@@ -1,0 +1,12 @@
+name: " "
+output_dir: "docs"
+navbar:
+  title: "Unidad 2"
+  left:
+    - text: "Probabilidad"
+      href: recurso301.html
+    - text: "Tipos de probabilidad"
+      href: recurso302.html
+    - text: "Variables aleatorias"
+      href: recurso303.html
+

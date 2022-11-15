@@ -1,0 +1,11 @@
+---
+title: "Introducción a la probabilidad"
+author: "Nivelatorio de Estadística"
+date: "2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
