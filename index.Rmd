@@ -1,5 +1,5 @@
 ---
-title: "Unidad 2"
+title: "Introducción a Probabilidad"
 ---
 
 Hello, Website!
