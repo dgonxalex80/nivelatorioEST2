@@ -13,7 +13,7 @@
 
 <meta name="date" content="2022-01-01" />
 
-<title>Tipos de probabilidad</title>
+<title> Tipos de probabilidad</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -262,14 +262,84 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Tipos de probabilidad</h1>
+<h1 class="title toc-ignore"><span style="color:#034a94"> <strong>Tipos
+de probabilidad</strong></span></h1>
 <h4 class="author">Nivelatorio de Estadística</h4>
 <h4 class="date">2022</h4>
 
 </div>
 
 
-
+<p>Iniciaremos con una tabla cruzada o de doble entrada que representa
+los valores obtenidos para dos caracteristicas cualitativas
+<strong>A</strong> y <strong>B</strong> para 900 registros</p>
+<p><img src="img/tabla2_22.png" width="35%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<p>A partir de estos valores se obtienen probabilidades bajo el enfoque
+frecuentista</p>
+<p><img src="img/tabla4_22.png" width="40%" style="display: block; margin: auto;" /></p>
+<p><br/><br/><br/></p>
+<div id="probabilidad-marginal-o-simple" class="section level4">
+<h4><strong>Probabilidad marginal o simple</strong></h4>
+<p>Corresponde a la probabilidad de que ocurra un evento simple. Tambien
+se le llama marginal debido a que aparece en el margen de las tablas o
+totales por fila o por columna</p>
+<p><br/></p>
+<ul>
+<li><p><span class="math inline">\(P(A) = 600/900 = 0.667\)</span> :
+probabilidad de que ocurra <span
+class="math inline">\(A\)</span></p></li>
+<li><p><span class="math inline">\(P(A&#39;) = 300/900 = 0.333\)</span>
+: probabilidad de que no ocurra <span
+class="math inline">\(A\)</span></p></li>
+<li><p><span class="math inline">\(P(B) = 500/900 = 0.556\)</span> :
+probabilidad de que ocurra <span
+class="math inline">\(B\)</span></p></li>
+<li><p><span class="math inline">\(P(B&#39;) = 400/900 = 0.444\)</span>
+: probabilidad de que no ocurra <span
+class="math inline">\(B\)</span></p></li>
+</ul>
+<p><br/><br/><br/></p>
+</div>
+<div id="probabilidad-conjunta" class="section level4">
+<h4><strong>Probabilidad conjunta</strong></h4>
+<p>Esta probabilidad ocurre cuando los dos eventos ocurren a la vez al
+mismo tiempo</p>
+<p><br/></p>
+<ul>
+<li><p><span class="math inline">\(P(A \cap B) = 460/900 =
+0.511\)</span> : probabilidad de que ocurra A y B</p></li>
+<li><p><span class="math inline">\(P(A&#39; \cap B) = 40/900 =
+0.044\)</span> : probabilidad de que NO ocurra A y ocurra B</p></li>
+<li><p><span class="math inline">\(P(A \cap B&#39;) = 140/900 =
+0.156\)</span> : probabilidad de que ocurra A y NO ocurra B</p></li>
+<li><p><span class="math inline">\(P(A&#39; \cap B&#39;) = 260/900 =
+0.289\)</span> : probabilidad de que NO ocurra A ni B</p></li>
+</ul>
+<p><br/><br/><br/></p>
+</div>
+<div id="probabilidad-condicional" class="section level4">
+<h4><strong>Probabilidad condicional</strong></h4>
+<p><br/></p>
+<p>En la mayoria de los casos cuando queremos calcualar una probabilidad
+conocemos eventos que los afectan. La probabilidades que toman
+información sobre la ocurrencia o no de eventos relacionados se les
+conoce como probabilidades condicionales</p>
+<p>La probabilidad condicional de <span
+class="math inline">\(B\)</span>, dado <span
+class="math inline">\(A\)</span>, se denota como <span
+class="math inline">\(P(B|A)\)</span>, se define como:</p>
+<p><span class="math display">\[P(B|A)=\dfrac{P(A \cap
+B)}{P(A)}\]</span></p>
+<p><img src="img/arbol1_22.png" width="50%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><span class="math inline">\(P(B|A)=\dfrac{P(A \cap B)}{P(A)} =
+\dfrac{460/900}{600/900} = \dfrac{460}{600} = 0.767\)</span></li>
+</ul>
+<p>La probabilidad de que ocurra <span class="math inline">\(B\)</span>
+dado que ya sucedió <span class="math inline">\(A\)</span> es de
+0.767</p>
+</div>
 
 
 

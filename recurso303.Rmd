@@ -1,7 +1,7 @@
 ---
-title: "Variables aleatorias"
-author: "dgonzalez80"
-date: "2022-11-15"
+title: <span style="color:#034a94"> **Variables aleatorias**</span>
+author: "Nivelatorio de Estadística"
+date: "2022"
 output: html_document
 ---
 
@@ -9,22 +9,77 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+El concepto de variable aleatoria constituye uno de los conceptos principales de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica segun J.A. Alberth & B. Ruiz (2013) , El primero basada en el resultado de fenómenos aleatorios y por otro lado el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatória como función de números reales y  el espacio para el sustento matemático. 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+<br/><br/><br/>
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## **Variable aleatoria**
 
-```{r cars}
-summary(cars)
-```
+<br/>
 
-## Including Plots
+Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un numero . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable X, ($R_{_{X}}$) 
 
-You can also embed plots, for example:
+Las variables aleatorias se clasifican teniendo en cuenta las características de su rango en **DISCRETAS** o **CONTINUAS**. La distribución de una variable aleatoria será **UNIVARIADA** si se estudia el comportamiento de una sola variable y serán **MULTIVARIADA** si se considera el comportamiento conjunto de varias variables definidas sobre el mismo espacio muestral.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+<br/>
+
+Ahora una variable $X$ se considera **DISCRETA** si su rango $R_{_{X}}$ es un conjunto finito o infinito numerable de valores, por lo general procede del conteo y en la gran mayoria de casos empieza por **número de...**
+
+Se considera variable aleatoria  **CONTINUA** si su rango $R_{_{X}}$ es un conjunto de valores infinito no numerable y generalmente corresponde a unión de intervalos. Estan asociadodas con la medición como son el tiempo, edad, precio, altura, distancia....
+
+<br/>
+
+En todos los casos se caracterizan por :
+
+<br/>
+
+### **Función de probabilidad**
+
+<br/>
+
+Esta función que asigna a cada valor de probabilidad  $f(x)$
+
+<br/>
+
+#### **Caso discreto**
+
+Para el caso de discreto se denomina **función de distribución de probabilidad** $f(x) = P(X = x)$ y debe cumplir las condiciones:
+    
+* $f(x) = P(X=x) \geq 0$
+* $\displaystyle\sum_{R_X} f(x) = 1$ 
+
+<br/><br/>  
+  
+#### **Caso continuo**  
+
+Para el caso continuo se denomina **función de densidad de probabilidad**
+
+* $f(x) \geq 0$
+* $\displaystyle\int\limits_{-\infty}^{+\infty}f(x)\:dx =1$
+* $P(a < X < b)=\displaystyle\int\limits_{a}^{b}f(x)\:dx$
+
+
+<br/><br/><br/>
+
+### **Función de probabilidad acumulada**
+
+Corresponde a la probabilidad acumulada para valores menores o iguales a un valor $x$
+$F(x)=P(X\leq x)$
+
+<br/>
+
+#### **Caso discreto**
+
+$F(x)=P(X\leq x)=\sum _{t \leq x}f(t)$
+
+<br/><br/>
+
+#### **Caso continuo**  
+
+$F_{_X}(x)=P(X \leq x)=\displaystyle\int \limits_{-\infty}^{x}f_{_X}(t)\:dt$
+
+$F(x) = P(X \leq x) = P(X < x)$
+<br/><br/>
+
+

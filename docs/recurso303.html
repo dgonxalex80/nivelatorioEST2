@@ -9,11 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="dgonzalez80" />
+<meta name="author" content="Nivelatorio de Estadística" />
 
-<meta name="date" content="2022-11-15" />
+<meta name="date" content="2022-01-01" />
 
-<title>Variables aleatorias</title>
+<title> Variables aleatorias</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -262,39 +262,105 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Variables aleatorias</h1>
-<h4 class="author">dgonzalez80</h4>
-<h4 class="date">2022-11-15</h4>
+<h1 class="title toc-ignore"><span style="color:#034a94">
+<strong>Variables aleatorias</strong></span></h1>
+<h4 class="author">Nivelatorio de Estadística</h4>
+<h4 class="date">2022</h4>
 
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<p>El concepto de variable aleatoria constituye uno de los conceptos
+principales de la probabilidad y estadística. A este concepto se pueden
+asociar dos paradigmas de evolución histórica segun J.A. Alberth &amp;
+B. Ruiz (2013) , El primero basada en el resultado de fenómenos
+aleatorios y por otro lado el proceso que relaciona los conjuntos de
+espacio muestral y sus respectivas probabilidades, para definir el
+concepto de variable aleatória como función de números reales y el
+espacio para el sustento matemático.</p>
+<p><br/><br/><br/></p>
+<div id="variable-aleatoria" class="section level2">
+<h2><strong>Variable aleatoria</strong></h2>
+<p><br/></p>
+<p>Una variable aleatoria <span class="math inline">\(X\)</span> es una
+función que asigna a cada valor de un espacio muestral <span
+class="math inline">\(S\)</span> un numero . El conjunto formado por
+estos números conforman un subconjunto de los reales llamado rango de la
+variable X, (<span class="math inline">\(R_{_{X}}\)</span>)</p>
+<p>Las variables aleatorias se clasifican teniendo en cuenta las
+características de su rango en <strong>DISCRETAS</strong> o
+<strong>CONTINUAS</strong>. La distribución de una variable aleatoria
+será <strong>UNIVARIADA</strong> si se estudia el comportamiento de una
+sola variable y serán <strong>MULTIVARIADA</strong> si se considera el
+comportamiento conjunto de varias variables definidas sobre el mismo
+espacio muestral.</p>
+<p><br/></p>
+<p>Ahora una variable <span class="math inline">\(X\)</span> se
+considera <strong>DISCRETA</strong> si su rango <span
+class="math inline">\(R_{_{X}}\)</span> es un conjunto finito o infinito
+numerable de valores, por lo general procede del conteo y en la gran
+mayoria de casos empieza por <strong>número de…</strong></p>
+<p>Se considera variable aleatoria <strong>CONTINUA</strong> si su rango
+<span class="math inline">\(R_{_{X}}\)</span> es un conjunto de valores
+infinito no numerable y generalmente corresponde a unión de intervalos.
+Estan asociadodas con la medición como son el tiempo, edad, precio,
+altura, distancia….</p>
+<p><br/></p>
+<p>En todos los casos se caracterizan por :</p>
+<p><br/></p>
+<div id="función-de-probabilidad" class="section level3">
+<h3><strong>Función de probabilidad</strong></h3>
+<p><br/></p>
+<p>Esta función que asigna a cada valor de probabilidad <span
+class="math inline">\(f(x)\)</span></p>
+<p><br/></p>
+<div id="caso-discreto" class="section level4">
+<h4><strong>Caso discreto</strong></h4>
+<p>Para el caso de discreto se denomina <strong>función de distribución
+de probabilidad</strong> <span class="math inline">\(f(x) = P(X =
+x)\)</span> y debe cumplir las condiciones:</p>
+<ul>
+<li><span class="math inline">\(f(x) = P(X=x) \geq 0\)</span></li>
+<li><span class="math inline">\(\displaystyle\sum_{R_X} f(x) =
+1\)</span></li>
+</ul>
+<p><br/><br/></p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="recurso303_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<div id="caso-continuo" class="section level4">
+<h4><strong>Caso continuo</strong></h4>
+<p>Para el caso continuo se denomina <strong>función de densidad de
+probabilidad</strong></p>
+<ul>
+<li><span class="math inline">\(f(x) \geq 0\)</span></li>
+<li><span
+class="math inline">\(\displaystyle\int\limits_{-\infty}^{+\infty}f(x)\:dx
+=1\)</span></li>
+<li><span class="math inline">\(P(a &lt; X &lt;
+b)=\displaystyle\int\limits_{a}^{b}f(x)\:dx\)</span></li>
+</ul>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="función-de-probabilidad-acumulada" class="section level3">
+<h3><strong>Función de probabilidad acumulada</strong></h3>
+<p>Corresponde a la probabilidad acumulada para valores menores o
+iguales a un valor <span class="math inline">\(x\)</span> <span
+class="math inline">\(F(x)=P(X\leq x)\)</span></p>
+<p><br/></p>
+<div id="caso-discreto-1" class="section level4">
+<h4><strong>Caso discreto</strong></h4>
+<p><span class="math inline">\(F(x)=P(X\leq x)=\sum _{t \leq
+x}f(t)\)</span></p>
+<p><br/><br/></p>
+</div>
+<div id="caso-continuo-1" class="section level4">
+<h4><strong>Caso continuo</strong></h4>
+<p><span class="math inline">\(F_{_X}(x)=P(X \leq x)=\displaystyle\int
+\limits_{-\infty}^{x}f_{_X}(t)\:dt\)</span></p>
+<p><span class="math inline">\(F(x) = P(X \leq x) = P(X &lt; x)\)</span>
+<br/><br/></p>
+</div>
+</div>
 </div>
 
 

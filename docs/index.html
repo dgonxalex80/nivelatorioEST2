@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Nivelatorio de Estadística" />
 
+<meta name="date" content="2022-01-01" />
 
-<title>Introducción a Probabilidad</title>
+<title> Introducción a Probabilidad</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -260,22 +262,175 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Introducción a Probabilidad</h1>
+<h1 class="title toc-ignore"><span style="color:#034a94">
+<strong>Introducción a Probabilidad</strong></span></h1>
+<h4 class="author">Nivelatorio de Estadística</h4>
+<h4 class="date">2022</h4>
 
 </div>
 
 
-<p>Hello, Website!</p>
-<p>For more information about simple R Markdown websites, please read
-the documentation at <a
-href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html"
-class="uri">https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html</a>.</p>
-<p>Please also note that simple R Markdown sites are <em>not</em> based
-on <strong>blogdown</strong>. They are probably good for websites with
-only a few Rmd documents. For larger-scale and more sophisticated
-websites (such as blogs), you may want to use <strong>blogdown</strong>
-instead: <a href="https://github.com/rstudio/blogdown"
-class="uri">https://github.com/rstudio/blogdown</a>.</p>
+<p><img src="img/arbol1.png" width="50%" style="display: block; margin: auto;" />
+<br/> <br/></p>
+<p>Hablar de probabilidad reune una serie de conceptos algunos de los
+cuales se presentan en la nube de palabras. A continuación se definen
+los más importantes :</p>
+<p><br/><br/><br/></p>
+<div id="experimento-aleatorio" class="section level3">
+<h3><strong>Experimento aleatorio</strong></h3>
+<p><br/></p>
+<p>Acción que puede ser replicada bajo las mismas condiciones y cuyo
+resultado no se conoce por anticipado.</p>
+<ul>
+<li><p><span class="math inline">\(E_{1}\)</span>: Lanzar una moneda dos
+veces y observar los resultados obtenidos en sus caras
+superiores</p></li>
+<li><p><span class="math inline">\(E_{2}\)</span>: Lanzar dos dados y
+observar la suma de los resultados superiores</p></li>
+<li><p><span class="math inline">\(E_{3}\)</span>: Realizar un examen de
+estadística y observar el resultado obtenido</p></li>
+<li><p><span class="math inline">\(E_{4}\)</span>: En una salida de
+campo, observo si se cumple o no, totalmente el objetivo
+planteado</p></li>
+<li><p><span class="math inline">\(E_{5}\)</span>: Observo el número
+total de ensayos de laboratorio exitosos en 20 intentos
+realizados.</p></li>
+</ul>
+<p><br/><br/><br/></p>
+</div>
+<div id="espacio-muestral" class="section level3">
+<h3><strong>Espacio muestral</strong></h3>
+<p><br/></p>
+<p>Conjunto de todos los posibles valores que puede tomar el experimento
+aleatorio. Este conjunto se nombra conuna letra mayuscula <span
+class="math inline">\(S\)</span> o tambien con <strong><span
+class="math inline">\(\Omega\)</span></strong></p>
+<ul>
+<li><span class="math inline">\(S_{1}\)</span>= <span
+class="math inline">\(\{ (cc), (cs), (sc), (ss) \}\)</span></li>
+</ul>
+<p><br/></p>
+<div style="display: flex;">
+<div>
+<ul>
+<li><span
+class="math inline">\(\begin{equation*}  S_{2}=\left\{  \begin{array}{cccccc}  &amp;(1,1),(1,2),(1,3),(1,4),(1,5),(1,6)&amp;\\  &amp;(2,1),(2,2),(2,3),(2,4),(2,5),(2,6)&amp;\\  &amp;(3,1),(3,2),(3,3),(3,4),(3,5),(3,6)&amp;\\  &amp;(4,1),(4,2),(4,3),(4,4),(4,5),(4,6)&amp;\\  &amp;(5,1),(5,2),(5,3),(5,4),(5,5),(5,6)&amp;\\  &amp;(6,1),(6,2),(6,3),(6,4),(6,5),(6,6)&amp;  \end{array}  \right\}  \end{equation*}\)</span></li>
+</ul>
+</div>
+<div>
+<p><img src="img/dados.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<p><br/><br/></p>
+<ul>
+<li><span class="math inline">\(S_{3}\)</span>= <span
+class="math inline">\(\{ x \in \mathbb{R} | 0 \leq x \leq 5
+\}\)</span></li>
+</ul>
+<p><br/></p>
+<ul>
+<li><span class="math inline">\(S_{4}\)</span>= <span
+class="math inline">\(\{ x \in \mathbb{N}| 0 \leq x \leq 1
+\}\)</span></li>
+</ul>
+<p><br/></p>
+<ul>
+<li><span class="math inline">\(S_{5}\)</span>= <span
+class="math inline">\(\{ x \in \mathbb{N}| 0 \leq x \leq 20
+\}\)</span></li>
+</ul>
+<p><br/><br/></p>
+<p>Algunos de los conjuntos se definen por extensión (<span
+class="math inline">\(S_{1}\)</span>, <span
+class="math inline">\(S_{2}\)</span> )y otros por compresión (<span
+class="math inline">\(S_{3}\)</span>, <span
+class="math inline">\(S_{4}\)</span> y <span
+class="math inline">\(S_{5}\)</span>)</p>
+<p><br/><br/><br/></p>
+</div>
+<div id="evento-aleatorio" class="section level3">
+<h3><strong>Evento aleatorio</strong></h3>
+<p><br/></p>
+<p>Subconjunto del espacio muestral que es de nuestro interés. Como todo
+conjunto se nombra con una letra mayúscula por lo general las primeras
+letras del alfabeto</p>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="54%" />
+<col width="30%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(A_{1}\)</span></td>
+<td align="left">Obtener solo caras</td>
+<td align="left"><span class="math inline">\(A_{1}=\{
+(c,c)\}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(A_{2}\)</span></td>
+<td align="left">Sacar un resultados es inferior a 4</td>
+<td align="left"><span
+class="math inline">\(A_{2}=\{(1,1),(1,2)(2,1)\}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(A_{3}\)</span></td>
+<td align="left">Ganar el examen</td>
+<td align="left"><span class="math inline">\(A_{3}=\{ x \in \mathbb{R} |
+3.0 \leq x \leq 5.0 \}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(A_{4}\)</span></td>
+<td align="left">Cumplir el objetivo de la salida</td>
+<td align="left"><span class="math inline">\(A_{4} =\{ 1
+\}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(A_{5}\)</span></td>
+<td align="left">Obtener más de 5 ensayos éxitos</td>
+<td align="left"><span class="math inline">\(A_{5}\)</span>= <span
+class="math inline">\(\{ x \in \mathbb{N}| 6 \leq x \leq 20
+\}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<p><br/><br/><br/></p>
+</div>
+<div id="enfoques-de-probabilidad" class="section level2">
+<h2><strong>Enfoques de probabilidad</strong></h2>
+<p><br/><br/><br/></p>
+<div id="enfoque-clásico" class="section level3">
+<h3><strong>Enfoque clásico</strong></h3>
+<p><br/></p>
+<p>Es el enfoque más antiguo de probabilidad y que está basado en el
+supuesto de eventos individuales igualmente probables. La probabilidad
+bajo ese enfoque para el evento <span class="math inline">\(A\)</span>
+se calcula como la fracción entre el número de elementos del conjunto
+<span class="math inline">\(A\)</span>, <span
+class="math inline">\(n(A)\)</span> y el número de elementos del espacio
+muestral <span class="math inline">\(n(S)\)</span>:</p>
+<p><span class="math display">\[P(A)=\dfrac{n(A)}{n(S)}\]</span>
+<br/><br/><br/></p>
+</div>
+<div id="enfoque-frecuentista" class="section level3">
+<h3><strong>Enfoque Frecuentista</strong></h3>
+<p><br/></p>
+<p>Este enfoque basa su cálculo en la frecuencia con que ocurre un
+evento en un tamaño de muestra determinado <span
+class="math inline">\(n\)</span>.</p>
+<p><span class="math display">\[\lim_{n \to{+}\infty} P(A)=\Bigg[
+\dfrac{\text{número de veces que ocurre A}}{n} \Bigg]\]</span>
+<br/><br/><br/></p>
+</div>
+<div id="enfoque-subjetivo" class="section level3">
+<h3><strong>Enfoque subjetivo</strong></h3>
+<p><br/></p>
+<p>En este caso la probabilidad es valorada y asignada por un
+<strong>EXPERTO</strong>, como un médico, un ingeniero, un abogado, un
+economista, un biólogo, un estadístico ……</p>
+</div>
+</div>
 
 
 
