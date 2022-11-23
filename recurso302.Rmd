@@ -6,9 +6,10 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
+<br/><br/>
 
 Iniciaremos con una tabla cruzada o de doble entrada que representa los valores obtenidos para dos caracteristicas cualitativas **A** y **B** para 900 registros 
 
@@ -18,7 +19,7 @@ knitr::include_graphics("img/tabla2_22.png")
 
 <br/><br/>
 
-A partir de estos valores se obtienen probabilidades bajo el enfoque frecuentista
+A partir de estos valores se obtienen probabilidades bajo el **enfoque frecuentista**
 
 ```{r, echo=FALSE, out.width="40%", fig.align = "center"}
 knitr::include_graphics("img/tabla4_22.png")
@@ -75,7 +76,10 @@ $$P(B|A)=\dfrac{P(A \cap B)}{P(A)}$$
 knitr::include_graphics("img/arbol1_22.png")
 ```
 
+<br/><br/>
 
 * $P(B|A)=\dfrac{P(A \cap B)}{P(A)} = \dfrac{460/900}{600/900} = \dfrac{460}{600} = 0.767$
+
+<br/>
 
 La probabilidad de que ocurra $B$ dado que ya sucedió $A$ es de 0.767

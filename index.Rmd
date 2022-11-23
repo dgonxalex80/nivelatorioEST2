@@ -6,12 +6,18 @@ output: html_document
 ---
 
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+```
+
+
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/arbol1.png")
 ```
+
 <br/> <br/>
 
-Hablar de probabilidad reune una serie de conceptos algunos de los cuales se presentan en la nube de palabras. A continuación se definen los más importantes :
+Hablar de probabilidad reune una serie de conceptos, algunos de ellos se presentan en la nube de palabras. A continuación se definen los más importantes :
 
 <br/><br/><br/>
 
