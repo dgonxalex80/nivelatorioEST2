@@ -2,6 +2,8 @@
 title: <span style="color:#034a94"> **Tipos de probabilidad**</span>
 author: "Nivelatorio de Estadística"
 output: html_document
+output: html_document
+css: style.css
 ---
 
 ```{r setup, include=FALSE}
