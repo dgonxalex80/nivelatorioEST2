@@ -71,7 +71,7 @@ Conjunto de todos los posibles valores que puede tomar el experimento aleatorio.
 
 ::: {}
 
-```{r, echo=FALSE, out.width="80%", fig.align = "center"}
+```{r, echo=FALSE, out.width="150%", fig.align = "center"}
 knitr::include_graphics("img/dados.png")
 ```
 :::
