@@ -1,7 +1,6 @@
 ---
 title: <span style="color:#034a94"> **Introducción a Probabilidad**</span>
 author: "Nivelatorio de Estadística"
-date: "2022"
 output: html_document
 ---
 
@@ -71,7 +70,7 @@ Conjunto de todos los posibles valores que puede tomar el experimento aleatorio.
 
 ::: {}
 
-```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
 knitr::include_graphics("img/dados.png")
 ```
 :::

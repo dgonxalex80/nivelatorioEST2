@@ -1,7 +1,6 @@
 ---
 title: <span style="color:#034a94"> **Tipos de probabilidad**</span>
 author: "Nivelatorio de Estadística"
-date: "2022"
 output: html_document
 ---
 
