@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 
 <br/><br/>
 
-Iniciaremos con una tabla cruzada o de doble entrada que representa los valores obtenidos para dos caracteristicas cualitativas **A** y **B** para 900 registros 
+Iniciaremos con una tabla cruzada o de doble entrada que representa los valores obtenidos para dos características cualitativas **A** y **B** para 900 registros 
 
 ```{r, echo=FALSE, out.width="35%", fig.align = "center"}
 knitr::include_graphics("img/tabla2_22.png")
@@ -29,7 +29,7 @@ knitr::include_graphics("img/tabla4_22.png")
 
 #### **Probabilidad marginal o simple**
 
-Corresponde a la probabilidad de que ocurra un evento simple. Tambien se le llama marginal debido a que aparece en el margen de las tablas o totales por fila o por columna
+Corresponde a la probabilidad de que ocurra un evento simple. También se le llama marginal debido a que aparece en el margen de las tablas o totales por fila o por columna
 
 <br/>
 
@@ -51,7 +51,7 @@ Esta probabilidad ocurre cuando los dos eventos ocurren a la vez al mismo tiempo
 <br/>
 
 * $P(A \cap B) = 460/900 = 0.511$ : probabilidad de que ocurra A y B 
-			
+
 * $P(A' \cap B) = 40/900 = 0.044$ : probabilidad de que NO ocurra A y ocurra B 
 
 * $P(A \cap B') = 140/900 = 0.156$ : probabilidad de que ocurra A y NO ocurra B 
@@ -64,7 +64,7 @@ Esta probabilidad ocurre cuando los dos eventos ocurren a la vez al mismo tiempo
 
 <br/>
 
-En la mayoria de los casos cuando queremos calcualar una probabilidad conocemos eventos que los afectan. La probabilidades que toman información sobre la ocurrencia o no de eventos relacionados se les conoce como probabilidades condicionales
+En la mayoría de los casos cuando queremos calcular una probabilidad conocemos eventos que los afectan. La probabilidades que toman información sobre la ocurrencia o no de eventos relacionados se les conoce como probabilidades condicionales
 
 
 La probabilidad condicional de $B$, dado $A$, se denota como $P(B|A)$, se define como:
@@ -83,3 +83,8 @@ knitr::include_graphics("img/arbol1_22.png")
 <br/>
 
 La probabilidad de que ocurra $B$ dado que ya sucedió $A$ es de 0.767
+
+
+
+
+
