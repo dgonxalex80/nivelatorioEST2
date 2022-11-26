@@ -50,13 +50,13 @@ Esta probabilidad ocurre cuando los dos eventos ocurren a la vez al mismo tiempo
 
 <br/>
 
-* $P(A \cap B) = 460/900 = 0.511$ : probabilidad de que ocurra A y B 
+* $P(A \cap B) = 460/900 = 0.511$ : probabilidad de que ocurra $A$ y $B$ 
 
-* $P(A' \cap B) = 40/900 = 0.044$ : probabilidad de que NO ocurra A y ocurra B 
+* $P(A' \cap B) = 40/900 = 0.044$ : probabilidad de que NO ocurra $A$ y ocurra $B$ 
 
-* $P(A \cap B') = 140/900 = 0.156$ : probabilidad de que ocurra A y NO ocurra B 
+* $P(A \cap B') = 140/900 = 0.156$ : probabilidad de que ocurra $A$ y NO ocurra $B$ 
 
-* $P(A' \cap B') = 260/900 = 0.289$ : probabilidad de que NO ocurra A ni B 
+* $P(A' \cap B') = 260/900 = 0.289$ : probabilidad de que NO ocurra $A$ ni $B$ 
 
 <br/><br/><br/>
 
@@ -67,10 +67,11 @@ Esta probabilidad ocurre cuando los dos eventos ocurren a la vez al mismo tiempo
 En la mayoría de los casos cuando queremos calcular una probabilidad conocemos eventos que los afectan. La probabilidades que toman información sobre la ocurrencia o no de eventos relacionados se les conoce como probabilidades condicionales
 
 
+<div class="content-box-blue">
 La probabilidad condicional de $B$, dado $A$, se denota como $P(B|A)$, se define como:
 
 $$P(B|A)=\dfrac{P(A \cap B)}{P(A)}$$
-
+</div>
 
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/arbol1_22.png")
@@ -84,7 +85,182 @@ knitr::include_graphics("img/arbol1_22.png")
 
 La probabilidad de que ocurra $B$ dado que ya sucedió $A$ es de 0.767
 
+<br/><br/><br/>
+
+
+#### **Independencia de eventos**
+
+En el caso que se requiera evaluar si dos eventos son independientes o no, partiendo de la definición de probabilidad condicional se podría obtener la siguiente regla al despejar $P(A \cap B)$ de la ecuación para obtener : $P(A \cap B) = P(A)∗P(B|A)$. En caso de que la ocurrencia del evento $A$ previamente al evento $B$, no cambie su probabilidad, se podría escribir que $P(B|A)=P(B)$ y en este caso la regla indica que la probablidad conjunta de los eventos $A$ y $B$ es igual a la probabilidad de sus probabilidades marginales :
+
+
+<div class="content-box-blue">
+Dos eventos $A$ y $B$ son independientes si y solo si la probabiliad del evento $B$ no es afectada por la ocurrencia del evento A o viceversa.
+
+$$P(B|A) = \dfrac{P( A \cap B)}{P(A)} = P(B)$$ 
+
+$$P(A∩B)= P(A) \hspace{.2cm} P(B|A) = P(A) \hspace{.2cm} P(B)$$   
+
+
+</div>
+
+<br/><br/><br/>
+
+#### **Probabilidad total**
+
+Para explicar el concepto de probabilidad total, supongamos que el espacio muestral está formado por elementos que pueden ser representados por una partición del conjunto $S$. Para este ejemplo con 5 particiones ($A_{1}$, $A_{2}$, $A_{3}$, $A_{4}$ y $A_{5}$).   Sobre este espacio se defune un evento aleatorio $B$ 
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/particion2_1122.png")
+```
+
+Se puede resaltar los conjutos que conforman el evento $B$
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/particion3_1122.png")
+```
+
+Tambien podemos recostruir $B$ como :
+ 
+ $B = (A_{1} \cap B) \cup (A_{2} \cap B) \cup (A_{3} \cap B) \cup (A_{4} \cap B) \cup (A_{5} \cap B)$
+ 
+<br/><br/>
+
+En terminos de probabilidad  tenemos
+  
+$P(B) = P(A_{1} \cap B) + P(A_{2} \cap B) + P(A_{3} \cap B) + P(A_{4} \cap B) + P(A_{5} \cap B)$
+
+Este resultado se puede expresar en otros terminos de la regla de la multiplicacion:
+
+$P(B) = P(A_{1})P(B|A_{1}) + P(A_{2})P(B|A_{2})  +P(A_{3})P(B|A_{})  + P(A_{4})P(B|A_{4}) + P(A_{5})P(B|A_{5})$
+
+<br/><br/><br/>
+Definimos la probabilidad total de manera general:
+
+<div class="content-box-blue">
+Dado una serie de eventos que conforman una partición $E_{1}$, $E_{2}$, $E_{3}$, $\dots$, $E_{k}$, que son mutuamente excluyentes y exaustivos y un evento $A$, la probabilidad del evento $A$ se expresa como :
+
+$$P(A)=P(E_{1})P(A|E_{1})+ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots P(E_{k})P(A|E_{k})$$
+</div>
+
+<br/><br/><br/>
+
+#### **Teorema de Bayes**
+
+El **teorema de Bayes**, fué propuesto por  el matemático británico Thomas Bayes, es una relación que permite determinar la probabilidad condicional . La probabilidad condicional es la probabilidad de que ocurra un resultado, basada en un resultado previo. El **teorema de Bayes** permite ajustar las aprobabilidades dada nueva información.
+
+<div class="content-box-blue">
+Dado una serie de eventos que conforma una partición $E_{1}$, $E_{2}$, $E_{3}$, $\dots$, $E_{k}$ , que son mutuamente excluyentes y exhautivos, con probabilidad a priori $P(E_{1})$, $P(E_{2})$ $P(E_{3})$, $\dots$, $P(E_{k})$. Si ocurre un evento $A$, la probabilidad a posteriori de $E_{i}$ dados $A$, es la probabilidad condicional :
+
+$$P(E_{i}|A)=\dfrac{P(E_{i} \cap A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\displaystyle\sum_{j=1}^{k} P(E_{j})P(A|E_{j})} $$
+</div>
+
+
+<br/><br/><br/>
+
+### **Código R**
+
+<br/>
+
+```{r, eval=FALSE}
+# se crea la tabla 
+x=c(460,140,40,260)
+t=matrix(x,nrow=2)
+rownames(t)=c("A","A'")
+colnames(t)=c("B","B'")
+t
+```
+
+<pre class="my-pre">
+     B  B'
+A  460  40
+A' 140 260
+</pre>
+
+
+<br/><br/>
+
+```{r, eval=FALSE}
+# adiciona los totales por filas y por columnas
+addmargins(t)
+```
+
+<pre class="my-pre"> 
+      B  B' Sum
+A   460  40 500
+A'  140 260 400
+Sum 600 300 900
+</pre>
+
+
+<br/><br/>
+
+```{r, eval=FALSE}
+# probabilidades conjuntas
+prop.table(t)
+```
+
+<pre class="my-pre">
+           B         B'
+A  0.5111111 0.04444444
+A' 0.1555556 0.28888889
+</pre>
 
 
 
+
+<br/><br/>
+
+```{r, eval=FALSE}
+# probabilidades condiccionales por fila
+prop.table(t,1)
+```
+
+<pre class="my-pre">
+      B   B'
+A  0.92 0.08
+A' 0.35 0.65
+</pre>
+
+
+<br/><br/>
+
+```{r, eval=FALSE}
+# probabilidades condiccionales por columna
+prop.table(t,2)
+```
+
+<pre class="my-pre">
+           B        B'
+A  0.7666667 0.1333333
+A' 0.2333333 0.8666667
+</pre>
+
+<br/><br/>
+
+### **Aplicación**
+
+Podemos representar las probabilidades mediante un árbol. Como ejemplo tomamos la base de datos del titanic contenida el el paquete `titanic` y calculamos la probabilidad de que un pasajero sobreviviera teniendo encuenta su sexo.
+
+
+```{r, message=FALSE}
+#  install.packages("titanic")  # instalar paquete titatic
+library(titanic) #  cargar paquete
+data1=data(titanic_train)  # cargar los datos
+data2=data(titanic_test)  # cargar los datos 
+data=append(data1,data2)
+ 
+# install.packages("rpart")
+# install.packages("rattle")
+#install.packages("rpart.plot")
+
+library(rpart)
+library(rattle)
+library(rpart.plot)
+
+arbol=rpart( formula = Survived ~ Sex + Age + Pclass ,
+             data = titanic_train,
+             method = "class")
+fancyRpartPlot(arbol)
+```
 
