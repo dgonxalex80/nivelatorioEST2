@@ -38,7 +38,16 @@ Se considera variable aleatoria  **CONTINUA** si su rango $R_{_{X}}$ es un conju
 
 <br/>
 
-En todos los casos se caracterizan por :
+En todos los casos se caracterizan por : 
+
+* $f(x)$ : función de distribución de probabilidad (variables discretgas), función de distribución de densidad (variables continuas)
+* $F(x)$ : función de probabilidad acumulada
+* $E[X]$ : valor esperado
+* $V[X]$ : varianza
+* función caracteristica
+* función generadora de momentos
+
+entre otras
 
 <br/>
 
@@ -173,11 +182,13 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 
 |                 |                 |                 |                 |                 |                 | 
 |:----------------|:----------------|:----------------|:----------------|:-----------------:|:---------------|
+| **Discretas**   |                 |                 |                 |                 |                 | 
 | Bernoulli       |   Binomial      | Poisson         | Hipergeométrico | Geométrico      | Binomial negativo|
+|**Continuas**    |                 |                 |                 |                 |                 | 
 | Uniforme        |   Normal        | Exponencial     |  Gamma          |  Weibull        | Cauchy          |
 | Lognormal       |   Beta          | Erlang          |  Gumbel         |  Kernel	        |                 |
 | t-Student       |   F de Fisher   | Ji-cuadrado     |                 |                 |                 |
-
+|                 |                 |                 |                 |                 |                 | 
 <br/><br/>
 
 
