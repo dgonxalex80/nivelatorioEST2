@@ -25,7 +25,9 @@ Hablar de probabilidad reúne una serie de conceptos, algunos de ellos se presen
 
 <br/>
 
+<div class="content-box-blue">
 Acción que puede ser replicada bajo las mismas condiciones y cuyo resultado no se conoce por anticipado.
+</div>
 
 + $E_{1}$: Lanzar una moneda dos veces y observar los resultados obtenidos en sus caras superiores 
 
@@ -44,7 +46,9 @@ Acción que puede ser replicada bajo las mismas condiciones y cuyo resultado no 
 
 <br/>
 
+<div class="content-box-blue">
 Conjunto de todos los posibles valores que puede tomar el experimento aleatorio. Este conjunto se nombra conuna letra mayuscula $S$ o tambien con **$\Omega$**
+</div>
 
 + $S_{1}$= $\{ (cc), (cs), (sc), (ss) \}$  
 
@@ -99,9 +103,9 @@ Algunos de los conjuntos se definen por extensión  ($S_{1}$, $S_{2}$ )y otros p
 ### **Evento aleatorio**
 
 <br/>
-
+<div class="content-box-blue">
 Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto se nombra con una letra mayúscula por lo general las primeras letras del alfabeto
-
+</div>
 
 
 |           |                                       |                      |
@@ -129,6 +133,12 @@ Es el enfoque más antiguo de probabilidad y que está basado en el supuesto de 
 
 
 $$P(A)=\dfrac{n(A)}{n(S)}$$
+
+**Ejemplos**: 
+
+* Probabilidad de sacar un doble seis al lanzar dos dados
+* Probabilidad de elegir un as en una baraja de cartas
+
 <br/><br/><br/>
 
 ### **Enfoque Frecuentista**
@@ -139,20 +149,30 @@ Este enfoque basa su cálculo en la frecuencia con que ocurre un evento en un ta
 
 
 $$\lim_{n \to{+}\infty} P(A)=\Bigg[ \dfrac{\text{número de veces que ocurre A}}{n} \Bigg]$$
+
+**Ejemplos**:
+
+* Probabilidad de ganar un examen
+* Probabilidad de realizar más de 10 ventas en un dia
 <br/><br/><br/>
 
 ### **Enfoque subjetivo** 
 
 <br/>
 
-En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un médico, un ingeniero, un abogado, un economista, un biólogo, un estadístico ......
+En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un médico, un ingeniero, un abogado, un economista, un biólogo, un estadístico, un mecánico ......
 
+**Ejemplos**:
 
+* Probabilidad de tener exito en una operación terigio
+* Probabilidad de que se rompa la cadena del distribución de un auto
+
+<br/><br/><br/>
 
 ## **Axiomas de probabilidad**
 
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+<div class="content-box-blue">
 
 + $A_{1}$ : Sea $S$ un espacio muestral  asociado a un experimento. Entonces:
 

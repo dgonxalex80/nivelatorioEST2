@@ -269,7 +269,7 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="img/variables.jpg" width="100%" style="display: block; margin: auto;" />
+<p><img src="img/variables1.jpg" width="100%" style="display: block; margin: auto;" />
 Tomada de: <a href="https://pixabay.com/"
 class="uri">https://pixabay.com/</a></p>
 <p><br/></p>
@@ -284,12 +284,14 @@ espacio para el sustento matemático.</p>
 <p><br/><br/><br/></p>
 <div id="variable-aleatoria" class="section level2">
 <h2><strong>Variable aleatoria</strong></h2>
-<p><br/></p>
+<br/>
+<div class="content-box-blue">
 <p>Una variable aleatoria <span class="math inline">\(X\)</span> es una
 función que asigna a cada valor de un espacio muestral <span
 class="math inline">\(S\)</span> un numero . El conjunto formado por
 estos números conforman un subconjunto de los reales llamado rango de la
 variable X, (<span class="math inline">\(R_{_{X}}\)</span>)</p>
+</div>
 <p>Las variables aleatorias se clasifican teniendo en cuenta las
 características de su rango en <strong>DISCRETAS</strong> o
 <strong>CONTINUAS</strong>. La distribución de una variable aleatoria
@@ -329,53 +331,72 @@ acumulada</li>
 <p>Esta función que asigna a cada valor de probabilidad <span
 class="math inline">\(f(x)\)</span></p>
 <p><br/></p>
-<div id="caso-discreto" class="section level4">
-<h4><strong>Caso discreto</strong></h4>
-<p>Para el caso de discreto se denomina <strong>función de distribución
-de probabilidad</strong> <span class="math inline">\(f(x) = P(X =
-x)\)</span> y debe cumplir las condiciones:</p>
-<ul>
-<li><span class="math inline">\(f(x) = P(X=x) \geq 0\)</span></li>
-<li><span class="math inline">\(\displaystyle\sum_{R_X} f(x) =
-1\)</span></li>
-</ul>
-<p><br/><br/></p>
-</div>
-<div id="caso-continuo" class="section level4">
-<h4><strong>Caso continuo</strong></h4>
-<p>Para el caso continuo se denomina <strong>función de densidad de
-probabilidad</strong></p>
-<ul>
-<li><span class="math inline">\(f(x) \geq 0\)</span></li>
-<li><span
+<div class="content-box-blue">
+<table>
+<colgroup>
+<col width="46%" />
+<col width="53%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Caso discreto</strong></td>
+<td align="left"><strong>Caso continuo</strong></td>
+</tr>
+<tr class="even">
+<td align="left">Para el caso de discreto se denomina <strong>función de
+distribución de probabilidad</strong> <span class="math inline">\(f(x) =
+P(X = x)\)</span> y debe cumplir las condiciones:</td>
+<td align="left">Para el caso continuo se denomina <strong>función de
+densidad de probabilidad</strong></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(f(x) = P(X=x) \geq
+0\)</span></td>
+<td align="left"><span class="math inline">\(f(x) \geq 0\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\displaystyle\sum_{R_X}
+f(x) = 1\)</span></td>
+<td align="left"><span
 class="math inline">\(\displaystyle\int\limits_{-\infty}^{+\infty}f(x)\:dx
-=1\)</span></li>
-<li><span class="math inline">\(P(a &lt; X &lt;
-b)=\displaystyle\int\limits_{a}^{b}f(x)\:dx\)</span></li>
-</ul>
-<p><br/><br/><br/></p>
+=1\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><span class="math inline">\(P(a &lt; X &lt;
+b)=\displaystyle\int\limits_{a}^{b}f(x)\:dx\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
+<p><br/><br/><br/></p>
 </div>
 <div id="función-de-probabilidad-acumulada" class="section level3">
 <h3><strong>Función de probabilidad acumulada</strong></h3>
 <p>Corresponde a la probabilidad acumulada para valores menores o
-iguales a un valor <span class="math inline">\(x\)</span> <span
-class="math inline">\(F(x)=P(X\leq x)\)</span></p>
+iguales a un valor <span class="math inline">\(x\)</span></p>
 <p><br/></p>
-<div id="caso-discreto-1" class="section level4">
-<h4><strong>Caso discreto</strong></h4>
-<p><span class="math inline">\(F(x)=P(X\leq x)=\sum _{t \leq
-x}f(t)\)</span></p>
-<p><br/><br/></p>
+<div class="content-box-blue">
+<table>
+<colgroup>
+<col width="46%" />
+<col width="53%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Caso discreto</strong></td>
+<td align="left"><strong>Caso continuo</strong></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(F(x)=P(X\leq x) = \sum _{t
+\leq x}f(t)\)</span></td>
+<td align="left"><span class="math inline">\(F_{_X}(x) = P(X \leq
+x)=\displaystyle\int \limits_{-\infty}^{x}f_{_X}(t)\:dt\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="caso-continuo-1" class="section level4">
-<h4><strong>Caso continuo</strong></h4>
-<p><span class="math inline">\(F_{_X}(x)=P(X \leq x)=\displaystyle\int
-\limits_{-\infty}^{x}f_{_X}(t)\:dt\)</span></p>
-<p><span class="math inline">\(F(x) = P(X \leq x) = P(X &lt;
-x)\)</span></p>
 <p><br/><br/></p>
-</div>
 </div>
 <div id="valor-esperado" class="section level3">
 <h3><strong>Valor Esperado</strong></h3>
@@ -385,18 +406,27 @@ población de la variable aleatoria denotada por <span
 class="math inline">\(E[x]\)</span> o tambien <span
 class="math inline">\(\mu\)</span></p>
 <p><br/><br/></p>
-<div id="caso-discreto-2" class="section level4">
-<h4><strong>Caso discreto</strong></h4>
-<p><span class="math inline">\(E(X) =
-\displaystyle\sum\limits_{x}^{}x_{i}f(x_{i})\)</span></p>
-<p><br/><br/></p>
+<div class="content-box-blue">
+<table>
+<colgroup>
+<col width="46%" />
+<col width="53%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Caso discreto</strong></td>
+<td align="left"><strong>Caso continuo</strong></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(E(X) =
+\displaystyle\sum\limits_{x}^{}x_{i}f(x_{i})\)</span></td>
+<td align="left"><span class="math inline">\(E(X) =
+\displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="caso-continuo-2" class="section level4">
-<h4><strong>Caso continuo</strong></h4>
-<p><span class="math inline">\(E(X) =
-\displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx\)</span></p>
 <p><br/><br/></p>
-</div>
 <div id="propiedades-del-valor-esperado" class="section level4">
 <h4><strong>Propiedades del Valor Esperado</strong></h4>
 <ul>
@@ -423,24 +453,33 @@ independientes</p></li>
 <p>Sea <span class="math inline">\(X\)</span> una variable aleatoria
 discreta o continua. El momento de orden <span
 class="math inline">\(k\)</span> se define como:</p>
-<p><br/></p>
-<div id="caso-discreto-3" class="section level4">
-<h4><strong>Caso discreto</strong></h4>
-<p><span class="math inline">\(E(X^{k}) =
-\displaystyle\sum\limits_{x}^{}x_{i}^{k}f(x_{i})\)</span></p>
-<p><br/></p>
+<br/>
+<div class="content-box-blue">
+<table>
+<colgroup>
+<col width="46%" />
+<col width="53%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Caso discreto</strong></td>
+<td align="left"><strong>Caso continuo</strong></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(E(X^{k}) =
+\displaystyle\sum\limits_{x}^{}x_{i}^{k}f(x_{i})\)</span></td>
+<td align="left"><span class="math inline">\(E(X^{k}) =
+\displaystyle\int\limits_{-\infty}^{+\infty}x^{k} f(x)dx\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="caso-continuo-3" class="section level4">
-<h4><strong>Caso continuo</strong></h4>
-<p><span class="math inline">\(E(X^{k}) =
-\displaystyle\int\limits_{-\infty}^{+\infty}x^{k} f(x)dx\)</span></p>
 <p><br/><br/></p>
 <p>Se define la varianza como la diferencia entre el segundo momento y
 el cuadrado del primer momento</p>
 <p><span class="math inline">\(V[X] = E[X^{2}]-(E[X])^{2} =
 E[X^{2}]-\mu^{2}\)</span></p>
 <p><br/><br/></p>
-</div>
 <div id="propiedades-de-la-varianza" class="section level4">
 <h4><strong>Propiedades de la varianza</strong></h4>
 <ul>
@@ -463,9 +502,11 @@ b^{2}V[Y]\)</span></p></li>
 </div>
 </div>
 </div>
-<div id="modelos-de-probabilidad-especiales" class="section level2">
-<h2><strong>Modelos de probabilidad especiales</strong></h2>
+<div id="algunos-modelos-de-probabilidad-especiales"
+class="section level2">
+<h2><strong>Algunos modelos de probabilidad especiales</strong></h2>
 <p><br/><br/></p>
+<div class="content-box-blue">
 <table>
 <colgroup>
 <col width="16%" />
@@ -534,6 +575,7 @@ b^{2}V[Y]\)</span></p></li>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br/><br/></p>
 </div>
 <div id="código-r" class="section level2">
@@ -561,118 +603,139 @@ modelos tanto discretos como continuos</p>
 <table>
 <thead>
 <tr class="header">
-<th><em>modelo</em></th>
-<th><span class="math inline">\(F(x)\)</span></th>
-<th><span class="math inline">\(X_{p}\)</span></th>
-<th><span class="math inline">\(f(x)\)</span></th>
-<th>aleatorio</th>
+<th align="left"><em>modelo</em></th>
+<th align="left"><span class="math inline">\(F(x)\)</span></th>
+<th align="left"><span class="math inline">\(X_{p}\)</span></th>
+<th align="left"><span class="math inline">\(f(x)\)</span></th>
+<th align="left">aleatorio</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>binomial</td>
-<td>pbinom</td>
-<td>qbinom</td>
-<td>dbinom</td>
-<td>rbinom</td>
+<td align="left"><strong>discretos</strong></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>gometrico</td>
-<td>pgeom</td>
-<td>qgeom</td>
-<td>dgeom</td>
-<td>rgeom</td>
+<td align="left">binomial</td>
+<td align="left">pbinom</td>
+<td align="left">qbinom</td>
+<td align="left">dbinom</td>
+<td align="left">rbinom</td>
 </tr>
 <tr class="odd">
-<td>hipergeometrico</td>
-<td>phyper</td>
-<td>qhyper</td>
-<td>dhyper</td>
-<td>rhyper</td>
+<td align="left">gometrico</td>
+<td align="left">pgeom</td>
+<td align="left">qgeom</td>
+<td align="left">dgeom</td>
+<td align="left">rgeom</td>
 </tr>
 <tr class="even">
-<td>Poisson</td>
-<td>ppois</td>
-<td>qpois</td>
-<td>dpois</td>
-<td>rpois</td>
+<td align="left">hipergeometrico</td>
+<td align="left">phyper</td>
+<td align="left">qhyper</td>
+<td align="left">dhyper</td>
+<td align="left">rhyper</td>
 </tr>
 <tr class="odd">
-<td>binomial negativo</td>
-<td>pnbinom</td>
-<td>qnbinom</td>
-<td>dnbionom</td>
-<td>rnbinom</td>
+<td align="left">Poisson</td>
+<td align="left">ppois</td>
+<td align="left">qpois</td>
+<td align="left">dpois</td>
+<td align="left">rpois</td>
 </tr>
 <tr class="even">
-<td>beta</td>
-<td>pbeta</td>
-<td>qbeta</td>
-<td>dbeta</td>
-<td>rbeta</td>
+<td align="left">binomial negativo</td>
+<td align="left">pnbinom</td>
+<td align="left">qnbinom</td>
+<td align="left">dnbionom</td>
+<td align="left">rnbinom</td>
 </tr>
 <tr class="odd">
-<td>Cauchy</td>
-<td>pcauchy</td>
-<td>qcauchy</td>
-<td>dcauchy</td>
-<td>rcauchy</td>
+<td align="left"><strong>continuos</strong></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>exponencial</td>
-<td>pexp</td>
-<td>qexp</td>
-<td>dexp</td>
-<td>rexp</td>
+<td align="left">normal</td>
+<td align="left">pnorm</td>
+<td align="left">qnorm</td>
+<td align="left">dnorm</td>
+<td align="left">rnorm</td>
 </tr>
 <tr class="odd">
-<td>gamma</td>
-<td>pgamma</td>
-<td>qgamma</td>
-<td>dgamma</td>
-<td>rgamma</td>
+<td align="left">beta</td>
+<td align="left">pbeta</td>
+<td align="left">qbeta</td>
+<td align="left">dbeta</td>
+<td align="left">rbeta</td>
 </tr>
 <tr class="even">
-<td>lognormal</td>
-<td>plnorm</td>
-<td>qlnorm</td>
-<td>dlnorm</td>
-<td>rlnorm</td>
+<td align="left">Cauchy</td>
+<td align="left">pcauchy</td>
+<td align="left">qcauchy</td>
+<td align="left">dcauchy</td>
+<td align="left">rcauchy</td>
 </tr>
 <tr class="odd">
-<td>uniforme</td>
-<td>punif</td>
-<td>qunif</td>
-<td>dunif</td>
-<td>runif</td>
+<td align="left">exponencial</td>
+<td align="left">pexp</td>
+<td align="left">qexp</td>
+<td align="left">dexp</td>
+<td align="left">rexp</td>
 </tr>
 <tr class="even">
-<td>Weibull</td>
-<td>pweibull</td>
-<td>qweibull</td>
-<td>dweibull</td>
-<td>rweibull</td>
+<td align="left">gamma</td>
+<td align="left">pgamma</td>
+<td align="left">qgamma</td>
+<td align="left">dgamma</td>
+<td align="left">rgamma</td>
 </tr>
 <tr class="odd">
-<td>t-Student</td>
-<td>pt</td>
-<td>qt</td>
-<td>dt</td>
-<td>rt</td>
+<td align="left">lognormal</td>
+<td align="left">plnorm</td>
+<td align="left">qlnorm</td>
+<td align="left">dlnorm</td>
+<td align="left">rlnorm</td>
 </tr>
 <tr class="even">
-<td>Ji-cuadrado</td>
-<td>pchisq</td>
-<td>qchisq</td>
-<td>dchisq</td>
-<td>rchisq</td>
+<td align="left">uniforme</td>
+<td align="left">punif</td>
+<td align="left">qunif</td>
+<td align="left">dunif</td>
+<td align="left">runif</td>
 </tr>
 <tr class="odd">
-<td>F</td>
-<td>pf</td>
-<td>qf</td>
-<td>df</td>
-<td>rf</td>
+<td align="left">Weibull</td>
+<td align="left">pweibull</td>
+<td align="left">qweibull</td>
+<td align="left">dweibull</td>
+<td align="left">rweibull</td>
+</tr>
+<tr class="even">
+<td align="left">t-Student</td>
+<td align="left">pt</td>
+<td align="left">qt</td>
+<td align="left">dt</td>
+<td align="left">rt</td>
+</tr>
+<tr class="odd">
+<td align="left">Ji-cuadrado</td>
+<td align="left">pchisq</td>
+<td align="left">qchisq</td>
+<td align="left">dchisq</td>
+<td align="left">rchisq</td>
+</tr>
+<tr class="even">
+<td align="left">F</td>
+<td align="left">pf</td>
+<td align="left">qf</td>
+<td align="left">df</td>
+<td align="left">rf</td>
 </tr>
 </tbody>
 </table>
@@ -710,95 +773,73 @@ class="math inline">\(P(X=x)\)</span></td>
 </tr>
 </tbody>
 </table>
-<p><br/><br/></p>
+<p><br/><br/><br/></p>
 <div id="ejemplo-1" class="section level4">
 <h4><strong>Ejemplo 1</strong></h4>
+<div id="modelo-binomial" class="section level5">
+<h5><strong>Modelo binomial</strong></h5>
+<p><span class="math display">\[\begin{equation*}
+        f(x)=\left\lbrace
+        \begin{array}{lll}
+            \displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &amp;,&amp;
+x=0,1,2, \ldots, n   \\
+            &amp;&amp;\\
+            0 &amp;,&amp; \mbox{en otro caso}
+        \end{array}
+        \right.
+\end{equation*}\]</span></p>
+<p><span class="math display">\[E[X]=np\]</span></p>
+<p><span class="math display">\[V[X]= np(1-p) \]</span> <br/></p>
 <p>Sea una variables con distribución binomial con parámetros <span
-class="math inline">\(n=20\)</span> y <span
-class="math inline">\(p=0.30\)</span> , lo cual se puede simbolizar como
-: <span class="math inline">\(X\sim b(x; 20,0.30)\)</span></p>
-<p>En este caso se requieren realizar los siguientes procesos:</p>
-<p><br/></p>
-<ol style="list-style-type: decimal">
-<li>Calcular la probabilidad de <span class="math display">\[ P(X=7) =
-\dbinom{20}{7} 0.30^{7} (10.30)^{(20-7)}\]</span></li>
-</ol>
-<pre class="r"><code>dbinom(7, 20, 0.30)</code></pre>
-<pre><code>[1] 0.164262</code></pre>
-<p><br/></p>
-<ol start="2" style="list-style-type: decimal">
-<li>Calcular la probabilidad acumulada <span class="math display">\[P(X
-\leq 7) = \displaystyle\sum_{x=0}^{x=7} \dbinom{20}{x} 0.30^{x}
-(1-0.30)^{(20-x)}\]</span></li>
-</ol>
-<pre class="r"><code>pbinom(7, 20, 0.30)</code></pre>
-<pre><code>[1] 0.7722718</code></pre>
-<p><br/></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Generar 15 números aleatorios a partir de esta distribución</li>
-</ol>
-<pre class="r"><code>rbinom(15,20,0.30)</code></pre>
-<pre><code> [1] 3 5 5 6 3 4 4 6 9 6 9 5 7 6 7</code></pre>
-<ol start="4" style="list-style-type: decimal">
-<li>Para construir una gráfica se puede utilizar el siguiente
-código</li>
-</ol>
-<pre class="r"><code>library(ggplot2)
-x=0:20
-fx=dbinom(x,20,0.30)
-dat=data.frame(x,fx)
-    
-ggplot(dat) + geom_point(aes(x, fx),colour = &quot;orange&quot;, size = 4) +
-        scale_x_continuous(limits = c(0, 20),
-          breaks = 0:20, 
-        labels = c(&#39;0&#39;,&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;,&#39;8&#39;,&#39;9&#39;,&#39;10&#39;,&#39;11&#39;,&#39;12&#39;,&#39;13&#39;,&#39;14&#39;, &#39;15&#39;,&#39;16&#39;,&#39;17&#39;,&#39;18&#39;,&#39;19&#39;,&#39;20&#39;))</code></pre>
-<p><img src="recurso303_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+class="math inline">\(n=10\)</span> y <span
+class="math inline">\(p=0.90\)</span> , lo cual se puede simbolizar como
+: <span class="math inline">\(X\sim b(x; 10,0.90)\)</span>|</p>
+<p><img src="recurso303_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><span class="math display">\[ P(X=7) = \dbinom{10}{7} 0.90^{7}
+(1-0.90)^{(10-7)}\]</span></p>
+<pre class="r"><code>dbinom(7, 10, 0.90)</code></pre>
+<pre><code>[1] 0.05739563</code></pre>
+<p><span class="math display">\[P(X \leq 7) =
+\displaystyle\sum_{x=0}^{x=7} \dbinom{10}{x} 0.90^{x}
+(1-0.90)^{(10-x)}\]</span></p>
+<pre class="r"><code>pbinom(7, 10, 0.90)</code></pre>
+<pre><code>[1] 0.07019083</code></pre>
 <p><br/><br/></p>
+</div>
 </div>
 <div id="ejemplo-2" class="section level4">
 <h4><strong>Ejemplo 2</strong></h4>
+<p><br/></p>
+<div id="modelo-normal" class="section level5">
+<h5><strong>Modelo normal</strong></h5>
+<p><br/></p>
+<p><span class="math display">\[f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}}
+\hspace{.1cm}
+e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}  \hspace{.5cm}  -\infty
+\leq  x \leq \infty \]</span></p>
+<p><span class="math display">\[E[X]=\mu\]</span> <span
+class="math display">\[V[X]=\sigma^{2}\]</span> <br/><br/></p>
+<p>Nornal estandar : <span class="math inline">\(X \sim
+N(0,1)\)</span></p>
+<p><img src="recurso303_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><br/></p>
 <p>Ahora supongamos que se tiene una variable continua con distribución
 normal, con media 50 y varianza 100, es decir desviación estándar 10, lo
 cual se puede representar como <span class="math inline">\(X\sim
-N(50,100)\)</span>.</p>
-<p>En este caso vamos a hallar los siguientes valores:</p>
-<p><br/></p>
-<ol style="list-style-type: decimal">
-<li>Calcular la probabilidad de que un valor de <span
-class="math inline">\(X\)</span> sea menor o igual a 70, <span
-class="math display">\[P(X&lt;70) =\displaystyle\int_{-\infty}^{70}
-\dfrac{1}{\sqrt{200 \pi }} \exp{\frac{1}{200 }(x-50)^{2}}
-\:dx\]</span></li>
-</ol>
+N(50,100)\)</span>. En este caso vamos a hallar los siguientes
+valores:</p>
+<p><span class="math display">\[P(X&lt;70)
+=\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{200 \pi }}
+\exp{\frac{1}{200 }(x-50)^{2}} \:dx\]</span></p>
 <pre class="r"><code> pnorm(70,50,sqrt(100))</code></pre>
 <pre><code>[1] 0.9772499</code></pre>
 <p><br/></p>
-<ol start="2" style="list-style-type: decimal">
-<li>Calcular la probabilidad de que la variable sea mayor a 70: <span
-class="math inline">\(P(X&gt;70)\)</span></li>
-</ol>
+<p><span class="math display">\[P(X&gt;70)
+=\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{200 \pi }}
+\exp{\frac{1}{200 }(x-50)^{2}} \:dx\]</span></p>
 <pre class="r"><code>pnorm(70,50,sqrt(100),lower.tail=FALSE)</code></pre>
 <pre><code>[1] 0.02275013</code></pre>
-<p><br/></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Genere 10 números aleatorios de la variables <span
-class="math inline">\(X\)</span></li>
-</ol>
-<pre class="r"><code>rnorm(10,70,sqrt(100))</code></pre>
-<pre><code> [1] 63.51232 63.55992 67.95561 74.90841 67.94663 71.90691 79.70024 67.14739
- [9] 68.96381 75.11255</code></pre>
-<p><br/></p>
-<ol start="4" style="list-style-type: decimal">
-<li>Para realizar un gráfico podemos utilizar el siguiente código</li>
-</ol>
-<pre class="r"><code># install.package(&quot;ggfortify&quot;)
-library(ggfortify)
-ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = &#39;blue&#39;)</code></pre>
-<p><img src="recurso303_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<pre class="r"><code># install.package(&quot;ggfortify&quot;)
-library(ggfortify)
-ggdistribution(pnorm, seq(-4, 4, 0.1), mean = 0, sd = 1)</code></pre>
-<p><img src="recurso303_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
 </div>
 </div>
 

@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/variables.jpg")
+knitr::include_graphics("img/variables1.jpg")
 ```
 Tomada de: https://pixabay.com/
 
@@ -24,8 +24,9 @@ El concepto de variable aleatoria constituye uno de los conceptos principales de
 ## **Variable aleatoria**
 
 <br/>
-
+<div class="content-box-blue">
 Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un numero . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable X, ($R_{_{X}}$) 
+</div>
 
 Las variables aleatorias se clasifican teniendo en cuenta las características de su rango en **DISCRETAS** o **CONTINUAS**. La distribución de una variable aleatoria será **UNIVARIADA** si se estudia el comportamiento de una sola variable y serán **MULTIVARIADA** si se considera el comportamiento conjunto de varias variables definidas sobre el mismo espacio muestral.
 
@@ -59,45 +60,30 @@ Esta función que asigna a cada valor de probabilidad  $f(x)$
 
 <br/>
 
-#### **Caso discreto**
-
-Para el caso de discreto se denomina **función de distribución de probabilidad** $f(x) = P(X = x)$ y debe cumplir las condiciones:
-    
-* $f(x) = P(X=x) \geq 0$
-* $\displaystyle\sum_{R_X} f(x) = 1$ 
-
-<br/><br/>  
-  
-#### **Caso continuo**  
-
-Para el caso continuo se denomina **función de densidad de probabilidad**
-
-* $f(x) \geq 0$
-* $\displaystyle\int\limits_{-\infty}^{+\infty}f(x)\:dx =1$
-* $P(a < X < b)=\displaystyle\int\limits_{a}^{b}f(x)\:dx$
-
+<div class="content-box-blue">
+|                                           |                                                 |
+| :-----------------------------------------| :-----------------------------------------------|
+| **Caso discreto**                         | **Caso continuo**                               |
+|Para el caso de discreto se denomina **función de distribución de probabilidad** $f(x) = P(X = x)$ y debe cumplir las condiciones: |Para el caso continuo se denomina **función de densidad de probabilidad**|
+| $f(x) = P(X=x) \geq 0$                    |  $f(x) \geq 0$                                               |
+| $\displaystyle\sum_{R_X} f(x) = 1$        |  $\displaystyle\int\limits_{-\infty}^{+\infty}f(x)\:dx =1$   |
+|                                           |  $P(a < X < b)=\displaystyle\int\limits_{a}^{b}f(x)\:dx$     |
+</div>
 
 <br/><br/><br/>
 
 ### **Función de probabilidad acumulada**
 
-Corresponde a la probabilidad acumulada para valores menores o iguales a un valor $x$
-$F(x)=P(X\leq x)$
+Corresponde a la probabilidad acumulada para valores menores o iguales a un valor $x$ 
 
 <br/>
 
-#### **Caso discreto**
-
-$F(x)=P(X\leq x)=\sum _{t \leq x}f(t)$
-
-<br/><br/>
-
-#### **Caso continuo**  
-
-$F_{_X}(x)=P(X \leq x)=\displaystyle\int \limits_{-\infty}^{x}f_{_X}(t)\:dt$
-
-$F(x) = P(X \leq x) = P(X < x)$
-
+<div class="content-box-blue">
+|                                           |                                                 |
+| :-----------------------------------------| :-----------------------------------------------|
+| **Caso discreto**                         | **Caso continuo**                               |
+|$F(x)=P(X\leq x) = \sum _{t \leq x}f(t)$   | $F_{_X}(x) = P(X \leq x)=\displaystyle\int \limits_{-\infty}^{x}f_{_X}(t)\:dt$
+</div>
 
 <br/><br/>
 
@@ -107,15 +93,12 @@ La esperanza matemática de una variable aleatoria X,  corresponde a un valor qu
 
 <br/><br/>
 
-#### **Caso discreto**
-
-$E(X) = \displaystyle\sum\limits_{x}^{}x_{i}f(x_{i})$
-
-<br/><br/>
-
-#### **Caso continuo** 
-
-$E(X) = \displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx$
+<div class="content-box-blue">
+|                                           |                                                 |
+| :-----------------------------------------| :-----------------------------------------------|
+| **Caso discreto**                         | **Caso continuo**                               |
+| $E(X) = \displaystyle\sum\limits_{x}^{}x_{i}f(x_{i})$ | $E(X) = \displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx$ |
+</div>
 
 <br/><br/>
 
@@ -141,17 +124,12 @@ $E(X) = \displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx$
 Sea $X$ una variable aleatoria discreta o continua. El momento de orden $k$ se define como:
 
 <br/>
-
-#### **Caso discreto**
-
-$E(X^{k}) = \displaystyle\sum\limits_{x}^{}x_{i}^{k}f(x_{i})$
-
-<br/>
-
-#### **Caso continuo** 
-
-$E(X^{k}) = \displaystyle\int\limits_{-\infty}^{+\infty}x^{k} f(x)dx$
-
+<div class="content-box-blue">
+|                                           |                                                 |
+| :-----------------------------------------| :-----------------------------------------------|
+| **Caso discreto**                         | **Caso continuo**                               |
+| $E(X^{k}) = \displaystyle\sum\limits_{x}^{}x_{i}^{k}f(x_{i})$ |  $E(X^{k}) = \displaystyle\int\limits_{-\infty}^{+\infty}x^{k} f(x)dx$ |
+</div>
 
 <br/><br/>
 
@@ -176,10 +154,11 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 
 <br/><br/>
 
-## **Modelos de probabilidad especiales**
+## **Algunos modelos de probabilidad especiales**
 
 <br/><br/>
 
+<div class="content-box-blue">
 |                 |                 |                 |                 |                 |                 | 
 |:----------------|:----------------|:----------------|:----------------|:-----------------:|:---------------|
 | **Discretas**   |                 |                 |                 |                 |                 | 
@@ -189,6 +168,8 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 | Lognormal       |   Beta          | Erlang          |  Gumbel         |  Kernel	        |                 |
 | t-Student       |   F de Fisher   | Ji-cuadrado     |                 |                 |                 |
 |                 |                 |                 |                 |                 |                 | 
+</div>
+
 <br/><br/>
 
 
@@ -215,23 +196,26 @@ La siguiene tabla presenta estas las funciones para los principales modelos tant
 <br/><br/>
 
 
-*modelo*            |  $F(x)$  |  $X_{p}$ |  $f(x)$  | aleatorio   |
---------------------|----------|----------|----------|-------------|
-binomial            | pbinom   | qbinom   | dbinom   | rbinom      |
-gometrico           | pgeom    | qgeom    | dgeom    | rgeom       |       
-hipergeometrico     | phyper   | qhyper   | dhyper   | rhyper      |
-Poisson             | ppois    | qpois    | dpois    | rpois       |
-binomial negativo   | pnbinom  | qnbinom  | dnbionom | rnbinom     |      
-beta                | pbeta    | qbeta    | dbeta    | rbeta       |
-Cauchy              | pcauchy  | qcauchy  | dcauchy  | rcauchy     |
-exponencial         | pexp     | qexp     | dexp     | rexp        |
-gamma               | pgamma   | qgamma   | dgamma   | rgamma      |
-lognormal           | plnorm   | qlnorm   | dlnorm   | rlnorm      |
-uniforme            | punif    | qunif    | dunif    | runif       |
-Weibull             | pweibull | qweibull | dweibull | rweibull    |
-t-Student           | pt       | qt       | dt       | rt          |
-Ji-cuadrado         | pchisq   | qchisq   | dchisq   | rchisq      |
-F                   | pf       | qf       | df       | rf          |
+|*modelo*            |  $F(x)$  |  $X_{p}$ |  $f(x)$  | aleatorio   |
+|:-------------------|:---------|:---------|:---------|:------------|
+|**discretos**       |          |          |          |             |
+|binomial            | pbinom   | qbinom   | dbinom   | rbinom      |
+|gometrico           | pgeom    | qgeom    | dgeom    | rgeom       |       
+|hipergeometrico     | phyper   | qhyper   | dhyper   | rhyper      |
+|Poisson             | ppois    | qpois    | dpois    | rpois       |
+|binomial negativo   | pnbinom  | qnbinom  | dnbionom | rnbinom     | 
+|**continuos**       |          |          |          |             |  
+|normal              | pnorm    | qnorm    | dnorm    | rnorm       |
+|beta                | pbeta    | qbeta    | dbeta    | rbeta       |
+|Cauchy              | pcauchy  | qcauchy  | dcauchy  | rcauchy     |
+|exponencial         | pexp     | qexp     | dexp     | rexp        |
+|gamma               | pgamma   | qgamma   | dgamma   | rgamma      |
+|lognormal           | plnorm   | qlnorm   | dlnorm   | rlnorm      |
+|uniforme            | punif    | qunif    | dunif    | runif       |
+|Weibull             | pweibull | qweibull | dweibull | rweibull    |
+|t-Student           | pt       | qt       | dt       | rt          |
+|Ji-cuadrado         | pchisq   | qchisq   | dchisq   | rchisq      |
+|F                   | pf       | qf       | df       | rf          |
 
 <br/><br/>
 
@@ -254,67 +238,90 @@ En cada caso si no recuerda las sintaxis de la función puede hacer uso de las a
 |	d        | densidad de probabilidad $P(X=x)$         |
 |	r        | variable aleatoria                        |
 
-<br/><br/>
+<br/><br/><br/>
 
 #### **Ejemplo 1**
 
-Sea una variables con distribución binomial con parámetros $n=20$ y $p=0.30$ , lo cual se puede simbolizar como : $X\sim b(x; 20,0.30)$
+##### **Modelo binomial**
 
+$$\begin{equation*}
+		f(x)=\left\lbrace
+		\begin{array}{lll}
+			\displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &,& x=0,1,2, \ldots, n   \\
+			&&\\
+			0 &,& \mbox{en otro caso}
+		\end{array}
+		\right.
+ \end{equation*}$$
 
-En este caso se requieren realizar los siguientes procesos:
+$$E[X]=np$$
 
+$$V[X]= np(1-p) $$
 <br/>
 
-1. Calcular la probabilidad de $$ P(X=7) = \dbinom{20}{7} 0.30^{7} (10.30)^{(20-7)}$$
+Sea una variables con distribución binomial con parámetros $n=10$ y $p=0.90$ , lo cual se puede simbolizar como : $X\sim b(x; 10,0.90)$|
 
-```{r}
-dbinom(7, 20, 0.30)
-```
-
-<br/>
-
-2. Calcular la probabilidad acumulada $$P(X \leq 7) = \displaystyle\sum_{x=0}^{x=7} \dbinom{20}{x} 0.30^{x} (1-0.30)^{(20-x)}$$
-
-```{r}
-pbinom(7, 20, 0.30)
-```
-
-<br/>
-
-3. Generar 15 números aleatorios a partir de esta distribución 
-
-```{r}
-rbinom(15,20,0.30)
-```
-
-
-4. Para construir una gráfica  se puede utilizar el siguiente código
-
-
-```{r, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5}
 library(ggplot2)
-x=0:20
-fx=dbinom(x,20,0.30)
+# modelo binomial  ok
+x=0:10
+fx=dbinom(x,10,0.90)
 dat=data.frame(x,fx)
-	
-ggplot(dat) + geom_point(aes(x, fx),colour = "orange", size = 4) +
-       	scale_x_continuous(limits = c(0, 20),
-	      breaks = 0:20, 
-      	labels = c('0','1','2','3','4','5','6','7','8','9','10','11','12','13','14', '15','16','17','18','19','20'))
+
+
+ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 3) +
+  scale_x_continuous(limits = c(0, 10),
+                     breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
+                     labels = c('0','1','2','3','4','5','6','7','8','9','10'))
 ```
+
+
+$$ P(X=7) = \dbinom{10}{7} 0.90^{7} (1-0.90)^{(10-7)}$$
+
+```{r}
+dbinom(7, 10, 0.90)
+```
+
+
+
+$$P(X \leq 7) = \displaystyle\sum_{x=0}^{x=7} \dbinom{10}{x} 0.90^{x} (1-0.90)^{(10-x)}$$
+
+```{r}
+pbinom(7, 10, 0.90)
+```
+
+
+
 
 <br/><br/>
 
 #### **Ejemplo 2**
 
-Ahora supongamos que se tiene una variable continua con distribución normal, con media 50 y varianza 100, es decir desviación estándar 10, lo cual se puede representar como $X\sim N(50,100)$.  
+<br/>
 
-En este caso vamos a hallar los siguientes valores: 
+##### **Modelo normal**
 
 <br/>
 
-1. Calcular la probabilidad de que un valor de $X$ sea menor o igual a 70, 
-$$P(X<70) =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{200 \pi }} \exp{\frac{1}{200 }(x-50)^{2}} \:dx$$ 
+$$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.1cm} e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}	 \hspace{.5cm}  -\infty \leq  x \leq \infty $$  
+
+$$E[X]=\mu$$
+$$V[X]=\sigma^{2}$$
+<br/><br/>
+
+Nornal estandar : $X \sim N(0,1)$
+
+```{r, echo=FALSE, fig.height=3.5}
+library(ggfortify)
+ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = 'blue')
+```
+
+<br/>
+
+Ahora supongamos que se tiene una variable continua con distribución normal, con media 50 y varianza 100, es decir desviación estándar 10, lo cual se puede representar como $X\sim N(50,100)$.  En este caso vamos a hallar los siguientes valores: 
+
+
+$$P(X<70) =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{200 \pi }} \exp{\frac{1}{200 }(x-50)^{2}} \:dx$$
 
 ```{r}
  pnorm(70,50,sqrt(100))
@@ -322,36 +329,10 @@ $$P(X<70) =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{200 \pi }} \exp{\fra
 
 <br/>
 
-2. Calcular la probabilidad de que la variable sea mayor a 70: $P(X>70)$
+$$P(X>70) =\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{200 \pi }} \exp{\frac{1}{200 }(x-50)^{2}} \:dx$$
 
 ```{r}
 pnorm(70,50,sqrt(100),lower.tail=FALSE)
 ```
 
-<br/>
-
-3. Genere 10 números aleatorios de la variables $X$
-
-
-```{r}
-rnorm(10,70,sqrt(100))
-```
-
-
-<br/>
-
-4. Para realizar un gráfico podemos utilizar el siguiente código
-
-```{r, fig.height=3.5}
-# install.package("ggfortify")
-library(ggfortify)
-ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = 'blue')
-```
-
-```{r, fig.height=3.5}
-# install.package("ggfortify")
-library(ggfortify)
-ggdistribution(pnorm, seq(-4, 4, 0.1), mean = 0, sd = 1)
-```
- 
 
