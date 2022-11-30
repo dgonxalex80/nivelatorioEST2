@@ -279,7 +279,7 @@ asociar dos paradigmas de evolución histórica segun J.A. Alberth &amp;
 B. Ruiz (2013) , El primero basada en el resultado de fenómenos
 aleatorios y por otro lado el proceso que relaciona los conjuntos de
 espacio muestral y sus respectivas probabilidades, para definir el
-concepto de variable aleatória como función de números reales y el
+concepto de variable aleatoria como función de números reales y el
 espacio para el sustento matemático.</p>
 <p><br/><br/><br/></p>
 <div id="variable-aleatoria" class="section level2">
@@ -308,19 +308,19 @@ mayoria de casos empieza por <strong>número de…</strong></p>
 <p>Se considera variable aleatoria <strong>CONTINUA</strong> si su rango
 <span class="math inline">\(R_{_{X}}\)</span> es un conjunto de valores
 infinito no numerable y generalmente corresponde a unión de intervalos.
-Estan asociadodas con la medición como son el tiempo, edad, precio,
+Están asociadas con la medición como son el tiempo, edad, precio,
 altura, distancia….</p>
 <p><br/></p>
 <p>En todos los casos se caracterizan por :</p>
 <ul>
 <li><span class="math inline">\(f(x)\)</span> : función de distribución
-de probabilidad (variables discretgas), función de distribución de
+de probabilidad (variables discretas), función de distribución de
 densidad (variables continuas)</li>
 <li><span class="math inline">\(F(x)\)</span> : función de probabilidad
 acumulada</li>
 <li><span class="math inline">\(E[X]\)</span> : valor esperado</li>
 <li><span class="math inline">\(V[X]\)</span> : varianza</li>
-<li>función caracteristica</li>
+<li>función característica</li>
 <li>función generadora de momentos</li>
 </ul>
 <p>entre otras</p>
@@ -590,7 +590,7 @@ función. <br/><br/></p>
 class="math inline">\(f(x)= P(X=x)\)</span>, para el caso discreto. En
 el caso de las variables continuas representa la función de densidad de
 probabilidad <span class="math inline">\(f(x)\)</span></p></li>
-<li><p><em>p</em> : función de probbilidad acumulada <span
+<li><p><em>p</em> : función de probabilidad acumulada <span
 class="math inline">\(F(x) = P(X \leq x)\)</span></p></li>
 <li><p><em>q</em> : percentil <span
 class="math inline">\(X_p\)</span></p></li>
@@ -749,7 +749,7 @@ aleatoria con distribución binomial)</p>
 <p>En cada caso si no recuerda las sintaxis de la función puede hacer
 uso de las ayudas de R así:</p>
 <p><br/><br/></p>
-<pre class="r"><code> help(&quot;pbinom&quot;)</code></pre>
+<pre class="r"><code>help(&quot;pbinom&quot;)</code></pre>
 <p><br/><br/></p>
 <table>
 <tbody>
@@ -779,14 +779,14 @@ class="math inline">\(P(X=x)\)</span></td>
 <div id="modelo-binomial" class="section level5">
 <h5><strong>Modelo binomial</strong></h5>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            \displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &amp;,&amp;
-x=0,1,2, \ldots, n   \\
-            &amp;&amp;\\
-            0 &amp;,&amp; \mbox{en otro caso}
-        \end{array}
-        \right.
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        \displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &amp;,&amp; x=0,1,2,
+\ldots, n   \\
+        &amp;&amp;\\
+        0 &amp;,&amp; \mbox{en otro caso}
+    \end{array}
+    \right.
 \end{equation*}\]</span></p>
 <p><span class="math display">\[E[X]=np\]</span></p>
 <p><span class="math display">\[V[X]= np(1-p) \]</span> <br/></p>
@@ -831,7 +831,7 @@ valores:</p>
 <p><span class="math display">\[P(X&lt;70)
 =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{200 \pi }}
 \exp{\frac{1}{200 }(x-50)^{2}} \:dx\]</span></p>
-<pre class="r"><code> pnorm(70,50,sqrt(100))</code></pre>
+<pre class="r"><code>pnorm(70,50,sqrt(100))</code></pre>
 <pre><code>[1] 0.9772499</code></pre>
 <p><br/></p>
 <p><span class="math display">\[P(X&gt;70)

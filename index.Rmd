@@ -47,7 +47,7 @@ Acción que puede ser replicada bajo las mismas condiciones y cuyo resultado no 
 <br/>
 
 <div class="content-box-blue">
-Conjunto de todos los posibles valores que puede tomar el experimento aleatorio. Este conjunto se nombra conuna letra mayuscula $S$ o tambien con **$\Omega$**
+Conjunto de todos los posibles valores que puede tomar el experimento aleatorio. Este conjunto se nombra con una letra mayúscula $S$ o también con **$\Omega$**
 </div>
 
 + $S_{1}$= $\{ (cc), (cs), (sc), (ss) \}$  
@@ -164,7 +164,7 @@ En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un 
 
 **Ejemplos**:
 
-* Probabilidad de tener exito en una operación terigio
+* Probabilidad de tener éxito en una operación de pterigio
 * Probabilidad de que se rompa la cadena del distribución de un auto
 
 <br/><br/><br/>
@@ -196,7 +196,4 @@ $$P(A \cup B) = P(A)+ P(B) - P(A \cap B)$$
 $$P(\phi) = 0$$   
 
 </div>
-
-
-
 

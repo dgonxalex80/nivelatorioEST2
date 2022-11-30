@@ -364,14 +364,14 @@ la ocurrencia del evento <span class="math inline">\(A\)</span>
 previamente al evento <span class="math inline">\(B\)</span>, no cambie
 su probabilidad, se podría escribir que <span
 class="math inline">\(P(B|A)=P(B)\)</span> y en este caso la regla
-indica que la probablidad conjunta de los eventos <span
+indica que la probabilidad conjunta de los eventos <span
 class="math inline">\(A\)</span> y <span
 class="math inline">\(B\)</span> es igual a la probabilidad de sus
 probabilidades marginales :</p>
 <div class="content-box-blue">
 <p>Dos eventos <span class="math inline">\(A\)</span> y <span
 class="math inline">\(B\)</span> son independientes si y solo si la
-probabiliad del evento <span class="math inline">\(B\)</span> no es
+probabilidad del evento <span class="math inline">\(B\)</span> no es
 afectada por la ocurrencia del evento A o viceversa.</p>
 <p><span class="math display">\[P(B|A) = \dfrac{P( A \cap B)}{P(A)} =
 P(B)\]</span></p>
@@ -390,7 +390,7 @@ class="math inline">\(A_{1}\)</span>, <span
 class="math inline">\(A_{2}\)</span>, <span
 class="math inline">\(A_{3}\)</span>, <span
 class="math inline">\(A_{4}\)</span> y <span
-class="math inline">\(A_{5}\)</span>). Sobre este espacio se defune un
+class="math inline">\(A_{5}\)</span>). Sobre este espacio se define un
 evento aleatorio <span class="math inline">\(B\)</span></p>
 <p><img src="img/particion2_1122.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Se puede resaltar los conjutos que conforman el evento <span
@@ -401,11 +401,11 @@ como :</p>
 <p><span class="math inline">\(B = (A_{1} \cap B) \cup (A_{2} \cap B)
 \cup (A_{3} \cap B) \cup (A_{4} \cap B) \cup (A_{5} \cap B)\)</span></p>
 <p><br/><br/></p>
-<p>En terminos de probabilidad tenemos</p>
+<p>En términos de probabilidad tenemos</p>
 <p><span class="math inline">\(P(B) = P(A_{1} \cap B) + P(A_{2} \cap B)
 + P(A_{3} \cap B) + P(A_{4} \cap B) + P(A_{5} \cap B)\)</span></p>
-<p>Este resultado se puede expresar en otros terminos de la regla de la
-multiplicacion:</p>
+<p>Este resultado se puede expresar en otros términos de la regla de la
+multiplicación:</p>
 <p><span class="math inline">\(P(B) = P(A_{1})P(B|A_{1}) +
 P(A_{2})P(B|A_{2}) +P(A_{3})P(B|A_{}) + P(A_{4})P(B|A_{4}) +
 P(A_{5})P(B|A_{5})\)</span></p>
@@ -418,7 +418,7 @@ class="math inline">\(E_{2}\)</span>, <span
 class="math inline">\(E_{3}\)</span>, <span
 class="math inline">\(\dots\)</span>, <span
 class="math inline">\(E_{k}\)</span>, que son mutuamente excluyentes y
-exaustivos y un evento <span class="math inline">\(A\)</span>, la
+exhaustivos y un evento <span class="math inline">\(A\)</span>, la
 probabilidad del evento <span class="math inline">\(A\)</span> se
 expresa como :</p>
 <p><span class="math display">\[P(A)=P(E_{1})P(A|E_{1})+
@@ -429,11 +429,11 @@ P(E_{k})P(A|E_{k})\]</span></p>
 </div>
 <div id="teorema-de-bayes" class="section level4">
 <h4><strong>Teorema de Bayes</strong></h4>
-<p>El <strong>teorema de Bayes</strong>, fué propuesto por el matemático
+<p>El <strong>teorema de Bayes</strong>, fue propuesto por el matemático
 británico Thomas Bayes, es una relación que permite determinar la
 probabilidad condicional . La probabilidad condicional es la
 probabilidad de que ocurra un resultado, basada en un resultado previo.
-El <strong>teorema de Bayes</strong> permite ajustar las aprobabilidades
+El <strong>teorema de Bayes</strong> permite ajustar las probabilidades
 dada nueva información.</p>
 <div class="content-box-blue">
 <p>Dado una serie de eventos que conforma una partición <span
@@ -442,7 +442,7 @@ class="math inline">\(E_{2}\)</span>, <span
 class="math inline">\(E_{3}\)</span>, <span
 class="math inline">\(\dots\)</span>, <span
 class="math inline">\(E_{k}\)</span> , que son mutuamente excluyentes y
-exhautivos, con probabilidad a priori <span
+exhaustivos, con probabilidad a priori <span
 class="math inline">\(P(E_{1})\)</span>, <span
 class="math inline">\(P(E_{2})\)</span> <span
 class="math inline">\(P(E_{3})\)</span>, <span
@@ -467,7 +467,7 @@ rownames(t)=c(&quot;A&quot;,&quot;A&#39;&quot;)
 colnames(t)=c(&quot;B&quot;,&quot;B&#39;&quot;)
 t</code></pre>
 <pre class="my-pre">
-     B  B'
+B  B'
 A  460  40
 A' 140 260
 </pre>
@@ -475,7 +475,7 @@ A' 140 260
 <pre class="r"><code># adiciona los totales por filas y por columnas
 addmargins(t)</code></pre>
 <pre class="my-pre"> 
-      B  B' Sum
+B  B' Sum
 A   460  40 500
 A'  140 260 400
 Sum 600 300 900
@@ -484,15 +484,15 @@ Sum 600 300 900
 <pre class="r"><code># probabilidades conjuntas
 prop.table(t)</code></pre>
 <pre class="my-pre">
-           B         B'
+B         B'
 A  0.5111111 0.04444444
 A' 0.1555556 0.28888889
 </pre>
 <p><br/><br/></p>
-<pre class="r"><code># probabilidades condiccionales por fila
+<pre class="r"><code># probabilidades condicionales por fila
 prop.table(t,1)</code></pre>
 <pre class="my-pre">
-      B   B'
+B   B'
 A  0.92 0.08
 A' 0.35 0.65
 </pre>
@@ -500,7 +500,7 @@ A' 0.35 0.65
 <pre class="r"><code># probabilidades condiccionales por columna
 prop.table(t,2)</code></pre>
 <pre class="my-pre">
-           B        B'
+B        B'
 A  0.7666667 0.1333333
 A' 0.2333333 0.8666667
 </pre>
@@ -517,7 +517,7 @@ library(titanic) #  cargar paquete
 data1=data(titanic_train)  # cargar los datos
 data2=data(titanic_test)  # cargar los datos 
 data=append(data1,data2)
- 
+
 # install.packages(&quot;rpart&quot;)
 # install.packages(&quot;rattle&quot;)
 #install.packages(&quot;rpart.plot&quot;)
@@ -527,8 +527,8 @@ library(rattle)
 library(rpart.plot)
 
 arbol=rpart( formula = Survived ~ Sex + Age + Pclass ,
-             data = titanic_train,
-             method = &quot;class&quot;)
+data = titanic_train,
+method = &quot;class&quot;)
 fancyRpartPlot(arbol)</code></pre>
 <p><img src="recurso302_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>

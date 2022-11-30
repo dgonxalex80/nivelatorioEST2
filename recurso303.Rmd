@@ -17,7 +17,7 @@ Tomada de: https://pixabay.com/
 
 <br/>
 
-El concepto de variable aleatoria constituye uno de los conceptos principales de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica segun J.A. Alberth & B. Ruiz (2013) , El primero basada en el resultado de fenómenos aleatorios y por otro lado el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatória como función de números reales y  el espacio para el sustento matemático. 
+El concepto de variable aleatoria constituye uno de los conceptos principales de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica segun J.A. Alberth & B. Ruiz (2013) , El primero basada en el resultado de fenómenos aleatorios y por otro lado el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatoria como función de números reales y  el espacio para el sustento matemático. 
 
 <br/><br/><br/>
 
@@ -35,17 +35,17 @@ Las variables aleatorias se clasifican teniendo en cuenta las características d
 
 Ahora una variable $X$ se considera **DISCRETA** si su rango $R_{_{X}}$ es un conjunto finito o infinito numerable de valores, por lo general procede del conteo y en la gran mayoria de casos empieza por **número de...**
 
-Se considera variable aleatoria  **CONTINUA** si su rango $R_{_{X}}$ es un conjunto de valores infinito no numerable y generalmente corresponde a unión de intervalos. Estan asociadodas con la medición como son el tiempo, edad, precio, altura, distancia....
+Se considera variable aleatoria  **CONTINUA** si su rango $R_{_{X}}$ es un conjunto de valores infinito no numerable y generalmente corresponde a unión de intervalos. Están asociadas con la medición como son el tiempo, edad, precio, altura, distancia....
 
 <br/>
 
 En todos los casos se caracterizan por : 
 
-* $f(x)$ : función de distribución de probabilidad (variables discretgas), función de distribución de densidad (variables continuas)
+* $f(x)$ : función de distribución de probabilidad (variables discretas), función de distribución de densidad (variables continuas)
 * $F(x)$ : función de probabilidad acumulada
 * $E[X]$ : valor esperado
 * $V[X]$ : varianza
-* función caracteristica
+* función característica
 * función generadora de momentos
 
 entre otras
@@ -183,7 +183,7 @@ La primera parte es una letra que identifica el propósito de la función.
 
 + *d* : función de distribución de probabilidad $f(x)= P(X=x)$, para el caso discreto. En el caso de las variables continuas representa la función de densidad de probabilidad $f(x)$
 
-+ *p* : función de probbilidad acumulada $F(x) = P(X \leq x)$
++ *p* : función de probabilidad acumulada $F(x) = P(X \leq x)$
 
 + *q* : percentil $X_p$
 
@@ -226,7 +226,7 @@ En cada caso si no recuerda las sintaxis de la función puede hacer uso de las a
 <br/><br/>
 
 ```{r}
- help("pbinom")
+help("pbinom")
 ```
 
 <br/><br/>
@@ -245,14 +245,14 @@ En cada caso si no recuerda las sintaxis de la función puede hacer uso de las a
 ##### **Modelo binomial**
 
 $$\begin{equation*}
-		f(x)=\left\lbrace
-		\begin{array}{lll}
-			\displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &,& x=0,1,2, \ldots, n   \\
-			&&\\
-			0 &,& \mbox{en otro caso}
-		\end{array}
-		\right.
- \end{equation*}$$
+	f(x)=\left\lbrace
+	\begin{array}{lll}
+		\displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &,& x=0,1,2, \ldots, n   \\
+		&&\\
+		0 &,& \mbox{en otro caso}
+	\end{array}
+	\right.
+\end{equation*}$$
 
 $$E[X]=np$$
 
@@ -270,9 +270,9 @@ dat=data.frame(x,fx)
 
 
 ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 3) +
-  scale_x_continuous(limits = c(0, 10),
-                     breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
-                     labels = c('0','1','2','3','4','5','6','7','8','9','10'))
+scale_x_continuous(limits = c(0, 10),
+breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
+labels = c('0','1','2','3','4','5','6','7','8','9','10'))
 ```
 
 
@@ -324,7 +324,7 @@ Ahora supongamos que se tiene una variable continua con distribución normal, co
 $$P(X<70) =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{200 \pi }} \exp{\frac{1}{200 }(x-50)^{2}} \:dx$$
 
 ```{r}
- pnorm(70,50,sqrt(100))
+pnorm(70,50,sqrt(100))
 ```
 
 <br/>
