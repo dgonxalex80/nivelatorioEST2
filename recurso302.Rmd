@@ -64,7 +64,7 @@ Esta probabilidad ocurre cuando los dos eventos ocurren a la vez al mismo tiempo
 
 <br/>
 
-En la mayoría de los casos cuando queremos calcular una probabilidad conocemos eventos que los afectan. La probabilidades que toman información sobre la ocurrencia o no de eventos relacionados se les conoce como probabilidades condicionales
+En la mayoría de los casos cuando queremos calcular una probabilidad conocemos eventos que los afectan. A las probabilidades que toman información sobre la ocurrencia o no de eventos relacionados se les conoce como probabilidades condicionales.
 
 
 <div class="content-box-blue">
@@ -147,7 +147,7 @@ $$P(A)=P(E_{1})P(A|E_{1})+ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots P(E_{k}
 
 ### <span style="color:#FF7F00">**Teorema de Bayes**</span>
 
-El **teorema de Bayes**, fue propuesto por  el matemático británico Thomas Bayes, es una relación que permite determinar la probabilidad condicional . La probabilidad condicional es la probabilidad de que ocurra un resultado, basada en un resultado previo. El **teorema de Bayes** permite ajustar las probabilidades dada nueva información.
+El **teorema de Bayes**, fue propuesto por  el matemático británico Thomas Bayes, es una relación que permite determinar la probabilidad condicional. La probabilidad condicional es la probabilidad de que ocurra un resultado, basado en un resultado previo. El **teorema de Bayes** permite ajustar las probabilidades dada nueva información.
 
 <div class="content-box-blue">
 Dado una serie de eventos que conforma una partición $E_{1}$, $E_{2}$, $E_{3}$, $\dots$, $E_{k}$ , que son mutuamente excluyentes y exhaustivos, con probabilidad a priori $P(E_{1})$, $P(E_{2})$ $P(E_{3})$, $\dots$, $P(E_{k})$. Si ocurre un evento $A$, la probabilidad a posteriori de $E_{i}$ dados $A$, es la probabilidad condicional :
@@ -240,7 +240,7 @@ A' 0.2333333 0.8666667
 
 ### <span style="color:#FF7F00">**Aplicación**</span>
 
-Podemos representar las probabilidades mediante un árbol. Como ejemplo tomamos la base de datos del titanic contenida el el paquete `titanic` y calculamos la probabilidad de que un pasajero sobreviviera teniendo encuenta su sexo.
+Podemos representar las probabilidades mediante un árbol. Como ejemplo tomamos la base de datos del titanic contenida en el paquete `titanic` y calculamos la probabilidad de que un pasajero sobreviviera teniendo en cuenta su sexo.
 
 
 ```{r, message=FALSE}

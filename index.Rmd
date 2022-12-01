@@ -104,7 +104,7 @@ Algunos de los conjuntos se definen por extensión  ($S_{1}$, $S_{2}$ )y otros p
 
 <br/>
 <div class="content-box-blue">
-Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto se nombra con una letra mayúscula por lo general las primeras letras del alfabeto
+Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto, se nombra con una letra mayúscula por lo general las primeras letras del alfabeto
 </div>
 
 
@@ -114,7 +114,7 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto 
 | $A_{2}$   | Sacar un resultados es inferior a 4   | $A_{2}=\{(1,1),(1,2)(2,1)\}$
 | $A_{3}$   | Ganar el examen                       | $A_{3}=\{ x \in \mathbb{R} | 3.0 \leq x \leq 5.0 \}$
 | $A_{4}$   | Cumplir el objetivo de la salida      | $A_{4} =\{ 1 \}$
-| $A_{5}$   | Obtener más de 5 ensayos éxitos       | $A_{5}$= $\{ x \in \mathbb{N}| 6 \leq x \leq 20 \}$
+| $A_{5}$   | Obtener más de 5 ensayos exitosos     | $A_{5}$= $\{ x \in \mathbb{N}| 6 \leq x \leq 20 \}$
 
 <br/><br/>
 
@@ -129,7 +129,7 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto 
 
 <br/>
 
-Es el enfoque más antiguo de probabilidad y que está basado en el supuesto de eventos individuales igualmente probables. La probabilidad bajo ese enfoque para el evento $A$ se calcula como la fracción entre el número de elementos del conjunto $A$, $n(A)$ y el número de elementos del espacio muestral $n(S)$: 
+Es el enfoque más antiguo de probabilidad y que está basado en el supuesto de eventos individuales igualmente probables. La probabilidad bajo este enfoque para el evento $A$ se calcula como la fracción entre el número de elementos del conjunto $A$, $n(A)$ y el número de elementos del espacio muestral $n(S)$: 
 
 
 $$P(A)=\dfrac{n(A)}{n(S)}$$
