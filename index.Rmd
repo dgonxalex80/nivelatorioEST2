@@ -21,7 +21,7 @@ Hablar de probabilidad reúne una serie de conceptos, algunos de ellos se presen
 
 <br/><br/><br/>
 
-### **Experimento aleatorio**
+### <span style="color:#FF7F00">**Experimento aleatorio**</span>
 
 <br/>
 
@@ -42,7 +42,7 @@ Acción que puede ser replicada bajo las mismas condiciones y cuyo resultado no 
 
 <br/><br/><br/>
 
-### **Espacio muestral** 
+### <span style="color:#FF7F00">**Espacio muestral**</span> 
 
 <br/>
 
@@ -100,7 +100,7 @@ Algunos de los conjuntos se definen por extensión  ($S_{1}$, $S_{2}$ )y otros p
 
 <br/><br/><br/>
 
-### **Evento aleatorio**
+### <span style="color:#FF7F00">**Evento aleatorio**</span>
 
 <br/>
 <div class="content-box-blue">
@@ -121,11 +121,11 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto 
 
 <br/><br/><br/>
 
-## **Enfoques de probabilidad**
+## <span style="color:#FF7F00">**Enfoques de probabilidad**</span>
 
 <br/><br/><br/>
 
-### **Enfoque clásico**  
+### <span style="color:#FF7F00">**Enfoque clásico**</span>  
 
 <br/>
 
@@ -141,7 +141,7 @@ $$P(A)=\dfrac{n(A)}{n(S)}$$
 
 <br/><br/><br/>
 
-### **Enfoque Frecuentista**
+### <span style="color:#FF7F00">**Enfoque Frecuentista**</span>
 
 <br/>
 
@@ -156,7 +156,7 @@ $$\lim_{n \to{+}\infty} P(A)=\Bigg[ \dfrac{\text{número de veces que ocurre A}}
 * Probabilidad de realizar más de 10 ventas en un dia
 <br/><br/><br/>
 
-### **Enfoque subjetivo** 
+### <span style="color:#FF7F00">**Enfoque subjetivo**</span> 
 
 <br/>
 
@@ -169,7 +169,7 @@ En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un 
 
 <br/><br/><br/>
 
-## **Axiomas de probabilidad**
+## <span style="color:#FF7F00">**Axiomas de probabilidad**</span>
 
 
 <div class="content-box-blue">

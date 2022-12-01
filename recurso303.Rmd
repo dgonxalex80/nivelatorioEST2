@@ -21,8 +21,7 @@ El concepto de variable aleatoria constituye uno de los conceptos principales de
 
 <br/><br/><br/>
 
-## **Variable aleatoria**
-
+## <span style="color:#FF7F00">**Variable aleatoria**</span>
 <br/>
 <div class="content-box-blue">
 Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un numero . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable X, ($R_{_{X}}$) 
@@ -52,7 +51,7 @@ entre otras
 
 <br/>
 
-### **Función de probabilidad**
+### <span style="color:#FF7F00"> **Función de probabilidad**</span>
 
 <br/>
 
@@ -72,7 +71,7 @@ Esta función que asigna a cada valor de probabilidad  $f(x)$
 
 <br/><br/><br/>
 
-### **Función de probabilidad acumulada**
+### <span style="color:#FF7F00"> **Función de probabilidad acumulada**</span>
 
 Corresponde a la probabilidad acumulada para valores menores o iguales a un valor $x$ 
 
@@ -87,7 +86,7 @@ Corresponde a la probabilidad acumulada para valores menores o iguales a un valo
 
 <br/><br/>
 
-### **Valor Esperado**
+### <span style="color:#FF7F00"> **Valor Esperado**</span>
 
 La esperanza matemática de una variable aleatoria X,  corresponde a un valor que representa el valor más probable que ocurra o la media población de la variable aleatoria denotada por $E[x]$ o tambien $\mu$
 
@@ -102,7 +101,7 @@ La esperanza matemática de una variable aleatoria X,  corresponde a un valor qu
 
 <br/><br/>
 
-#### **Propiedades del Valor Esperado**
+#### **Propiedades del Valor Esperado**</span>
 
 + $E(k) = k$, para todo numero real $k$.
 
@@ -117,7 +116,7 @@ La esperanza matemática de una variable aleatoria X,  corresponde a un valor qu
 
 <br/><br/>
 
-### **Varianza**
+### <span style="color:#FF7F00"> **Varianza**</span>
 
 <br/>
 
@@ -154,7 +153,7 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 
 <br/><br/>
 
-## **Algunos modelos de probabilidad especiales**
+## <span style="color:#FF7F00"> **Algunos modelos de probabilidad especiales**</span>
 
 <br/><br/>
 
@@ -173,7 +172,7 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 <br/><br/>
 
 
-## **Código R**
+## <span style="color:#FF7F00"> **Código R**</span>
 
 
 En $R$ los nombre de las funciones diseñadas para los cálculos requeridos están conformadas por dos partes:
