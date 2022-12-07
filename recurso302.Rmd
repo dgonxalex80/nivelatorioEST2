@@ -244,23 +244,49 @@ Podemos representar las probabilidades mediante un árbol. Como ejemplo tomamos 
 
 
 ```{r, message=FALSE}
-#  install.packages("titanic")  # instalar paquete titatic
-library(titanic) #  cargar paquete
-data1=data(titanic_train)  # cargar los datos
-data2=data(titanic_test)  # cargar los datos 
-data=append(data1,data2)
-
 # install.packages("rpart")
 # install.packages("rattle")
 #install.packages("rpart.plot")
-
+library(readr)
 library(rpart)
 library(rattle)
 library(rpart.plot)
 
-arbol=rpart( formula = Survived ~ Sex + Age + Pclass ,
-data = titanic_train,
-method = "class")
-fancyRpartPlot(arbol)
+titanic3 <- read_csv("~/Documentos/Javeriana/Ms en Ciencia de Datos/repository/dataset/titanic3.csv")
+
+sobrevive.model <- rpart(survived ~ ., data = ptitanic, cp = .02)
+rpart.plot(sobrevive.model,
+           main = "Árbol de sobrevivientes Titanic")
+
 ```
 
+<br/><br/>
+
+En el primer nivel de información hace referencia a la probabilidad de sobrevivir (0.38)
+
+```{r, eval=FALSE}
+t=table(titanic3$survived)
+prop.table(t)
+```
+
+* $P(\text{survived} = 1) = 0.381971$ : probabilidad de sobrevivir en un accidente similar
+
+* $P(\text{survived} = 0) = 0.618029$ : probabilidad de no sobrevivir en un acdidente similar
+
+<br/><br/>
+
+En el segundo nivel se representan las probabilidades condicionales apartir de conocer que el pasajero sobrevivió, con relacin al sexo . ´`
+
+```{r, eval=FALSE}
+t2=table(titanic3$survived,titanic3$sex)
+prop.table(t2,2)
+```
+
+
+* $P(\text{female}|\text{survived}) = 0.72746778$ : si conocemos que sobrevivió, la probabilidad de que sea una mujer
+
+* $P(\text{male}|\text{survived}) = 0.1909846$ : si se conoce que sobrevivió, la probabilidad de que sea hombre 
+
+<br/><br/>
+
+El árbol presenta las probabilidades condicionales a medida que se desagregan las ramas

@@ -153,6 +153,73 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 
 <br/><br/>
 
+#### **Ejemplo 1**
+
+<div class="content-box-gray">
+Modelo discreto : binomial
+
+<br/>
+
+Función de distribución de probabilidad
+
+$$\begin{equation*}
+		f(x)=\left\lbrace
+		\begin{array}{lll}
+			\displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &,& x=0,1,2, \ldots, n   \\
+			&&\\
+			0 &,& \mbox{en otro caso}
+		\end{array}
+		\right.
+ \end{equation*}$$
+
+<br/>
+
+Valor esperado
+
+$$E[X]=np$$
+
+<br/>
+
+Varianza
+
+$$V[X]= np(1-p) $$
+</div>
+
+<br/><br/>
+
+
+#### **Ejemplo 2**
+
+<div class="content-box-gray">
+Modelo discreto : normal 
+```{r}
+
+```
+
+<br/>
+
+Función de densidad de probabilidad
+
+<br/>
+
+$$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.1cm} \exp{\Bigg\{-\Bigg(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\Bigg)}\Bigg\}	 \hspace{.5cm}  -\infty \leq  x \leq \infty $$  
+	
+
+<br/>
+
+Valor esperado
+
+
+$$E[X]=\mu$$
+<br/>
+
+Varianza
+
+$$V[X]=\sigma^{2}$$
+</div>
+
+<br/><br/>
+
 ## <span style="color:#FF7F00"> **Algunos modelos de probabilidad especiales**</span>
 
 <br/><br/>
@@ -160,9 +227,9 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 <div class="content-box-blue">
 |                 |                 |                 |                 |                 |                 | 
 |:----------------|:----------------|:----------------|:----------------|:-----------------:|:---------------|
-| **Discretas**   |                 |                 |                 |                 |                 | 
+| **Discretos**   |                 |                 |                 |                 |                 | 
 | Bernoulli       |   Binomial      | Poisson         | Hipergeométrico | Geométrico      | Binomial negativo|
-|**Continuas**    |                 |                 |                 |                 |                 | 
+|**Continuos**    |                 |                 |                 |                 |                 | 
 | Uniforme        |   Normal        | Exponencial     |  Gamma          |  Weibull        | Cauchy          |
 | Lognormal       |   Beta          | Erlang          |  Gumbel         |  Kernel	        |                 |
 | t-Student       |   F de Fisher   | Ji-cuadrado     |                 |                 |                 |
@@ -239,7 +306,7 @@ help("pbinom")
 
 <br/><br/><br/>
 
-#### **Ejemplo 1**
+#### **Ejemplo 3**
 
 ##### **Modelo binomial**
 
@@ -294,7 +361,7 @@ pbinom(7, 10, 0.90)
 
 <br/><br/>
 
-#### **Ejemplo 2**
+#### **Ejemplo 4**
 
 <br/>
 

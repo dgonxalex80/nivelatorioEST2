@@ -14,7 +14,7 @@
 
 <title> Variables aleatorias</title>
 
-<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -505,6 +505,50 @@ b^{2}V[Y]\)</span></p></li>
 </ul>
 <p><br/><br/></p>
 </div>
+<div id="ejemplo-1" class="section level4">
+<h4><strong>Ejemplo 1</strong></h4>
+<div class="content-box-gray">
+<p>Modelo discreto : binomial</p>
+<p><br/></p>
+<p>Función de distribución de probabilidad</p>
+<p><span class="math display">\[\begin{equation*}
+        f(x)=\left\lbrace
+        \begin{array}{lll}
+            \displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &amp;,&amp;
+x=0,1,2, \ldots, n   \\
+            &amp;&amp;\\
+            0 &amp;,&amp; \mbox{en otro caso}
+        \end{array}
+        \right.
+\end{equation*}\]</span></p>
+<p><br/></p>
+<p>Valor esperado</p>
+<p><span class="math display">\[E[X]=np\]</span></p>
+<p><br/></p>
+<p>Varianza</p>
+<p><span class="math display">\[V[X]= np(1-p) \]</span></p>
+</div>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo-2" class="section level4">
+<h4><strong>Ejemplo 2</strong></h4>
+<div class="content-box-gray">
+<p>Modelo discreto : normal</p>
+<p><br/></p>
+<p>Función de densidad de probabilidad</p>
+<p><br/></p>
+<p><span class="math display">\[f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}}
+\hspace{.1cm}
+\exp{\Bigg\{-\Bigg(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\Bigg)}\Bigg\}    \hspace{.5cm}  -\infty
+\leq  x \leq \infty \]</span></p>
+<p><br/></p>
+<p>Valor esperado</p>
+<p><span class="math display">\[E[X]=\mu\]</span> <br/></p>
+<p>Varianza</p>
+<p><span class="math display">\[V[X]=\sigma^{2}\]</span></p>
+</div>
+<p><br/><br/></p>
+</div>
 </div>
 </div>
 <div id="algunos-modelos-de-probabilidad-especiales"
@@ -524,7 +568,7 @@ especiales</strong></span></h2>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><strong>Discretas</strong></td>
+<td align="left"><strong>Discretos</strong></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -540,7 +584,7 @@ especiales</strong></span></h2>
 <td align="left">Binomial negativo</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>Continuas</strong></td>
+<td align="left"><strong>Continuos</strong></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -780,8 +824,8 @@ class="math inline">\(P(X=x)\)</span></td>
 </tbody>
 </table>
 <p><br/><br/><br/></p>
-<div id="ejemplo-1" class="section level4">
-<h4><strong>Ejemplo 1</strong></h4>
+<div id="ejemplo-3" class="section level4">
+<h4><strong>Ejemplo 3</strong></h4>
 <div id="modelo-binomial" class="section level5">
 <h5><strong>Modelo binomial</strong></h5>
 <p><span class="math display">\[\begin{equation*}
@@ -800,7 +844,7 @@ class="math inline">\(P(X=x)\)</span></td>
 class="math inline">\(n=10\)</span> y <span
 class="math inline">\(p=0.90\)</span> , lo cual se puede simbolizar como
 : <span class="math inline">\(X\sim b(x; 10,0.90)\)</span>|</p>
-<p><img src="recurso303_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="recurso303_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p><span class="math display">\[ P(X=7) = \dbinom{10}{7} 0.90^{7}
 (1-0.90)^{(10-7)}\]</span></p>
 <pre class="r"><code>dbinom(7, 10, 0.90)</code></pre>
@@ -813,8 +857,8 @@ class="math inline">\(p=0.90\)</span> , lo cual se puede simbolizar como
 <p><br/><br/></p>
 </div>
 </div>
-<div id="ejemplo-2" class="section level4">
-<h4><strong>Ejemplo 2</strong></h4>
+<div id="ejemplo-4" class="section level4">
+<h4><strong>Ejemplo 4</strong></h4>
 <p><br/></p>
 <div id="modelo-normal" class="section level5">
 <h5><strong>Modelo normal</strong></h5>
@@ -827,7 +871,7 @@ e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}  \hspace{.5cm}  -\infty
 class="math display">\[V[X]=\sigma^{2}\]</span> <br/><br/></p>
 <p>Nornal estandar : <span class="math inline">\(X \sim
 N(0,1)\)</span></p>
-<p><img src="recurso303_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="recurso303_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p><br/></p>
 <p>Ahora supongamos que se tiene una variable continua con distribución
 normal, con media 50 y varianza 100, es decir desviación estándar 10, lo

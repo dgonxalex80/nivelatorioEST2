@@ -14,7 +14,7 @@
 
 <title> Tipos de probabilidad</title>
 
-<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -518,25 +518,50 @@ A' 0.2333333 0.8666667
 ejemplo tomamos la base de datos del titanic contenida en el paquete
 <code>titanic</code> y calculamos la probabilidad de que un pasajero
 sobreviviera teniendo en cuenta su sexo.</p>
-<pre class="r"><code>#  install.packages(&quot;titanic&quot;)  # instalar paquete titatic
-library(titanic) #  cargar paquete
-data1=data(titanic_train)  # cargar los datos
-data2=data(titanic_test)  # cargar los datos 
-data=append(data1,data2)
-
-# install.packages(&quot;rpart&quot;)
+<pre class="r"><code># install.packages(&quot;rpart&quot;)
 # install.packages(&quot;rattle&quot;)
 #install.packages(&quot;rpart.plot&quot;)
-
+library(readr)
 library(rpart)
 library(rattle)
 library(rpart.plot)
 
-arbol=rpart( formula = Survived ~ Sex + Age + Pclass ,
-data = titanic_train,
-method = &quot;class&quot;)
-fancyRpartPlot(arbol)</code></pre>
+titanic3 &lt;- read_csv(&quot;~/Documentos/Javeriana/Ms en Ciencia de Datos/repository/dataset/titanic3.csv&quot;)
+
+sobrevive.model &lt;- rpart(survived ~ ., data = ptitanic, cp = .02)
+rpart.plot(sobrevive.model,
+           main = &quot;Árbol de sobrevivientes Titanic&quot;)</code></pre>
 <p><img src="recurso302_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p>En el primer nivel de información hace referencia a la probabilidad
+de sobrevivir (0.38)</p>
+<pre class="r"><code>t=table(titanic3$survived)
+prop.table(t)</code></pre>
+<ul>
+<li><p><span class="math inline">\(P(\text{survived} = 1) =
+0.381971\)</span> : probabilidad de sobrevivir en un accidente
+similar</p></li>
+<li><p><span class="math inline">\(P(\text{survived} = 0) =
+0.618029\)</span> : probabilidad de no sobrevivir en un acdidente
+similar</p></li>
+</ul>
+<p><br/><br/></p>
+<p>En el segundo nivel se representan las probabilidades condicionales
+apartir de conocer que el pasajero sobrevivió, con relacin al sexo .
+´`</p>
+<pre class="r"><code>t2=table(titanic3$survived,titanic3$sex)
+prop.table(t2,2)</code></pre>
+<ul>
+<li><p><span class="math inline">\(P(\text{female}|\text{survived}) =
+0.72746778\)</span> : si conocemos que sobrevivió, la probabilidad de
+que sea una mujer</p></li>
+<li><p><span class="math inline">\(P(\text{male}|\text{survived}) =
+0.1909846\)</span> : si se conoce que sobrevivió, la probabilidad de que
+sea hombre</p></li>
+</ul>
+<p><br/><br/></p>
+<p>El árbol presenta las probabilidades condicionales a medida que se
+desagregan las ramas</p>
 </div>
 
 

@@ -132,12 +132,14 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto,
 Es el enfoque más antiguo de probabilidad y que está basado en el supuesto de eventos individuales igualmente probables. La probabilidad bajo este enfoque para el evento $A$ se calcula como la fracción entre el número de elementos del conjunto $A$, $n(A)$ y el número de elementos del espacio muestral $n(S)$: 
 
 
+<div class="content-box-blue">
 $$P(A)=\dfrac{n(A)}{n(S)}$$
+</div>
 
 **Ejemplos**: 
 
 * Probabilidad de sacar un doble seis al lanzar dos dados
-* Probabilidad de elegir un as en una baraja de cartas
+* Probabilidad de elegir un `As` en una baraja de cartas
 
 <br/><br/><br/>
 
@@ -147,8 +149,9 @@ $$P(A)=\dfrac{n(A)}{n(S)}$$
 
 Este enfoque basa su cálculo en la frecuencia con que ocurre un evento en un tamaño de muestra determinado $n$.
 
-
+<div class="content-box-blue">
 $$\lim_{n \to{+}\infty} P(A)=\Bigg[ \dfrac{\text{número de veces que ocurre A}}{n} \Bigg]$$
+</div>
 
 **Ejemplos**:
 
@@ -162,6 +165,10 @@ $$\lim_{n \to{+}\infty} P(A)=\Bigg[ \dfrac{\text{número de veces que ocurre A}}
 
 En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un médico, un ingeniero, un abogado, un economista, un biólogo, un estadístico, un mecánico ......
 
+<div class="content-box-blue">
+$$P(A)   \gets \text{Experto}$$  
+</div>
+
 **Ejemplos**:
 
 * Probabilidad de tener éxito en una operación de pterigio
@@ -170,6 +177,8 @@ En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un 
 <br/><br/><br/>
 
 ## <span style="color:#FF7F00">**Axiomas de probabilidad**</span>
+
+Los siuientes cinco axiomas corresponde a las condiciones mínimas que se deben verificar sobre los elemtos basícos ($E$, $S$, $A$). Fueron formuladas por Andréi Kolmogórov (1933) 
 
 
 <div class="content-box-blue">
