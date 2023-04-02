@@ -14,7 +14,7 @@
 
 <title> Tipos de probabilidad</title>
 
-<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -280,7 +280,7 @@ los valores obtenidos para dos características cualitativas
 <p><img src="img/tabla4_22.png" width="40%" style="display: block; margin: auto;" /></p>
 <p><br/><br/><br/></p>
 <div id="probabilidad-marginal-o-simple" class="section level3">
-<h3><span style="color:#FF7F00"><strong>Probabilidad marginal o
+<h3><span style="color:#034a94"><strong>Probabilidad marginal o
 simple</strong></span></h3>
 <p>Corresponde a la probabilidad de que ocurra un evento simple. También
 se le llama marginal debido a que aparece en el margen de las tablas o
@@ -303,7 +303,7 @@ class="math inline">\(B\)</span></p></li>
 <p><br/><br/><br/></p>
 </div>
 <div id="probabilidad-conjunta" class="section level3">
-<h3><span style="color:#FF7F00"><strong>Probabilidad
+<h3><span style="color:#034a94"><strong>Probabilidad
 conjunta</strong></span></h3>
 <p>Esta probabilidad ocurre cuando los dos eventos ocurren a la vez al
 mismo tiempo</p>
@@ -329,7 +329,7 @@ class="math inline">\(B\)</span></p></li>
 <p><br/><br/><br/></p>
 </div>
 <div id="probabilidad-condicional" class="section level3">
-<h3><span style="color:#FF7F00"><strong>Probabilidad
+<h3><span style="color:#034a94"><strong>Probabilidad
 condicional</strong></span></h3>
 <p><br/></p>
 <p>En la mayoría de los casos cuando queremos calcular una probabilidad
@@ -357,7 +357,7 @@ dado que ya sucedió <span class="math inline">\(A\)</span> es de
 <p><br/><br/><br/></p>
 </div>
 <div id="independencia-de-eventos" class="section level3">
-<h3><span style="color:#FF7F00"><strong>Independencia de
+<h3><span style="color:#034a94"><strong>Independencia de
 eventos</strong></span></h3>
 <p>En el caso que se requiera evaluar si dos eventos son independientes
 o no, partiendo de la definición de probabilidad condicional se podría
@@ -385,7 +385,7 @@ P(B)\]</span></p>
 <p><br/><br/><br/></p>
 </div>
 <div id="probabilidad-total" class="section level3">
-<h3><span style="color:#FF7F00"><strong>Probabilidad
+<h3><span style="color:#034a94"><strong>Probabilidad
 total</strong></span></h3>
 <p>Para explicar el concepto de probabilidad total, supongamos que el
 espacio muestral está formado por elementos que pueden ser representados
@@ -433,7 +433,7 @@ P(E_{k})P(A|E_{k})\]</span></p>
 <p><br/><br/><br/></p>
 </div>
 <div id="teorema-de-bayes" class="section level3">
-<h3><span style="color:#FF7F00"><strong>Teorema de
+<h3><span style="color:#034a94"><strong>Teorema de
 Bayes</strong></span></h3>
 <p>El <strong>teorema de Bayes</strong>, fue propuesto por el matemático
 británico Thomas Bayes, es una relación que permite determinar la
@@ -464,7 +464,7 @@ P(E_{j})P(A|E_{j})} \]</span></p>
 <p><br/><br/><br/></p>
 </div>
 <div id="código-r" class="section level3">
-<h3><span style="color:#FF7F00"><strong>Código R</strong></span></h3>
+<h3><span style="color:#034a94"><strong>Código R</strong></span></h3>
 <p><br/></p>
 <pre class="r"><code># se crea la tabla 
 x=c(460,140,40,260)
@@ -513,7 +513,7 @@ A' 0.2333333 0.8666667
 <p><br/><br/></p>
 </div>
 <div id="aplicación" class="section level3">
-<h3><span style="color:#FF7F00"><strong>Aplicación</strong></span></h3>
+<h3><span style="color:#034a94"><strong>Aplicación</strong></span></h3>
 <p>Podemos representar las probabilidades mediante un árbol. Como
 ejemplo tomamos la base de datos del titanic contenida en el paquete
 <code>titanic</code> y calculamos la probabilidad de que un pasajero
@@ -525,8 +525,8 @@ library(readr)
 library(rpart)
 library(rattle)
 library(rpart.plot)
-
-titanic3 &lt;- read_csv(&quot;~/Documentos/Javeriana/Ms en Ciencia de Datos/repository/dataset/titanic3.csv&quot;)
+library(paqueteNIV)
+data(&quot;titanic3&quot;)
 
 sobrevive.model &lt;- rpart(survived ~ ., data = ptitanic, cp = .02)
 rpart.plot(sobrevive.model,

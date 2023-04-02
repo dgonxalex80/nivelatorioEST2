@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/variables1.jpg")
 ```
-Tomada de: https://pixabay.com/
+<sub>Tomada de: https://pixabay.com/ </sub>
 
 <br/>
 
@@ -21,7 +21,7 @@ El concepto de variable aleatoria constituye uno de los conceptos principales de
 
 <br/><br/><br/>
 
-## <span style="color:#FF7F00">**Variable aleatoria**</span>
+## <span style="color:#034a94">**Variable aleatoria**</span>
 <br/>
 <div class="content-box-blue">
 Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un numero . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable X, ($R_{_{X}}$) 
@@ -51,7 +51,7 @@ entre otras
 
 <br/>
 
-### <span style="color:#FF7F00"> **Función de probabilidad**</span>
+### <span style="color:#034a94">**Función de probabilidad**</span>
 
 <br/>
 
@@ -71,7 +71,7 @@ Esta función que asigna a cada valor de probabilidad  $f(x)$
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00"> **Función de probabilidad acumulada**</span>
+### <span style="color:#034a94"> **Función de probabilidad acumulada**</span>
 
 Corresponde a la probabilidad acumulada para valores menores o iguales a un valor $x$ 
 
@@ -86,7 +86,7 @@ Corresponde a la probabilidad acumulada para valores menores o iguales a un valo
 
 <br/><br/>
 
-### <span style="color:#FF7F00"> **Valor Esperado**</span>
+### <span style="color:#034a94">**Valor Esperado**</span>
 
 La esperanza matemática de una variable aleatoria X,  corresponde a un valor que representa el valor más probable que ocurra o la media población de la variable aleatoria denotada por $E[x]$ o también $\mu$.
 
@@ -101,7 +101,7 @@ La esperanza matemática de una variable aleatoria X,  corresponde a un valor qu
 
 <br/><br/>
 
-#### **Propiedades del Valor Esperado**</span>
+#### <span style="color:#034a94">**Propiedades del Valor Esperado**</span>
 
 + $E(k) = k$, para todo numero real $k$.
 
@@ -116,7 +116,7 @@ La esperanza matemática de una variable aleatoria X,  corresponde a un valor qu
 
 <br/><br/>
 
-### <span style="color:#FF7F00"> **Varianza**</span>
+### <span style="color:#034a94"> **Varianza**</span>
 
 <br/>
 
@@ -138,7 +138,7 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 
 <br/><br/>
 
-#### **Propiedades de la varianza**
+#### <span style="color:#034a94">**Propiedades de la varianza**</span>
 
 + $V[X] \geq 0$
 
@@ -153,10 +153,11 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 
 <br/><br/>
 
-#### **Ejemplo 1**
-
 <div class="content-box-gray">
-Modelo discreto : binomial
+### <span style="color:#FF7F00"> **Ejemplo**</span> 
+
+
+Modelo discreto : **binomial**
 
 <br/>
 
@@ -187,11 +188,10 @@ $$V[X]= np(1-p) $$
 
 <br/><br/>
 
-
-#### **Ejemplo 2**
-
 <div class="content-box-gray">
-Modelo discreto : normal 
+### <span style="color:#FF7F00"> **Ejemplo**</span> 
+
+Modelo continuo : **normal** 
 ```{r}
 
 ```
@@ -220,7 +220,7 @@ $$V[X]=\sigma^{2}$$
 
 <br/><br/>
 
-## <span style="color:#FF7F00"> **Algunos modelos de probabilidad especiales**</span>
+## <span style="color:#034a94"> **Algunos modelos de probabilidad especiales**</span>
 
 <br/><br/>
 
@@ -239,7 +239,7 @@ $$V[X]=\sigma^{2}$$
 <br/><br/>
 
 
-## <span style="color:#FF7F00"> **Código R**</span>
+## <span style="color:#034a94">**Código R**</span>
 
 
 En $R$ los nombre de las funciones diseñadas para los cálculos requeridos están conformadas por dos partes:
@@ -306,9 +306,9 @@ help("pbinom")
 
 <br/><br/><br/>
 
-#### **Ejemplo 3**
+### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
-##### **Modelo binomial**
+### <span style="color:#034a94">**Modelo binomial**</span>
 
 $$\begin{equation*}
 	f(x)=\left\lbrace
@@ -335,7 +335,7 @@ fx=dbinom(x,10,0.90)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 3) +
+ggplot(dat) + geom_point(aes(x, fx),colour = "#034A94", size = 2) +
 scale_x_continuous(limits = c(0, 10),
 breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
 labels = c('0','1','2','3','4','5','6','7','8','9','10'))
@@ -361,11 +361,11 @@ pbinom(7, 10, 0.90)
 
 <br/><br/>
 
-#### **Ejemplo 4**
+### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
 <br/>
 
-##### **Modelo normal**
+### <span style="color:#034a94">**Modelo normal**</span>
 
 <br/>
 

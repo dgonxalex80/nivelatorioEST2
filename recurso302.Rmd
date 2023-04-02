@@ -7,6 +7,12 @@ css: style.css
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
+
+# install.packages("devtools") # solo una vez
+# devtools::install_github("dgonxalex80/paqueteNIV") # descarga paqueteDEG
+library(paqueteNIV) # activa paqueteDEG
+
+
 ```
 
 <br/><br/>
@@ -27,7 +33,7 @@ knitr::include_graphics("img/tabla4_22.png")
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Probabilidad marginal o simple**</span>
+### <span style="color:#034a94">**Probabilidad marginal o simple**</span>
 
 Corresponde a la probabilidad de que ocurra un evento simple. También se le llama marginal debido a que aparece en el margen de las tablas o totales por fila o por columna
 
@@ -44,7 +50,7 @@ Corresponde a la probabilidad de que ocurra un evento simple. También se le lla
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Probabilidad conjunta**</span>
+### <span style="color:#034a94">**Probabilidad conjunta**</span>
 
 Esta probabilidad ocurre cuando los dos eventos ocurren a la vez al mismo tiempo
 
@@ -60,7 +66,7 @@ Esta probabilidad ocurre cuando los dos eventos ocurren a la vez al mismo tiempo
 
 <br/><br/><br/>
 
-###  <span style="color:#FF7F00">**Probabilidad condicional**</span>
+###  <span style="color:#034a94">**Probabilidad condicional**</span>
 
 <br/>
 
@@ -88,7 +94,7 @@ La probabilidad de que ocurra $B$ dado que ya sucedió $A$ es de 0.767
 <br/><br/><br/>
 
 
-### <span style="color:#FF7F00">**Independencia de eventos**</span>
+### <span style="color:#034a94">**Independencia de eventos**</span>
 
 En el caso que se requiera evaluar si dos eventos son independientes o no, partiendo de la definición de probabilidad condicional se podría obtener la siguiente regla al despejar $P(A \cap B)$ de la ecuación para obtener : $P(A \cap B) = P(A)∗P(B|A)$. En caso de que la ocurrencia del evento $A$ previamente al evento $B$, no cambie su probabilidad, se podría escribir que $P(B|A)=P(B)$ y en este caso la regla indica que la probabilidad conjunta de los eventos $A$ y $B$ es igual a la probabilidad de sus probabilidades marginales :
 
@@ -105,7 +111,7 @@ $$P(A∩B)= P(A) \hspace{.2cm} P(B|A) = P(A) \hspace{.2cm} P(B)$$
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Probabilidad total**</span>
+### <span style="color:#034a94">**Probabilidad total**</span>
 
 Para explicar el concepto de probabilidad total, supongamos que el espacio muestral está formado por elementos que pueden ser representados por una partición del conjunto $S$. Para este ejemplo con 5 particiones ($A_{1}$, $A_{2}$, $A_{3}$, $A_{4}$ y $A_{5}$).   Sobre este espacio se define un evento aleatorio $B$ 
 
@@ -145,7 +151,7 @@ $$P(A)=P(E_{1})P(A|E_{1})+ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots P(E_{k}
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Teorema de Bayes**</span>
+### <span style="color:#034a94">**Teorema de Bayes**</span>
 
 El **teorema de Bayes**, fue propuesto por  el matemático británico Thomas Bayes, es una relación que permite determinar la probabilidad condicional. La probabilidad condicional es la probabilidad de que ocurra un resultado, basado en un resultado previo. El **teorema de Bayes** permite ajustar las probabilidades dada nueva información.
 
@@ -158,7 +164,7 @@ $$P(E_{i}|A)=\dfrac{P(E_{i} \cap A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\display
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Código R**</span>
+### <span style="color:#034a94">**Código R**</span>
 
 <br/>
 
@@ -238,7 +244,7 @@ A' 0.2333333 0.8666667
 
 <br/><br/>
 
-### <span style="color:#FF7F00">**Aplicación**</span>
+### <span style="color:#034a94">**Aplicación**</span>
 
 Podemos representar las probabilidades mediante un árbol. Como ejemplo tomamos la base de datos del titanic contenida en el paquete `titanic` y calculamos la probabilidad de que un pasajero sobreviviera teniendo en cuenta su sexo.
 
@@ -251,8 +257,8 @@ library(readr)
 library(rpart)
 library(rattle)
 library(rpart.plot)
-
-titanic3 <- read_csv("~/Documentos/Javeriana/Ms en Ciencia de Datos/repository/dataset/titanic3.csv")
+library(paqueteNIV)
+data("titanic3")
 
 sobrevive.model <- rpart(survived ~ ., data = ptitanic, cp = .02)
 rpart.plot(sobrevive.model,

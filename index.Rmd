@@ -21,7 +21,7 @@ Hablar de probabilidad reúne una serie de conceptos, algunos de ellos se presen
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Experimento aleatorio**</span>
+## <span style="color:#034a94">**Experimento aleatorio**</span>
 
 <br/>
 
@@ -42,7 +42,7 @@ Acción que puede ser replicada bajo las mismas condiciones y cuyo resultado no 
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Espacio muestral**</span> 
+## <span style="color:#034a94">**Espacio muestral**</span> 
 
 <br/>
 
@@ -100,7 +100,7 @@ Algunos de los conjuntos se definen por extensión  ($S_{1}$, $S_{2}$ )y otros p
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Evento aleatorio**</span>
+## <span style="color:#034a94">**Evento aleatorio**</span>
 
 <br/>
 <div class="content-box-blue">
@@ -121,11 +121,11 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto,
 
 <br/><br/><br/>
 
-## <span style="color:#FF7F00">**Enfoques de probabilidad**</span>
+## <span style="color:#034a94">**Enfoques de probabilidad**</span>
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Enfoque clásico**</span>  
+### <span style="color:#034a94">**Enfoque clásico**</span>  
 
 <br/>
 
@@ -136,14 +136,14 @@ Es el enfoque más antiguo de probabilidad y que está basado en el supuesto de 
 $$P(A)=\dfrac{n(A)}{n(S)}$$
 </div>
 
-**Ejemplos**: 
+### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
 * Probabilidad de sacar un doble seis al lanzar dos dados
 * Probabilidad de elegir un `As` en una baraja de cartas
 
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Enfoque Frecuentista**</span>
+### <span style="color:#034a94">**Enfoque Frecuentista**</span>
 
 <br/>
 
@@ -153,13 +153,13 @@ Este enfoque basa su cálculo en la frecuencia con que ocurre un evento en un ta
 $$\lim_{n \to{+}\infty} P(A)=\Bigg[ \dfrac{\text{número de veces que ocurre A}}{n} \Bigg]$$
 </div>
 
-**Ejemplos**:
+### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
 * Probabilidad de ganar un examen
 * Probabilidad de realizar más de 10 ventas en un dia
 <br/><br/><br/>
 
-### <span style="color:#FF7F00">**Enfoque subjetivo**</span> 
+### <span style="color:#034a94">**Enfoque subjetivo**</span> 
 
 <br/>
 
@@ -169,14 +169,14 @@ En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un 
 $$P(A)   \gets \text{Experto}$$  
 </div>
 
-**Ejemplos**:
+### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
 * Probabilidad de tener éxito en una operación de pterigio
 * Probabilidad de que se rompa la cadena del distribución de un auto
 
 <br/><br/><br/>
 
-## <span style="color:#FF7F00">**Axiomas de probabilidad**</span>
+## <span style="color:#034a94">**Axiomas de probabilidad**</span>
 
 Los siuientes cinco axiomas corresponde a las condiciones mínimas que se deben verificar sobre los elemtos basícos ($E$, $S$, $A$). Fueron formuladas por Andréi Kolmogórov (1933) 
 
