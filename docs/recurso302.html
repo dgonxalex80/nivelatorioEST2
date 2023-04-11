@@ -472,7 +472,7 @@ t=matrix(x,nrow=2)
 rownames(t)=c(&quot;A&quot;,&quot;A&#39;&quot;)
 colnames(t)=c(&quot;B&quot;,&quot;B&#39;&quot;)
 t</code></pre>
-<pre class="my-pre">
+<pre>
 B  B'
 A  460  40
 A' 140 260
@@ -480,7 +480,7 @@ A' 140 260
 <p><br/><br/></p>
 <pre class="r"><code># adiciona los totales por filas y por columnas
 addmargins(t)</code></pre>
-<pre class="my-pre"> 
+<pre> 
 B  B' Sum
 A   460  40 500
 A'  140 260 400
@@ -489,7 +489,7 @@ Sum 600 300 900
 <p><br/><br/></p>
 <pre class="r"><code># probabilidades conjuntas
 prop.table(t)</code></pre>
-<pre class="my-pre">
+<pre>
 B         B'
 A  0.5111111 0.04444444
 A' 0.1555556 0.28888889
@@ -497,7 +497,7 @@ A' 0.1555556 0.28888889
 <p><br/><br/></p>
 <pre class="r"><code># probabilidades condicionales por fila
 prop.table(t,1)</code></pre>
-<pre class="my-pre">
+<pre>
 B   B'
 A  0.92 0.08
 A' 0.35 0.65
@@ -505,7 +505,7 @@ A' 0.35 0.65
 <p><br/><br/></p>
 <pre class="r"><code># probabilidades condiccionales por columna
 prop.table(t,2)</code></pre>
-<pre class="my-pre">
+<pre>
 B        B'
 A  0.7666667 0.1333333
 A' 0.2333333 0.8666667

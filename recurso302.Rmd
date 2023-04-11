@@ -177,7 +177,7 @@ colnames(t)=c("B","B'")
 t
 ```
 
-<pre class="my-pre">
+<pre>
 B  B'
 A  460  40
 A' 140 260
@@ -191,7 +191,7 @@ A' 140 260
 addmargins(t)
 ```
 
-<pre class="my-pre"> 
+<pre> 
 B  B' Sum
 A   460  40 500
 A'  140 260 400
@@ -206,7 +206,7 @@ Sum 600 300 900
 prop.table(t)
 ```
 
-<pre class="my-pre">
+<pre>
 B         B'
 A  0.5111111 0.04444444
 A' 0.1555556 0.28888889
@@ -222,7 +222,7 @@ A' 0.1555556 0.28888889
 prop.table(t,1)
 ```
 
-<pre class="my-pre">
+<pre>
 B   B'
 A  0.92 0.08
 A' 0.35 0.65
@@ -236,7 +236,7 @@ A' 0.35 0.65
 prop.table(t,2)
 ```
 
-<pre class="my-pre">
+<pre>
 B        B'
 A  0.7666667 0.1333333
 A' 0.2333333 0.8666667

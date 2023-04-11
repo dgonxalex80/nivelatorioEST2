@@ -153,7 +153,7 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 
 <br/><br/>
 
-<div class="content-box-gray">
+
 ### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
 
@@ -184,11 +184,11 @@ $$E[X]=np$$
 Varianza
 
 $$V[X]= np(1-p) $$
-</div>
+
 
 <br/><br/>
 
-<div class="content-box-gray">
+
 ### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
 Modelo continuo : **normal** 
@@ -216,7 +216,7 @@ $$E[X]=\mu$$
 Varianza
 
 $$V[X]=\sigma^{2}$$
-</div>
+
 
 <br/><br/>
 
