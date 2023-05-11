@@ -270,15 +270,28 @@ de probabilidad</strong></span></h1>
 
 
 <p><br/><br/></p>
+<div id="ejemplo" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Iniciaremos con una tabla cruzada o de doble entrada que representa
 los valores obtenidos para dos características cualitativas
 <strong>A</strong> y <strong>B</strong> para 900 registros</p>
-<p><img src="img/tabla2_22.png" width="35%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<center>
+<strong>Tabla 2.1</strong> Distribución de las frecuencias absolutas de
+<strong>A</strong> y <strong>B</strong><br />
+<img src="img/tabla2_22.png" width="70%" style="display: block; margin: auto;" />
+</center>
 <p><br/><br/></p>
 <p>A partir de estos valores se obtienen probabilidades bajo el
 <strong>enfoque frecuentista</strong></p>
-<p><img src="img/tabla4_22.png" width="40%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<center>
+<strong>Tabla 2.2</strong> Distribución frecuencias relativas de
+<strong>A</strong> y <strong>B</strong><br />
+<img src="img/tabla4_22.png" width="70%" style="display: block; margin: auto;" />
+</center>
 <p><br/><br/><br/></p>
+</div>
 <div id="probabilidad-marginal-o-simple" class="section level3">
 <h3><span style="color:#034a94"><strong>Probabilidad marginal o
 simple</strong></span></h3>
@@ -344,7 +357,10 @@ class="math inline">\(P(B|A)\)</span>, se define como:</p>
 <p><span class="math display">\[P(B|A)=\dfrac{P(A \cap
 B)}{P(A)}\]</span></p>
 </div>
-<p><img src="img/arbol1_22.png" width="50%" style="display: block; margin: auto;" /></p>
+<center>
+<img src="img/arbol1_22.png" width="80%" style="display: block; margin: auto;" />
+</br> <strong>Figura 2.2</strong> Arbol de probabilidades
+</center>
 <p><br/><br/></p>
 <ul>
 <li><span class="math inline">\(P(B|A)=\dfrac{P(A \cap B)}{P(A)} =
@@ -397,10 +413,20 @@ class="math inline">\(A_{3}\)</span>, <span
 class="math inline">\(A_{4}\)</span> y <span
 class="math inline">\(A_{5}\)</span>). Sobre este espacio se define un
 evento aleatorio <span class="math inline">\(B\)</span></p>
-<p><img src="img/particion2_1122.png" width="100%" style="display: block; margin: auto;" /></p>
+<center>
+<p><img src="img/particion2_1122.png" width="100%" style="display: block; margin: auto;" />
+</br></p>
+<strong>Figura 2.2</strong> Partición del espacio muestral
+</center>
+<p></br></br></p>
 <p>Se puede resaltar los conjutos que conforman el evento <span
 class="math inline">\(B\)</span></p>
-<p><img src="img/particion3_1122.png" width="100%" style="display: block; margin: auto;" /></p>
+<center>
+<img src="img/particion3_1122.png" width="100%" style="display: block; margin: auto;" />
+</br> <strong>Figura 2.3</strong> Evento B como la unión de
+intercepciones <span class="math inline">\(A_{i} \cap B\)</span>
+</center>
+<p><br/><br/></p>
 <p>Tambien podemos recostruir <span class="math inline">\(B\)</span>
 como :</p>
 <p><span class="math inline">\(B = (A_{1} \cap B) \cup (A_{2} \cap B)
@@ -518,6 +544,7 @@ A' 0.2333333 0.8666667
 ejemplo tomamos la base de datos del titanic contenida en el paquete
 <code>titanic</code> y calculamos la probabilidad de que un pasajero
 sobreviviera teniendo en cuenta su sexo.</p>
+<center>
 <pre class="r"><code># install.packages(&quot;rpart&quot;)
 # install.packages(&quot;rattle&quot;)
 #install.packages(&quot;rpart.plot&quot;)
@@ -531,7 +558,9 @@ data(&quot;titanic3&quot;)
 sobrevive.model &lt;- rpart(survived ~ ., data = ptitanic, cp = .02)
 rpart.plot(sobrevive.model,
            main = &quot;Árbol de sobrevivientes Titanic&quot;)</code></pre>
-<p><img src="recurso302_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<img src="recurso302_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+</br> <strong>Figura 2.4</strong> Árbol de probabilidades
+</center>
 <p><br/><br/></p>
 <p>En el primer nivel de información hace referencia a la probabilidad
 de sobrevivir (0.38)</p>

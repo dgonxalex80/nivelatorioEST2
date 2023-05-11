@@ -17,19 +17,37 @@ library(paqueteNIV) # activa paqueteDEG
 
 <br/><br/>
 
+### <span style="color:#FF7F00"> **Ejemplo**</span> 
+
 Iniciaremos con una tabla cruzada o de doble entrada que representa los valores obtenidos para dos características cualitativas **A** y **B** para 900 registros 
 
-```{r, echo=FALSE, out.width="35%", fig.align = "center"}
+<br/><br/>
+
+<center>
+**Tabla 2.1**  Distribución de las frecuencias absolutas de **A** y **B**  
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 knitr::include_graphics("img/tabla2_22.png")
 ```
+</center>
 
 <br/><br/>
 
 A partir de estos valores se obtienen probabilidades bajo el **enfoque frecuentista**
 
-```{r, echo=FALSE, out.width="40%", fig.align = "center"}
+<br/><br/>
+
+
+
+
+
+
+
+<center>
+**Tabla 2.2** Distribución frecuencias relativas de **A** y **B**  
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 knitr::include_graphics("img/tabla4_22.png")
 ```
+</center>
 
 <br/><br/><br/>
 
@@ -79,9 +97,14 @@ La probabilidad condicional de $B$, dado $A$, se denota como $P(B|A)$, se define
 $$P(B|A)=\dfrac{P(A \cap B)}{P(A)}$$
 </div>
 
-```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+<center>
+  
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
 knitr::include_graphics("img/arbol1_22.png")
 ```
+</br>
+**Figura 2.2** Arbol de probabilidades
+</center>
 
 <br/><br/>
 
@@ -116,15 +139,30 @@ $$P(A∩B)= P(A) \hspace{.2cm} P(B|A) = P(A) \hspace{.2cm} P(B)$$
 Para explicar el concepto de probabilidad total, supongamos que el espacio muestral está formado por elementos que pueden ser representados por una partición del conjunto $S$. Para este ejemplo con 5 particiones ($A_{1}$, $A_{2}$, $A_{3}$, $A_{4}$ y $A_{5}$).   Sobre este espacio se define un evento aleatorio $B$ 
 
 
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/particion2_1122.png")
 ```
+</br>
+
+**Figura 2.2** Partición del espacio muestral
+</center>
+
+
+</br></br>
 
 Se puede resaltar los conjutos que conforman el evento $B$
 
+
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/particion3_1122.png")
 ```
+</br>
+**Figura 2.3** Evento B como la unión de intercepciones $A_{i} \cap B$
+</center>
+
+<br/><br/>
 
 Tambien podemos recostruir $B$ como :
 
@@ -248,7 +286,7 @@ A' 0.2333333 0.8666667
 
 Podemos representar las probabilidades mediante un árbol. Como ejemplo tomamos la base de datos del titanic contenida en el paquete `titanic` y calculamos la probabilidad de que un pasajero sobreviviera teniendo en cuenta su sexo.
 
-
+<center>
 ```{r, message=FALSE}
 # install.packages("rpart")
 # install.packages("rattle")
@@ -265,6 +303,9 @@ rpart.plot(sobrevive.model,
            main = "Árbol de sobrevivientes Titanic")
 
 ```
+</br>
+**Figura 2.4** Árbol de probabilidades
+</center>
 
 <br/><br/>
 

@@ -10,8 +10,9 @@ css: style.css
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
+<br/><br/>
 
-```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 knitr::include_graphics("img/arbol1.png")
 ```
 
@@ -136,6 +137,8 @@ Es el enfoque más antiguo de probabilidad y que está basado en el supuesto de 
 $$P(A)=\dfrac{n(A)}{n(S)}$$
 </div>
 
+<br/><br/>
+
 ### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
 * Probabilidad de sacar un doble seis al lanzar dos dados
@@ -153,6 +156,8 @@ Este enfoque basa su cálculo en la frecuencia con que ocurre un evento en un ta
 $$\lim_{n \to{+}\infty} P(A)=\Bigg[ \dfrac{\text{número de veces que ocurre A}}{n} \Bigg]$$
 </div>
 
+<br/><br/>
+
 ### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
 * Probabilidad de ganar un examen
@@ -168,6 +173,8 @@ En este caso la probabilidad es valorada y asignada por un **EXPERTO**, como un 
 <div class="content-box-blue">
 $$P(A)   \gets \text{Experto}$$  
 </div>
+
+<br/><br/>
 
 ### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
