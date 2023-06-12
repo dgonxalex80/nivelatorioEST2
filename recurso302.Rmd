@@ -25,10 +25,11 @@ Iniciaremos con una tabla cruzada o de doble entrada que representa los valores 
 
 <center>
 **Tabla 2.1**  Distribución de las frecuencias absolutas de **A** y **B**  
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-knitr::include_graphics("img/tabla2_22.png")
-```
 </center>
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/tabla2_22a.png")
+```
+
 
 <br/><br/>
 
@@ -44,10 +45,11 @@ A partir de estos valores se obtienen probabilidades bajo el **enfoque frecuenti
 
 <center>
 **Tabla 2.2** Distribución frecuencias relativas de **A** y **B**  
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-knitr::include_graphics("img/tabla4_22.png")
-```
 </center>
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/tabla4_22a.png")
+```
+
 
 <br/><br/><br/>
 
