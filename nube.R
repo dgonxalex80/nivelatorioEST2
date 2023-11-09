@@ -37,6 +37,10 @@ set.seed(1234)
 
 c("#F27F0C", "#F7AD19", "#053F5C", "#429EBD", "#034A94")
 library(wordcloud2)
-wordcloud2(data = t, size = 0.5, color=rep_len( c("#F27F0C", "#F7AD19", "#053F5C", "#429EBD", "#034A94"), nrow(demoFreq) ) )
+wordcloud2(data = t, 
+           size = 0.5, 
+           color=rep_len( c("#F27F0C", "#F7AD19", "#053F5C", "#429EBD", "#034A94"), 
+           nrow(demoFreq)),
+           rotateRatio = 0)
 
            

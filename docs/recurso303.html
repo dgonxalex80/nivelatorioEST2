@@ -14,7 +14,7 @@
 
 <title> Variables aleatorias</title>
 
-<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -31,6 +31,7 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
@@ -218,6 +219,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -259,6 +263,14 @@ $(document).ready(function () {
 </div><!--/.navbar -->
 
 <div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
 
@@ -507,46 +519,6 @@ b^{2}V[Y]\)</span></p></li>
 </ul>
 <p><br/><br/></p>
 </div>
-</div>
-<div id="ejemplo" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
-<p>Modelo discreto : <strong>binomial</strong></p>
-<p><br/></p>
-<p>Función de distribución de probabilidad</p>
-<p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            \displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &amp;,&amp;
-x=0,1,2, \ldots, n   \\
-            &amp;&amp;\\
-            0 &amp;,&amp; \mbox{en otro caso}
-        \end{array}
-        \right.
-\end{equation*}\]</span></p>
-<p><br/></p>
-<p>Valor esperado</p>
-<p><span class="math display">\[E[X]=np\]</span></p>
-<p><br/></p>
-<p>Varianza</p>
-<p><span class="math display">\[V[X]= np(1-p) \]</span></p>
-<p><br/><br/></p>
-</div>
-<div id="ejemplo-1" class="section level3">
-<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
-<p>Modelo continuo : <strong>normal</strong></p>
-<p><br/></p>
-<p>Función de densidad de probabilidad</p>
-<p><br/></p>
-<p><span class="math display">\[f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}}
-\hspace{.1cm}
-\exp{\Bigg\{-\Bigg(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\Bigg)}\Bigg\}    \hspace{.5cm}  -\infty
-\leq  x \leq \infty \]</span></p>
-<p><br/></p>
-<p>Valor esperado</p>
-<p><span class="math display">\[E[X]=\mu\]</span> <br/></p>
-<p>Varianza</p>
-<p><span class="math display">\[V[X]=\sigma^{2}\]</span></p>
-<p><br/><br/></p>
 </div>
 </div>
 <div id="algunos-modelos-de-probabilidad-especiales"
@@ -797,7 +769,6 @@ aleatoria con distribución binomial)</p>
 <p>En cada caso si no recuerda las sintaxis de la función puede hacer
 uso de las ayudas de R así:</p>
 <p><br/><br/></p>
-<pre class="r"><code>help(&quot;pbinom&quot;)</code></pre>
 <p><br/><br/></p>
 <table>
 <tbody>
@@ -822,74 +793,173 @@ class="math inline">\(P(X=x)\)</span></td>
 </tbody>
 </table>
 <p><br/><br/><br/></p>
-<div id="ejemplo-2" class="section level3">
+<div id="ejemplo" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
-</div>
-<div id="modelo-binomial" class="section level3">
-<h3><span style="color:#034a94"><strong>Modelo
-binomial</strong></span></h3>
+<div id="modelo-discreto-binomial" class="section level4">
+<h4>Modelo discreto : <strong>binomial</strong></h4>
+<p>Una variable que se distrbuye binomial es la que procede de un
+experimento bionomial que se puede describir de la siguiente forma:</p>
+<ul>
+<li>El experimento está compuesto de <span
+class="math inline">\(n\)</span> ensayos independientes</li>
+<li>Cada ensayo tiene unicamente dos posibles resultados:
+<strong>Exito</strong> o <strong>Fracaso</strong>.</li>
+<li>La probabilidad de Exito se mantiene constante para los <span
+class="math inline">\(n\)</span> ensayo y es igual a <span
+class="math inline">\(p\)</span>. La probabilidad de Fracaso es : <span
+class="math inline">\(1-p = q\)</span></li>
+<li>La variable objeto de estudio es el **número de Exitos consegidos en
+los <span class="math inline">\(n\)</span> ensayos</li>
+</ul>
+<p><br/></p>
+<p><strong>Función de distribución de probabilidad</strong></p>
+<div class="content-box-blue">
 <p><span class="math display">\[\begin{equation*}
-    f(x)=\left\lbrace
-    \begin{array}{lll}
-        \displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &amp;,&amp; x=0,1,2,
-\ldots, n   \\
-        &amp;&amp;\\
-        0 &amp;,&amp; \mbox{en otro caso}
-    \end{array}
-    \right.
+        f(x)=\left\lbrace
+        \begin{array}{lll}
+            \displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &amp;,&amp;
+x=0,1,2, \ldots, n   \\
+            &amp;&amp;\\
+            0 &amp;,&amp; \mbox{en otro caso}
+        \end{array}
+        \right.
 \end{equation*}\]</span></p>
+</div>
+<p><br/></p>
+<p><strong>Valor esperado</strong></p>
+<div class="content-box-blue">
 <p><span class="math display">\[E[X]=np\]</span></p>
-<p><span class="math display">\[V[X]= np(1-p) \]</span> <br/></p>
-<p>Sea una variables con distribución binomial con parámetros <span
-class="math inline">\(n=10\)</span> y <span
-class="math inline">\(p=0.90\)</span> , lo cual se puede simbolizar como
-: <span class="math inline">\(X\sim b(x; 10,0.90)\)</span>|</p>
-<p><img src="recurso303_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p><span class="math display">\[ P(X=7) = \dbinom{10}{7} 0.90^{7}
-(1-0.90)^{(10-7)}\]</span></p>
-<pre class="r"><code>dbinom(7, 10, 0.90)</code></pre>
-<pre><code>[1] 0.05739563</code></pre>
-<p><span class="math display">\[P(X \leq 7) =
-\displaystyle\sum_{x=0}^{x=7} \dbinom{10}{x} 0.90^{x}
-(1-0.90)^{(10-x)}\]</span></p>
-<pre class="r"><code>pbinom(7, 10, 0.90)</code></pre>
-<pre><code>[1] 0.07019083</code></pre>
+</div>
+<p><br/></p>
+<p><strong>Varianza</strong></p>
+<div class="content-box-blue">
+<p><span class="math display">\[V[X]= np(1-p) \]</span></p>
+</div>
 <p><br/><br/></p>
+<p>Sea la variable <span class="math inline">\(X \sim binom(n=10,
+p=0.60)\)</span></p>
+<pre class="r"><code>library(ggplot2)
+# modelo binomial  ok
+x=0:10
+fx=dbinom(x,10,0.60)
+dat=data.frame(x,fx)
+
+
+ggplot(dat) + geom_point(aes(x, fx),colour = &quot;#FF7F00&quot;, size = 2) +
+  scale_x_continuous(limits = c(0, 10),
+                     breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
+                     labels = c(&#39;0&#39;,&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;,&#39;8&#39;,&#39;9&#39;,&#39;10&#39;))</code></pre>
+<p><img src="recurso303_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><br/></p>
+<p><span class="math display">\[ P(X=7) = \dbinom{10}{7} 0.60^{7}
+(1-0.60)^{(10-7)}\]</span></p>
+<pre class="r"><code>dbinom(7, 10, 0.60)</code></pre>
+<pre><code>[1] 0.2149908</code></pre>
+<p><span class="math display">\[P(X \leq 7) =
+\displaystyle\sum_{x=0}^{x=7} \dbinom{10}{x} 0.60^{x}
+(1-0.60)^{(10-x)}\]</span> <br/></p>
+<pre class="r"><code>pbinom(7, 10, 0.60)</code></pre>
+<pre><code>[1] 0.8327102</code></pre>
+<p><br/><br/><br/></p>
 </div>
-<div id="ejemplo-3" class="section level3">
+</div>
+<div id="ejemplo-1" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
-<p><br/></p>
-</div>
-<div id="modelo-normal" class="section level3">
-<h3><span style="color:#034a94"><strong>Modelo
-normal</strong></span></h3>
-<p><br/></p>
+<div id="modelo-continuo-normal" class="section level4">
+<h4>Modelo continuo : <strong>normal</strong></h4>
+<p>La distribución normal es uno de los modelos más utilizados en las
+aplicaciones de la Estadística. Estas aplicaciones están relacionadas
+con:</p>
+<p>Usos de la distribución normal</p>
+<ul>
+<li><p>La mayoría de variables en la naturaleza, se distribuyen
+aproximadamente de manera normal</p></li>
+<li><p>A partir de la distribución normal se originan las distribuciones
+<span class="math inline">\(t-student\)</span>, <span
+class="math inline">\(\chi^{2}\)</span> y <span
+class="math inline">\(F\)</span>-Fisher, utilizadas en inferencia
+estadística</p></li>
+<li><p>En general la media muestral de variables que no tienen
+distribución normal, tiende a aproximarse a una distribución normal, a
+medida que el tamaño de muestra aumenta. (Teorema del Límite
+Central)</p></li>
+<li><p>La regla empírica establece que:</p>
+<ul>
+<li><p>Aproximadamente el 68% de la población se encuentra en el
+intervalo centrado <span class="math display">\[(\mu - \sigma ; \mu +
+\sigma)\]</span></p>
+<ul>
+<li><p>Aproximadamente el 95% de la población se encuentra en el
+intervalo centrado <span class="math display">\[(\mu - 2\sigma ; \mu +
+2\sigma)\]</span></p></li>
+<li><p>Aproximadamente el 99.7% de la población se encuentra en el
+intervalo centrado <span class="math display">\[(\mu - 3\sigma ; \mu +
+3\sigma)\]</span></p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Su distribución fué planteada por el matemático francés del siglo 18,
+Abraham de Moivre, quien a partir de la distribución Binomial, con <span
+class="math inline">\(n=2\)</span> empezó a aumentar su tamaño hasta
+observar que se formaba una distribución en forma de campana. Este mismo
+comportamiento fué detectado por Galileo en el siglo 17, al observar los
+errores producto de sus mediciones en astronomía. El modelo como se
+conoce actualmente fue propuesto de manera simultánea por los
+cientificos Robert Adrain y Carl Friedrich Gauss, quien finalmente le
+dió el nombre.</p>
+<p><strong>Función de densidad de probabilidad</strong></p>
+<br/>
+<div class="content-box-blue">
 <p><span class="math display">\[f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}}
 \hspace{.1cm}
-e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}  \hspace{.5cm}  -\infty
+\exp{\Bigg\{-\Bigg(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\Bigg)}\Bigg\}    \hspace{.5cm}  -\infty
 \leq  x \leq \infty \]</span></p>
-<p><span class="math display">\[E[X]=\mu\]</span> <span
-class="math display">\[V[X]=\sigma^{2}\]</span> <br/><br/></p>
+</div>
+<p><br/></p>
+<p><strong>Valor esperado</strong></p>
+<div class="content-box-blue">
+<p><span class="math display">\[E[X]=\mu\]</span></p>
+</div>
+<p><br/></p>
+<p><strong>Varianza</strong></p>
+<div class="content-box-blue">
+<p><span class="math display">\[V[X]=\sigma^{2}\]</span></p>
+</div>
+<p><br/><br/></p>
 <p>Nornal estandar : <span class="math inline">\(X \sim
 N(0,1)\)</span></p>
-<p><img src="recurso303_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Un caso especial lo constituye la distribución normal con media cero
+y varianza uno - normal estandar -</p>
+<pre class="r"><code># Distribucion normal
+library(ggfortify)
+
+p=ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,colour = &quot;#0EB0C6&quot;)
+#p=ggdistribution(dnorm, seq(-4, 8, 0.1), mean = 0, sd = 1.5,colour = &quot;#686868&quot;, p=p)
+#ggdistribution(dnorm, seq(-4, 8, 0.1),   mean = 2, sd = 1.5,colour = &quot;#FF7F00&quot;, p=p)
+p</code></pre>
+<p><img src="recurso303_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/></p>
 <p>Ahora supongamos que se tiene una variable continua con distribución
 normal, con media 50 y varianza 100, es decir desviación estándar 10, lo
 cual se puede representar como <span class="math inline">\(X\sim
-N(50,100)\)</span>. En este caso vamos a hallar los siguientes
+N(100,900)\)</span>. En este caso vamos a hallar los siguientes
 valores:</p>
+<p><br/></p>
+<pre class="r"><code>library(ggfortify)
+ggdistribution(dnorm, seq(0, 210, 0.1), mean = 100, sd = 30,fill = &quot;#0EB0C6&quot;)</code></pre>
+<p><img src="recurso303_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><span class="math display">\[P(X&lt;70)
-=\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{200 \pi }}
-\exp{\frac{1}{200 }(x-50)^{2}} \:dx\]</span></p>
-<pre class="r"><code>pnorm(70,50,sqrt(100))</code></pre>
-<pre><code>[1] 0.9772499</code></pre>
+=\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{1800 \pi }}
+\exp{\frac{1}{1800 }(x-100)^{2}} \:dx\]</span></p>
+<pre class="r"><code>pnorm(70,100,sqrt(900))</code></pre>
+<pre><code>[1] 0.1586553</code></pre>
 <p><br/></p>
 <p><span class="math display">\[P(X&gt;70)
-=\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{200 \pi }}
-\exp{\frac{1}{200 }(x-50)^{2}} \:dx\]</span></p>
-<pre class="r"><code>pnorm(70,50,sqrt(100),lower.tail=FALSE)</code></pre>
-<pre><code>[1] 0.02275013</code></pre>
+=\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{1800 \pi }}
+\exp{\frac{1}{1800 }(x-100)^{2}} \:dx\]</span></p>
+<pre class="r"><code>pnorm(70,100,sqrt(1800),lower.tail=FALSE)</code></pre>
+<pre><code>[1] 0.7602499</code></pre>
+</div>
 </div>
 </div>
 
@@ -926,6 +996,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

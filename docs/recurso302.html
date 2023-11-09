@@ -14,7 +14,7 @@
 
 <title> Tipos de probabilidad</title>
 
-<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -31,6 +31,7 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
@@ -218,6 +219,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -259,6 +263,14 @@ $(document).ready(function () {
 </div><!--/.navbar -->
 
 <div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
 
@@ -498,44 +510,34 @@ t=matrix(x,nrow=2)
 rownames(t)=c(&quot;A&quot;,&quot;A&#39;&quot;)
 colnames(t)=c(&quot;B&quot;,&quot;B&#39;&quot;)
 t</code></pre>
-<pre>
-B  B'
+<pre><code>     B  B&#39;
 A  460  40
-A' 140 260
-</pre>
+A&#39; 140 260</code></pre>
 <p><br/><br/></p>
 <pre class="r"><code># adiciona los totales por filas y por columnas
 addmargins(t)</code></pre>
-<pre> 
-B  B' Sum
+<pre><code>      B  B&#39; Sum
 A   460  40 500
-A'  140 260 400
-Sum 600 300 900
-</pre>
+A&#39;  140 260 400
+Sum 600 300 900</code></pre>
 <p><br/><br/></p>
 <pre class="r"><code># probabilidades conjuntas
 prop.table(t)</code></pre>
-<pre>
-B         B'
+<pre><code>           B         B&#39;
 A  0.5111111 0.04444444
-A' 0.1555556 0.28888889
-</pre>
+A&#39; 0.1555556 0.28888889</code></pre>
 <p><br/><br/></p>
 <pre class="r"><code># probabilidades condicionales por fila
 prop.table(t,1)</code></pre>
-<pre>
-B   B'
+<pre><code>      B   B&#39;
 A  0.92 0.08
-A' 0.35 0.65
-</pre>
+A&#39; 0.35 0.65</code></pre>
 <p><br/><br/></p>
 <pre class="r"><code># probabilidades condiccionales por columna
 prop.table(t,2)</code></pre>
-<pre>
-B        B'
+<pre><code>           B        B&#39;
 A  0.7666667 0.1333333
-A' 0.2333333 0.8666667
-</pre>
+A&#39; 0.2333333 0.8666667</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="aplicación" class="section level3">
@@ -626,6 +628,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

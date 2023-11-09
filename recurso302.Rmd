@@ -1,8 +1,10 @@
 ---
 title: <span style="color:#034a94"> **Tipos de probabilidad**</span>
 author: "Nivelatorio de Estadística"
-output: html_document
-css: style.css
+output:
+  html_document:
+    code_folding: hide
+    css: style.css
 ---
 
 ```{r setup, include=FALSE}
@@ -208,7 +210,7 @@ $$P(E_{i}|A)=\dfrac{P(E_{i} \cap A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\display
 
 <br/>
 
-```{r, eval=FALSE}
+```{r}
 # se crea la tabla 
 x=c(460,140,40,260)
 t=matrix(x,nrow=2)
@@ -217,70 +219,46 @@ colnames(t)=c("B","B'")
 t
 ```
 
-<pre>
-B  B'
-A  460  40
-A' 140 260
-</pre>
+
 
 
 <br/><br/>
 
-```{r, eval=FALSE}
+```{r}
 # adiciona los totales por filas y por columnas
 addmargins(t)
 ```
 
-<pre> 
-B  B' Sum
-A   460  40 500
-A'  140 260 400
-Sum 600 300 900
-</pre>
 
 
 <br/><br/>
 
-```{r, eval=FALSE}
+```{r}
 # probabilidades conjuntas
 prop.table(t)
 ```
 
-<pre>
-B         B'
-A  0.5111111 0.04444444
-A' 0.1555556 0.28888889
-</pre>
 
 
 
 
 <br/><br/>
 
-```{r, eval=FALSE}
+```{r}
 # probabilidades condicionales por fila
 prop.table(t,1)
 ```
 
-<pre>
-B   B'
-A  0.92 0.08
-A' 0.35 0.65
-</pre>
 
 
 <br/><br/>
 
-```{r, eval=FALSE}
+```{r}
 # probabilidades condiccionales por columna
 prop.table(t,2)
 ```
 
-<pre>
-B        B'
-A  0.7666667 0.1333333
-A' 0.2333333 0.8666667
-</pre>
+
 
 <br/><br/>
 

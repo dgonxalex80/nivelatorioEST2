@@ -2,7 +2,10 @@
 title: "Introducción a la probabilidad"
 author: "Nivelatorio de Estadística"
 date: "2022"
-output: html_document
+output:
+  html_document:
+    code_folding: hide
+    css: style.css
 ---
 
 ```{r setup, include=FALSE}

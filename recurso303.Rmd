@@ -1,8 +1,10 @@
 ---
 title: <span style="color:#034a94"> **Variables aleatorias**</span>
 author: "Nivelatorio de Estadística"
-output: html_document
-css: style.css
+output:
+  html_document:
+    code_folding: hide
+    css: style.css
 ---
 
 ```{r setup, include=FALSE}
@@ -154,72 +156,6 @@ $V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$
 <br/><br/>
 
 
-### <span style="color:#FF7F00"> **Ejemplo**</span> 
-
-
-Modelo discreto : **binomial**
-
-<br/>
-
-Función de distribución de probabilidad
-
-$$\begin{equation*}
-		f(x)=\left\lbrace
-		\begin{array}{lll}
-			\displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &,& x=0,1,2, \ldots, n   \\
-			&&\\
-			0 &,& \mbox{en otro caso}
-		\end{array}
-		\right.
- \end{equation*}$$
-
-<br/>
-
-Valor esperado
-
-$$E[X]=np$$
-
-<br/>
-
-Varianza
-
-$$V[X]= np(1-p) $$
-
-
-<br/><br/>
-
-
-### <span style="color:#FF7F00"> **Ejemplo**</span> 
-
-Modelo continuo : **normal** 
-```{r}
-
-```
-
-<br/>
-
-Función de densidad de probabilidad
-
-<br/>
-
-$$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.1cm} \exp{\Bigg\{-\Bigg(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\Bigg)}\Bigg\}	 \hspace{.5cm}  -\infty \leq  x \leq \infty $$  
-	
-
-<br/>
-
-Valor esperado
-
-
-$$E[X]=\mu$$
-<br/>
-
-Varianza
-
-$$V[X]=\sigma^{2}$$
-
-
-<br/><br/>
-
 ## <span style="color:#034a94"> **Algunos modelos de probabilidad especiales**</span>
 
 <br/><br/>
@@ -291,7 +227,7 @@ En cada caso si no recuerda las sintaxis de la función puede hacer uso de las a
 
 <br/><br/>
 
-```{r}
+```{r, echo=FALSE}
 help("pbinom")
 ```
 
@@ -306,99 +242,195 @@ help("pbinom")
 
 <br/><br/><br/>
 
+
+
+
 ### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
-### <span style="color:#034a94">**Modelo binomial**</span>
+#### Modelo discreto : **binomial**
 
-$$\begin{equation*}
-	f(x)=\left\lbrace
-	\begin{array}{lll}
-		\displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &,& x=0,1,2, \ldots, n   \\
-		&&\\
-		0 &,& \mbox{en otro caso}
-	\end{array}
-	\right.
-\end{equation*}$$
 
-$$E[X]=np$$
+Una variable que se distrbuye binomial es la que procede de un experimento bionomial que se puede describir de la siguiente forma:
 
-$$V[X]= np(1-p) $$
+* El experimento está compuesto de $n$ ensayos independientes
+* Cada ensayo tiene unicamente dos posibles resultados: **Exito** o **Fracaso**.
+* La probabilidad de Exito se mantiene constante para los $n$ ensayo y es igual a $p$. La probabilidad de Fracaso es : $1-p = q$
+* La variable objeto de estudio es el **número de Exitos consegidos en los $n$ ensayos
+
 <br/>
 
-Sea una variables con distribución binomial con parámetros $n=10$ y $p=0.90$ , lo cual se puede simbolizar como : $X\sim b(x; 10,0.90)$|
 
-```{r, echo=FALSE, fig.height=3.5}
-library(ggplot2)
-# modelo binomial  ok
-x=0:10
-fx=dbinom(x,10,0.90)
-dat=data.frame(x,fx)
+**Función de distribución de probabilidad**
 
+<div class="content-box-blue">
+$$\begin{equation*}
+		f(x)=\left\lbrace
+		\begin{array}{lll}
+			\displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &,& x=0,1,2, \ldots, n   \\
+			&&\\
+			0 &,& \mbox{en otro caso}
+		\end{array}
+		\right.
+ \end{equation*}$$
 
-ggplot(dat) + geom_point(aes(x, fx),colour = "#034A94", size = 2) +
-scale_x_continuous(limits = c(0, 10),
-breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
-labels = c('0','1','2','3','4','5','6','7','8','9','10'))
-```
+</div>
 
+<br/>
 
-$$ P(X=7) = \dbinom{10}{7} 0.90^{7} (1-0.90)^{(10-7)}$$
+**Valor esperado**
 
-```{r}
-dbinom(7, 10, 0.90)
-```
+<div class="content-box-blue">
+$$E[X]=np$$
+</div>
 
+<br/>
 
+**Varianza**
 
-$$P(X \leq 7) = \displaystyle\sum_{x=0}^{x=7} \dbinom{10}{x} 0.90^{x} (1-0.90)^{(10-x)}$$
-
-```{r}
-pbinom(7, 10, 0.90)
-```
-
-
-
+<div class="content-box-blue">
+$$V[X]= np(1-p) $$
+</div>
 
 <br/><br/>
 
+Sea la variable $X \sim binom(n=10, p=0.60)$
+
+
+```{r, fig.height=3.5, fig.align='center'}
+library(ggplot2)
+# modelo binomial  ok
+x=0:10
+fx=dbinom(x,10,0.60)
+dat=data.frame(x,fx)
+
+
+ggplot(dat) + geom_point(aes(x, fx),colour = "#FF7F00", size = 2) +
+  scale_x_continuous(limits = c(0, 10),
+                     breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
+                     labels = c('0','1','2','3','4','5','6','7','8','9','10'))
+  
+```
+
+<br/>
+
+
+$$ P(X=7) = \dbinom{10}{7} 0.60^{7} (1-0.60)^{(10-7)}$$
+
+```{r}
+dbinom(7, 10, 0.60)
+```
+
+
+
+$$P(X \leq 7) = \displaystyle\sum_{x=0}^{x=7} \dbinom{10}{x} 0.60^{x} (1-0.60)^{(10-x)}$$
+<br/>
+
+
+
+```{r}
+pbinom(7, 10, 0.60)
+```
+
+
+
+
+<br/><br/><br/>
+
+
 ### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
+#### Modelo continuo : **normal**
+
+La distribución normal es uno de los modelos más utilizados en las aplicaciones de la Estadística. Estas aplicaciones están relacionadas con:
+
+Usos de la distribución normal
+
+* La mayoría de variables en la naturaleza, se distribuyen aproximadamente de manera normal
+
+* A partir de la distribución normal se originan las distribuciones $t-student$, $\chi^{2}$ y $F$-Fisher, utilizadas en inferencia estadística
+
+* En general la media muestral de variables que no tienen distribución normal, tiende a aproximarse a una distribución normal, a medida que el tamaño de muestra aumenta. (Teorema del Límite Central) 
+
+* La regla empírica establece que:
+
+    *	Aproximadamente el 68\% de la población se encuentra en el intervalo centrado $$(\mu - \sigma ; \mu + \sigma)$$
+
+		* Aproximadamente el 95\% de la población se encuentra en el intervalo centrado $$(\mu - 2\sigma ; \mu + 2\sigma)$$
+
+		* Aproximadamente el 99.7\% de la población se encuentra en el intervalo centrado $$(\mu - 3\sigma ; \mu + 3\sigma)$$
+
+Su distribución fué planteada por el matemático francés del siglo 18, Abraham de Moivre, quien a partir de la distribución Binomial, con $n=2$ empezó a aumentar su tamaño hasta observar que se formaba una distribución en forma de campana. Este mismo comportamiento fué detectado por Galileo en el siglo 17, al observar los errores producto de sus mediciones en astronomía. El modelo como se conoce actualmente fue propuesto de manera simultánea por los cientificos Robert Adrain y Carl Friedrich Gauss, quien finalmente le dió el nombre.
+
+
+**Función de densidad de probabilidad**
+
+<br/>
+<div class="content-box-blue">
+$$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.1cm} \exp{\Bigg\{-\Bigg(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\Bigg)}\Bigg\}	 \hspace{.5cm}  -\infty \leq  x \leq \infty $$  
+</div>	
+
 <br/>
 
-### <span style="color:#034a94">**Modelo normal**</span>
+**Valor esperado**
 
-<br/>
-
-$$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.1cm} e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}	 \hspace{.5cm}  -\infty \leq  x \leq \infty $$  
-
+<div class="content-box-blue">
 $$E[X]=\mu$$
+</div>
+
+<br/>
+
+**Varianza**
+
+<div class="content-box-blue">
 $$V[X]=\sigma^{2}$$
+</div>
+
 <br/><br/>
 
 Nornal estandar : $X \sim N(0,1)$
 
-```{r, echo=FALSE, fig.height=3.5}
+Un caso especial lo constituye la distribución normal con media cero y varianza uno - normal estandar -
+
+
+```{r, fig.height=3.5, fig.align='center'}
+# Distribucion normal
 library(ggfortify)
-ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = 'blue')
+
+p=ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,colour = "#0EB0C6")
+#p=ggdistribution(dnorm, seq(-4, 8, 0.1), mean = 0, sd = 1.5,colour = "#686868", p=p)
+#ggdistribution(dnorm, seq(-4, 8, 0.1),   mean = 2, sd = 1.5,colour = "#FF7F00", p=p)
+p
+```
+
+
+
+
+<br/>
+
+Ahora supongamos que se tiene una variable continua con distribución normal, con media 50 y varianza 100, es decir desviación estándar 10, lo cual se puede representar como $X\sim N(100,900)$.  En este caso vamos a hallar los siguientes valores: 
+
+
+
+<br/>
+
+```{r, fig.height=3.5, fig.align='center'}
+library(ggfortify)
+ggdistribution(dnorm, seq(0, 210, 0.1), mean = 100, sd = 30,fill = "#0EB0C6")
+```
+
+
+$$P(X<70) =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{1800 \pi }} \exp{\frac{1}{1800 }(x-100)^{2}} \:dx$$
+
+```{r}
+pnorm(70,100,sqrt(900))
 ```
 
 <br/>
 
-Ahora supongamos que se tiene una variable continua con distribución normal, con media 50 y varianza 100, es decir desviación estándar 10, lo cual se puede representar como $X\sim N(50,100)$.  En este caso vamos a hallar los siguientes valores: 
-
-
-$$P(X<70) =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{200 \pi }} \exp{\frac{1}{200 }(x-50)^{2}} \:dx$$
+$$P(X>70) =\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{1800 \pi }} \exp{\frac{1}{1800 }(x-100)^{2}} \:dx$$
 
 ```{r}
-pnorm(70,50,sqrt(100))
-```
-
-<br/>
-
-$$P(X>70) =\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{200 \pi }} \exp{\frac{1}{200 }(x-50)^{2}} \:dx$$
-
-```{r}
-pnorm(70,50,sqrt(100),lower.tail=FALSE)
+pnorm(70,100,sqrt(1800),lower.tail=FALSE)
 ```
 
 
