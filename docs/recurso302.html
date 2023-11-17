@@ -293,6 +293,16 @@ los valores obtenidos para dos características cualitativas
 <strong>A</strong> y <strong>B</strong>
 </center>
 <p><img src="img/tabla2_22a.png" width="50%" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># se crea la tabla 
+x=c(460,140,40,260)
+t=matrix(x,nrow=2)
+colnames(t)=c(&quot;A&quot;,&quot;A&#39;&quot;)
+rownames(t)=c(&quot;B&quot;,&quot;B&#39;&quot;)
+addmargins(t)</code></pre>
+<pre><code>      A  A&#39; Sum
+B   460  40 500
+B&#39;  140 260 400
+Sum 600 300 900</code></pre>
 <p><br/><br/></p>
 <p>A partir de estos valores se obtienen probabilidades bajo el
 <strong>enfoque frecuentista</strong></p>
@@ -387,6 +397,7 @@ dado que ya sucedió <span class="math inline">\(A\)</span> es de
 <div id="independencia-de-eventos" class="section level3">
 <h3><span style="color:#034a94"><strong>Independencia de
 eventos</strong></span></h3>
+<p><br/></p>
 <p>En el caso que se requiera evaluar si dos eventos son independientes
 o no, partiendo de la definición de probabilidad condicional se podría
 obtener la siguiente regla al despejar <span class="math inline">\(P(A
@@ -400,6 +411,7 @@ indica que la probabilidad conjunta de los eventos <span
 class="math inline">\(A\)</span> y <span
 class="math inline">\(B\)</span> es igual a la probabilidad de sus
 probabilidades marginales :</p>
+<p><br/><br/></p>
 <div class="content-box-blue">
 <p>Dos eventos <span class="math inline">\(A\)</span> y <span
 class="math inline">\(B\)</span> son independientes si y solo si la
@@ -415,6 +427,7 @@ P(B)\]</span></p>
 <div id="probabilidad-total" class="section level3">
 <h3><span style="color:#034a94"><strong>Probabilidad
 total</strong></span></h3>
+<p><br/></p>
 <p>Para explicar el concepto de probabilidad total, supongamos que el
 espacio muestral está formado por elementos que pueden ser representados
 por una partición del conjunto <span class="math inline">\(S\)</span>.
@@ -542,6 +555,7 @@ A&#39; 0.2333333 0.8666667</code></pre>
 </div>
 <div id="aplicación" class="section level3">
 <h3><span style="color:#034a94"><strong>Aplicación</strong></span></h3>
+<p><br/></p>
 <p>Podemos representar las probabilidades mediante un árbol. Como
 ejemplo tomamos la base de datos del titanic contenida en el paquete
 <code>titanic</code> y calculamos la probabilidad de que un pasajero
@@ -560,7 +574,7 @@ data(&quot;titanic3&quot;)
 sobrevive.model &lt;- rpart(survived ~ ., data = ptitanic, cp = .02)
 rpart.plot(sobrevive.model,
            main = &quot;Árbol de sobrevivientes Titanic&quot;)</code></pre>
-<img src="recurso302_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+<img src="recurso302_files/figure-html/unnamed-chunk-12-1.png" width="672" />
 </br> <strong>Figura 2.4</strong> Árbol de probabilidades
 </center>
 <p><br/><br/></p>
@@ -568,6 +582,9 @@ rpart.plot(sobrevive.model,
 de sobrevivir (0.38)</p>
 <pre class="r"><code>t=table(titanic3$survived)
 prop.table(t)</code></pre>
+<pre><code>
+       0        1 
+0.618029 0.381971 </code></pre>
 <ul>
 <li><p><span class="math inline">\(P(\text{survived} = 1) =
 0.381971\)</span> : probabilidad de sobrevivir en un accidente
@@ -580,8 +597,14 @@ similar</p></li>
 <p>En el segundo nivel se representan las probabilidades condicionales
 apartir de conocer que el pasajero sobrevivió, con relacin al sexo .
 ´`</p>
+<p><br/></p>
 <pre class="r"><code>t2=table(titanic3$survived,titanic3$sex)
 prop.table(t2,2)</code></pre>
+<pre><code>   
+       female      male
+  0 0.2725322 0.8090154
+  1 0.7274678 0.1909846</code></pre>
+<p><br/></p>
 <ul>
 <li><p><span class="math inline">\(P(\text{female}|\text{survived}) =
 0.72746778\)</span> : si conocemos que sobrevivió, la probabilidad de

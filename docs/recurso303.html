@@ -795,8 +795,9 @@ class="math inline">\(P(X=x)\)</span></td>
 <p><br/><br/><br/></p>
 <div id="ejemplo" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
-<div id="modelo-discreto-binomial" class="section level4">
-<h4>Modelo discreto : <strong>binomial</strong></h4>
+</div>
+<div id="modelo-discreto-binomial" class="section level3">
+<h3>Modelo discreto : <strong>binomial</strong></h3>
 <p>Una variable que se distrbuye binomial es la que procede de un
 experimento bionomial que se puede describir de la siguiente forma:</p>
 <ul>
@@ -862,11 +863,11 @@ ggplot(dat) + geom_point(aes(x, fx),colour = &quot;#FF7F00&quot;, size = 2) +
 <pre><code>[1] 0.8327102</code></pre>
 <p><br/><br/><br/></p>
 </div>
-</div>
 <div id="ejemplo-1" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
-<div id="modelo-continuo-normal" class="section level4">
-<h4>Modelo continuo : <strong>normal</strong></h4>
+</div>
+<div id="modelo-continuo-normal" class="section level3">
+<h3>Modelo continuo : <strong>normal</strong></h3>
 <p>La distribución normal es uno de los modelos más utilizados en las
 aplicaciones de la Estadística. Estas aplicaciones están relacionadas
 con:</p>
@@ -950,16 +951,15 @@ ggdistribution(dnorm, seq(0, 210, 0.1), mean = 100, sd = 30,fill = &quot;#0EB0C6
 <p><img src="recurso303_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><span class="math display">\[P(X&lt;70)
 =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{1800 \pi }}
-\exp{\frac{1}{1800 }(x-100)^{2}} \:dx\]</span></p>
+\exp\Big\{-\frac{1}{1800 }(x-100)^{2}\Big\} \:dx\]</span></p>
 <pre class="r"><code>pnorm(70,100,sqrt(900))</code></pre>
 <pre><code>[1] 0.1586553</code></pre>
 <p><br/></p>
 <p><span class="math display">\[P(X&gt;70)
 =\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{1800 \pi }}
-\exp{\frac{1}{1800 }(x-100)^{2}} \:dx\]</span></p>
+\exp\Big\{-\frac{1}{1800 }(x-100)^{2}\Big\} \:dx\]</span></p>
 <pre class="r"><code>pnorm(70,100,sqrt(1800),lower.tail=FALSE)</code></pre>
 <pre><code>[1] 0.7602499</code></pre>
-</div>
 </div>
 </div>
 

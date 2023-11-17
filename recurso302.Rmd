@@ -33,6 +33,18 @@ knitr::include_graphics("img/tabla2_22a.png")
 ```
 
 
+
+```{r}
+# se crea la tabla 
+x=c(460,140,40,260)
+t=matrix(x,nrow=2)
+colnames(t)=c("A","A'")
+rownames(t)=c("B","B'")
+addmargins(t)
+
+```
+
+
 <br/><br/>
 
 A partir de estos valores se obtienen probabilidades bajo el **enfoque frecuentista**
@@ -123,8 +135,11 @@ La probabilidad de que ocurra $B$ dado que ya sucedió $A$ es de 0.767
 
 ### <span style="color:#034a94">**Independencia de eventos**</span>
 
+<br/>
+
 En el caso que se requiera evaluar si dos eventos son independientes o no, partiendo de la definición de probabilidad condicional se podría obtener la siguiente regla al despejar $P(A \cap B)$ de la ecuación para obtener : $P(A \cap B) = P(A)∗P(B|A)$. En caso de que la ocurrencia del evento $A$ previamente al evento $B$, no cambie su probabilidad, se podría escribir que $P(B|A)=P(B)$ y en este caso la regla indica que la probabilidad conjunta de los eventos $A$ y $B$ es igual a la probabilidad de sus probabilidades marginales :
 
+<br/><br/>
 
 <div class="content-box-blue">
 Dos eventos $A$ y $B$ son independientes si y solo si la probabilidad del evento $B$ no es afectada por la ocurrencia del evento A o viceversa.
@@ -139,6 +154,8 @@ $$P(A∩B)= P(A) \hspace{.2cm} P(B|A) = P(A) \hspace{.2cm} P(B)$$
 <br/><br/><br/>
 
 ### <span style="color:#034a94">**Probabilidad total**</span>
+
+<br/>
 
 Para explicar el concepto de probabilidad total, supongamos que el espacio muestral está formado por elementos que pueden ser representados por una partición del conjunto $S$. Para este ejemplo con 5 particiones ($A_{1}$, $A_{2}$, $A_{3}$, $A_{4}$ y $A_{5}$).   Sobre este espacio se define un evento aleatorio $B$ 
 
@@ -219,9 +236,6 @@ colnames(t)=c("B","B'")
 t
 ```
 
-
-
-
 <br/><br/>
 
 ```{r}
@@ -229,17 +243,12 @@ t
 addmargins(t)
 ```
 
-
-
 <br/><br/>
 
 ```{r}
 # probabilidades conjuntas
 prop.table(t)
 ```
-
-
-
 
 
 <br/><br/>
@@ -263,6 +272,8 @@ prop.table(t,2)
 <br/><br/>
 
 ### <span style="color:#034a94">**Aplicación**</span>
+
+<br/>
 
 Podemos representar las probabilidades mediante un árbol. Como ejemplo tomamos la base de datos del titanic contenida en el paquete `titanic` y calculamos la probabilidad de que un pasajero sobreviviera teniendo en cuenta su sexo.
 
@@ -291,7 +302,7 @@ rpart.plot(sobrevive.model,
 
 En el primer nivel de información hace referencia a la probabilidad de sobrevivir (0.38)
 
-```{r, eval=FALSE}
+```{r}
 t=table(titanic3$survived)
 prop.table(t)
 ```
@@ -304,11 +315,14 @@ prop.table(t)
 
 En el segundo nivel se representan las probabilidades condicionales apartir de conocer que el pasajero sobrevivió, con relacin al sexo . ´`
 
-```{r, eval=FALSE}
+<br/>
+
+```{r}
 t2=table(titanic3$survived,titanic3$sex)
 prop.table(t2,2)
 ```
 
+<br/>
 
 * $P(\text{female}|\text{survived}) = 0.72746778$ : si conocemos que sobrevivió, la probabilidad de que sea una mujer
 

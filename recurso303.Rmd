@@ -247,7 +247,7 @@ help("pbinom")
 
 ### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
-#### Modelo discreto : **binomial**
+### Modelo discreto : **binomial**
 
 
 Una variable que se distrbuye binomial es la que procede de un experimento bionomial que se puede describir de la siguiente forma:
@@ -339,7 +339,7 @@ pbinom(7, 10, 0.60)
 
 ### <span style="color:#FF7F00"> **Ejemplo**</span> 
 
-#### Modelo continuo : **normal**
+### Modelo continuo : **normal**
 
 La distribución normal es uno de los modelos más utilizados en las aplicaciones de la Estadística. Estas aplicaciones están relacionadas con:
 
@@ -419,7 +419,7 @@ ggdistribution(dnorm, seq(0, 210, 0.1), mean = 100, sd = 30,fill = "#0EB0C6")
 ```
 
 
-$$P(X<70) =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{1800 \pi }} \exp{\frac{1}{1800 }(x-100)^{2}} \:dx$$
+$$P(X<70) =\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{1800 \pi }} \exp\Big\{-\frac{1}{1800 }(x-100)^{2}\Big\} \:dx$$
 
 ```{r}
 pnorm(70,100,sqrt(900))
@@ -427,10 +427,11 @@ pnorm(70,100,sqrt(900))
 
 <br/>
 
-$$P(X>70) =\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{1800 \pi }} \exp{\frac{1}{1800 }(x-100)^{2}} \:dx$$
+$$P(X>70) =\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{1800 \pi }} \exp\Big\{-\frac{1}{1800 }(x-100)^{2}\Big\} \:dx$$
 
 ```{r}
 pnorm(70,100,sqrt(1800),lower.tail=FALSE)
 ```
+
 
 
