@@ -517,6 +517,7 @@ P(E_{j})P(A|E_{j})} \]</span></p>
 <div id="código-r" class="section level3">
 <h3><span style="color:#034a94"><strong>Código R</strong></span></h3>
 <p><br/></p>
+<p>Construcción de la tabla</p>
 <pre class="r"><code># se crea la tabla 
 x=c(460,140,40,260)
 t=matrix(x,nrow=2)
@@ -527,6 +528,7 @@ t</code></pre>
 A  460  40
 A&#39; 140 260</code></pre>
 <p><br/><br/></p>
+<p>Se adicionan los totales</p>
 <pre class="r"><code># adiciona los totales por filas y por columnas
 addmargins(t)</code></pre>
 <pre><code>      B  B&#39; Sum
@@ -534,18 +536,21 @@ A   460  40 500
 A&#39;  140 260 400
 Sum 600 300 900</code></pre>
 <p><br/><br/></p>
+<p>Se calculan las probabilidades conjuntas</p>
 <pre class="r"><code># probabilidades conjuntas
 prop.table(t)</code></pre>
 <pre><code>           B         B&#39;
 A  0.5111111 0.04444444
 A&#39; 0.1555556 0.28888889</code></pre>
 <p><br/><br/></p>
+<p>Se calculan las probabilidades marginales por filas</p>
 <pre class="r"><code># probabilidades condicionales por fila
 prop.table(t,1)</code></pre>
 <pre><code>      B   B&#39;
 A  0.92 0.08
 A&#39; 0.35 0.65</code></pre>
 <p><br/><br/></p>
+<p>Se calculan las probabilidades marginales por columnas</p>
 <pre class="r"><code># probabilidades condiccionales por columna
 prop.table(t,2)</code></pre>
 <pre><code>           B        B&#39;

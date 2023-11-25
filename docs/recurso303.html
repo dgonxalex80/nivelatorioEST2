@@ -809,8 +809,9 @@ class="math inline">\(n\)</span> ensayos independientes</li>
 class="math inline">\(n\)</span> ensayo y es igual a <span
 class="math inline">\(p\)</span>. La probabilidad de Fracaso es : <span
 class="math inline">\(1-p = q\)</span></li>
-<li>La variable objeto de estudio es el **número de Exitos consegidos en
-los <span class="math inline">\(n\)</span> ensayos</li>
+<li>La variable objeto de estudio es el <strong>número de Exitos
+consegidos en los <span class="math inline">\(n\)</span>
+ensayos</strong></li>
 </ul>
 <p><br/></p>
 <p><strong>Función de distribución de probabilidad</strong></p>
@@ -960,6 +961,54 @@ ggdistribution(dnorm, seq(0, 210, 0.1), mean = 100, sd = 30,fill = &quot;#0EB0C6
 \exp\Big\{-\frac{1}{1800 }(x-100)^{2}\Big\} \:dx\]</span></p>
 <pre class="r"><code>pnorm(70,100,sqrt(1800),lower.tail=FALSE)</code></pre>
 <pre><code>[1] 0.7602499</code></pre>
+<p><br/><br/></p>
+</div>
+<div
+id="generación-de-números-aleatorios-asociados-a-una-distribución-de-probabilidad"
+class="section level3">
+<h3><span style="color:#034a94"> <strong>Generación de números
+aleatorios asociados a una distribución de
+probabilidad</strong></span></h3>
+<p>Una de las herramientas que nos permite la validación de propidedades
+y teoremas, además de realizar procedimenientos estadisticos de manera
+sintetica, es la simulación.</p>
+<p>Este procedimiento consiste en generar de manera artificial valores
+asociados auna distribución de probabilidad.</p>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo-2" class="section level3">
+<h3><span style="color:#FF7F00"><strong>Ejemplo</strong></span></h3>
+<p>El número de articulos defectuosos encontrados en casas de 10
+unidades se puede simular a partir del conocimiento de los parámetros n
+y p de una distribución binomial.</p>
+<p>Supongamos que n=10 (número de unidades por paquete) y p=0.10
+probabilidad de éxito, en este caso de encontrar un artículo
+defectuoso</p>
+<p>Simulemos 100 valores que podrían corresponde al resultado de la
+revisión de 100 cajas</p>
+<pre class="r"><code>rbinom(100, 10, 0.10)</code></pre>
+<pre><code>  [1] 1 1 0 0 1 2 0 1 2 0 2 2 3 0 0 0 3 2 1 1 1 0 0 1 1 0 1 1 1 1 1 0 1 0 2 0 3
+ [38] 1 2 1 3 1 1 2 2 2 0 1 1 1 1 2 0 2 1 1 1 1 0 1 1 0 2 2 0 0 0 1 0 2 1 0 0 2
+ [75] 3 1 0 1 0 2 3 2 1 0 0 0 2 2 2 0 2 2 1 0 2 2 1 1 1 0</code></pre>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo-3" class="section level3">
+<h3><span style="color:#FF7F00"><strong>Ejemplo</strong></span></h3>
+<p>Para el caso de la distribició normal, simulemos el resultado de una
+prueba realizada por 100 estudiantes. Para ello se requiere conocer el
+valor de los parámetros asociados a ese modelo (<span
+class="math inline">\(\mu\)</span> y <span
+class="math inline">\(\sigma^2\)</span>)</p>
+<p>Para el caso supongamos que <span class="math inline">\(\mu =
+120\)</span> y <span class="math inline">\(\sigma = 8\)</span></p>
+<pre class="r"><code># round() , función para redondear a cero cifras decimanes
+round(rnorm(100,120,8),0) </code></pre>
+<pre><code>  [1] 110 129 100 120 126 115 126 124 123 118 128 109 109 110 114 108 128 122
+ [19] 118 133 115 122 128 120 113 124 123 119 126 111 128 125 117 119 121 124
+ [37] 112 129 123 116 115 116 134 124 138 116 125 110 123 113 124 115 126  97
+ [55] 123 115 118 128 136 106 109 114 112 121 120 131 107 118 136 110  94 130
+ [73] 122 123 131 111 102 127 116 131 129 114 123 110 127 122 134 115 113 122
+ [91] 102 113 118 123 131 120 130 115 106 124</code></pre>
 </div>
 </div>
 

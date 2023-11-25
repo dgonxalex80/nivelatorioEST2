@@ -227,6 +227,8 @@ $$P(E_{i}|A)=\dfrac{P(E_{i} \cap A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\display
 
 <br/>
 
+Construcción de la tabla
+
 ```{r}
 # se crea la tabla 
 x=c(460,140,40,260)
@@ -238,12 +240,16 @@ t
 
 <br/><br/>
 
+Se adicionan los totales 
+
 ```{r}
 # adiciona los totales por filas y por columnas
 addmargins(t)
 ```
 
 <br/><br/>
+
+Se calculan las probabilidades conjuntas
 
 ```{r}
 # probabilidades conjuntas
@@ -253,6 +259,8 @@ prop.table(t)
 
 <br/><br/>
 
+Se calculan las probabilidades marginales por filas
+
 ```{r}
 # probabilidades condicionales por fila
 prop.table(t,1)
@@ -261,6 +269,8 @@ prop.table(t,1)
 
 
 <br/><br/>
+
+Se calculan las probabilidades marginales por columnas
 
 ```{r}
 # probabilidades condiccionales por columna
@@ -331,3 +341,8 @@ prop.table(t2,2)
 <br/><br/>
 
 El árbol presenta las probabilidades condicionales a medida que se desagregan las ramas
+
+
+
+
+

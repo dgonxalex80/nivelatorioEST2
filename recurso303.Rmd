@@ -255,7 +255,7 @@ Una variable que se distrbuye binomial es la que procede de un experimento biono
 * El experimento está compuesto de $n$ ensayos independientes
 * Cada ensayo tiene unicamente dos posibles resultados: **Exito** o **Fracaso**.
 * La probabilidad de Exito se mantiene constante para los $n$ ensayo y es igual a $p$. La probabilidad de Fracaso es : $1-p = q$
-* La variable objeto de estudio es el **número de Exitos consegidos en los $n$ ensayos
+* La variable objeto de estudio es el **número de Exitos consegidos en los $n$ ensayos**
 
 <br/>
 
@@ -432,6 +432,50 @@ $$P(X>70) =\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{1800 \pi }} \exp\Big\
 ```{r}
 pnorm(70,100,sqrt(1800),lower.tail=FALSE)
 ```
+
+<br/><br/>
+
+### <span style="color:#034a94"> **Generación de números aleatorios asociados a una distribución de probabilidad**</span>
+
+Una de las herramientas que nos permite la validación de propidedades y teoremas, además de realizar procedimenientos estadisticos de manera sintetica, es la simulación.
+
+Este procedimiento consiste en generar de manera artificial valores asociados auna distribución de probabilidad.
+
+<br/><br/>
+
+### <span style="color:#FF7F00">**Ejemplo**</span>
+
+El número de articulos defectuosos encontrados en casas de 10 unidades se puede simular a partir del conocimiento de los parámetros n y p de una distribución binomial.
+
+Supongamos que n=10 (número de unidades por paquete) y p=0.10 probabilidad de éxito, en este caso de encontrar un artículo defectuoso
+
+
+Simulemos 100 valores que podrían corresponde al resultado de la revisión de 100 cajas 
+
+```{r}
+rbinom(100, 10, 0.10)
+```
+
+<br/><br/>
+
+### <span style="color:#FF7F00">**Ejemplo**</span>
+
+
+Para el caso de la distribició normal, simulemos el resultado de una prueba realizada por 100 estudiantes. Para ello se requiere conocer el valor de los parámetros asociados a ese modelo ($\mu$ y $\sigma^2$)
+
+Para el caso supongamos que $\mu = 120$ y $\sigma = 8$
+
+```{r}
+# round() , función para redondear a cero cifras decimanes
+round(rnorm(100,120,8),0) 
+
+
+```
+
+
+
+
+
 
 
 
