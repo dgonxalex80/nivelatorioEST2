@@ -853,13 +853,24 @@ ggplot(dat) + geom_point(aes(x, fx),colour = &quot;#FF7F00&quot;, size = 2) +
                      labels = c(&#39;0&#39;,&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;,&#39;8&#39;,&#39;9&#39;,&#39;10&#39;))</code></pre>
 <p><img src="recurso303_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/></p>
-<p><span class="math display">\[ P(X=7) = \dbinom{10}{7} 0.60^{7}
-(1-0.60)^{(10-7)}\]</span></p>
+<p>Para calcular la probabidad de obtener exactamente 7 exitos, se
+evalua en la función de distribución del modelo binomial</p>
+<p><span class="math display">\[ f(x) = P(X=7) = \dbinom{10}{7} 0.60^{7}
+(1-0.60)^{(10-7)}\]</span> <br/></p>
+<p>En R este calculo se obtiene con la función <code>dbinom()</code></p>
 <pre class="r"><code>dbinom(7, 10, 0.60)</code></pre>
 <pre><code>[1] 0.2149908</code></pre>
-<p><span class="math display">\[P(X \leq 7) =
+<p><br/></p>
+<p>En caso de requerir la probabilidad acumulada para los valores
+mejores o iguales a 7 (0,1,2,3,4,5,6,7) , se evalua para cada caso el
+valor correspondiente en la función de distribución binomial y los
+resultados se suman para obtener el valor total.</p>
+<p><span class="math display">\[F(x) = P(X \leq 7) =
 \displaystyle\sum_{x=0}^{x=7} \dbinom{10}{x} 0.60^{x}
 (1-0.60)^{(10-x)}\]</span> <br/></p>
+<p>En R este valor se obtiene mendiante la función
+<code>pbinom()</code></p>
+<p><br/></p>
 <pre class="r"><code>pbinom(7, 10, 0.60)</code></pre>
 <pre><code>[1] 0.8327102</code></pre>
 <p><br/><br/><br/></p>
@@ -944,23 +955,42 @@ p</code></pre>
 <p>Ahora supongamos que se tiene una variable continua con distribución
 normal, con media 50 y varianza 100, es decir desviación estándar 10, lo
 cual se puede representar como <span class="math inline">\(X\sim
-N(100,900)\)</span>. En este caso vamos a hallar los siguientes
+N(120,100)\)</span>. En este caso vamos a hallar los siguientes
 valores:</p>
 <p><br/></p>
 <pre class="r"><code>library(ggfortify)
-ggdistribution(dnorm, seq(0, 210, 0.1), mean = 100, sd = 30,fill = &quot;#0EB0C6&quot;)</code></pre>
+ggdistribution(dnorm, seq(30, 210, 0.1), mean = 120, sd = 20,fill = &quot;#0EB0C6&quot;)</code></pre>
 <p><img src="recurso303_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p><span class="math display">\[P(X&lt;70)
-=\displaystyle\int_{-\infty}^{70} \dfrac{1}{\sqrt{1800 \pi }}
-\exp\Big\{-\frac{1}{1800 }(x-100)^{2}\Big\} \:dx\]</span></p>
-<pre class="r"><code>pnorm(70,100,sqrt(900))</code></pre>
+<p><br/></p>
+<p>En este caso si se requiere calcular la probabilidad de obtener
+valores menores o iguales a 70 ( <span
+class="math inline">\(F(100)\)</span>), dado que esta probabilidad
+corresponde a un área bajo la curva de la función delimitada por 70 que
+se obtiene mediante la integral de <span
+class="math inline">\(f(x)\)</span>.</p>
+<p><br/></p>
+<p><span class="math display">\[P(X \leq 100) = F(100)
+=\displaystyle\int_{-\infty}^{100} \dfrac{1}{\sqrt{800 \pi }}
+\exp\Big\{-\frac{1}{800 }(x-120)^{2}\Big\} \:dx\]</span></p>
+<p><br/></p>
+<p>En R se utiliza la función <code>pnorm()</code> para realizar este
+calculo</p>
+<p><br/></p>
+<pre class="r"><code>pnorm(100,120,20)</code></pre>
 <pre><code>[1] 0.1586553</code></pre>
 <p><br/></p>
-<p><span class="math display">\[P(X&gt;70)
-=\displaystyle\int_{70}^{\infty} \dfrac{1}{\sqrt{1800 \pi }}
-\exp\Big\{-\frac{1}{1800 }(x-100)^{2}\Big\} \:dx\]</span></p>
-<pre class="r"><code>pnorm(70,100,sqrt(1800),lower.tail=FALSE)</code></pre>
-<pre><code>[1] 0.7602499</code></pre>
+<p>En el caso de requerir la probabilidad de obtener un valor superior a
+70, se requiere calcular la integral desde 70 a mas infinito</p>
+<p><span class="math display">\[P(X&gt;100)
+=\displaystyle\int_{100}^{\infty} \dfrac{1}{\sqrt{800 \pi }}
+\exp\Big\{-\frac{1}{800 }(x-120)^{2}\Big\} \:dx\]</span></p>
+<p><br/></p>
+<p>En R esta probabilidad se puede obtener con la funcion
+<code>pnorm()</code> de dos formas</p>
+<pre class="r"><code>pnorm(100,120,20,lower.tail=FALSE)</code></pre>
+<pre><code>[1] 0.8413447</code></pre>
+<pre class="r"><code>1-pnorm(100,120, 20)</code></pre>
+<pre><code>[1] 0.8413447</code></pre>
 <p><br/><br/></p>
 </div>
 <div
@@ -987,28 +1017,28 @@ defectuoso</p>
 <p>Simulemos 100 valores que podrían corresponde al resultado de la
 revisión de 100 cajas</p>
 <pre class="r"><code>rbinom(100, 10, 0.10)</code></pre>
-<pre><code>  [1] 1 1 0 0 1 2 0 1 2 0 2 2 3 0 0 0 3 2 1 1 1 0 0 1 1 0 1 1 1 1 1 0 1 0 2 0 3
- [38] 1 2 1 3 1 1 2 2 2 0 1 1 1 1 2 0 2 1 1 1 1 0 1 1 0 2 2 0 0 0 1 0 2 1 0 0 2
- [75] 3 1 0 1 0 2 3 2 1 0 0 0 2 2 2 0 2 2 1 0 2 2 1 1 1 0</code></pre>
+<pre><code>  [1] 0 0 0 1 0 0 1 0 0 1 0 0 2 2 1 1 0 1 1 1 1 2 2 0 1 1 1 0 1 1 1 4 2 2 1 0 1
+ [38] 1 0 2 1 0 1 2 1 0 1 0 1 0 1 0 2 1 1 0 1 0 3 1 1 2 0 1 0 0 1 0 1 0 2 1 3 2
+ [75] 3 1 2 2 1 0 0 1 1 3 2 1 0 0 2 0 0 1 1 4 4 1 2 1 0 1</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="ejemplo-3" class="section level3">
 <h3><span style="color:#FF7F00"><strong>Ejemplo</strong></span></h3>
 <p>Para el caso de la distribició normal, simulemos el resultado de una
 prueba realizada por 100 estudiantes. Para ello se requiere conocer el
-valor de los parámetros asociados a ese modelo (<span
+valor de los parámetros asociados a ese modelo ( <span
 class="math inline">\(\mu\)</span> y <span
-class="math inline">\(\sigma^2\)</span>)</p>
+class="math inline">\(\sigma^2\)</span> )</p>
 <p>Para el caso supongamos que <span class="math inline">\(\mu =
-120\)</span> y <span class="math inline">\(\sigma = 8\)</span></p>
+120\)</span> y <span class="math inline">\(\sigma = 20\)</span></p>
 <pre class="r"><code># round() , función para redondear a cero cifras decimanes
-round(rnorm(100,120,8),0) </code></pre>
-<pre><code>  [1] 110 129 100 120 126 115 126 124 123 118 128 109 109 110 114 108 128 122
- [19] 118 133 115 122 128 120 113 124 123 119 126 111 128 125 117 119 121 124
- [37] 112 129 123 116 115 116 134 124 138 116 125 110 123 113 124 115 126  97
- [55] 123 115 118 128 136 106 109 114 112 121 120 131 107 118 136 110  94 130
- [73] 122 123 131 111 102 127 116 131 129 114 123 110 127 122 134 115 113 122
- [91] 102 113 118 123 131 120 130 115 106 124</code></pre>
+round(rnorm(100,120,20),0) </code></pre>
+<pre><code>  [1]  99 107 134 135 124 109 105 128 129 160 121 114 144 124 104  95 109 153
+ [19] 118 127  63 127 131 127 115 119 102 137 105 108 113 113 114 140 136 100
+ [37] 132 104 133 173 109  88 122 116 115 112  89  92 133 103 150 159 128 119
+ [55] 106 124 138 110 107 116 127 107 114 137 137 141 161 120 108  98 169 118
+ [73]  91 121 151 121 114 124  88 105 104  93 119  84  83 135 130 157 131 126
+ [91] 121 139 103 114 112 115 130 117 134 126</code></pre>
 </div>
 </div>
 
