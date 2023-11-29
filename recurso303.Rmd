@@ -19,14 +19,14 @@ knitr::include_graphics("img/variables1.jpg")
 
 <br/>
 
-El concepto de variable aleatoria constituye uno de los conceptos principales de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica segun J.A. Alberth & B. Ruiz (2013) , El primero basado en el resultado de fenómenos aleatorios y el segundo, el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatoria como función de números reales y  el espacio para el sustento matemático. 
+El concepto de variable aleatoria constituye uno de los conceptos principales de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica según J.A. Alberth & B. Ruiz (2013). El primero basado en el resultado de fenómenos aleatorios y el segundo, el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatoria como función de números reales y  el espacio para el sustento matemático. 
 
 <br/><br/><br/>
 
 ## <span style="color:#034a94">**Variable aleatoria**</span>
 <br/>
 <div class="content-box-blue">
-Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un numero . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable X, ($R_{_{X}}$) 
+Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un número. El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable X, ($R_{_{X}}$) 
 </div>
 
 Las variables aleatorias se clasifican teniendo en cuenta las características de su rango en **DISCRETAS** o **CONTINUAS**. La distribución de una variable aleatoria será **UNIVARIADA** si se estudia el comportamiento de una sola variable y será **MULTIVARIADA** si se considera el comportamiento en conjunto de varias variables definidas sobre el mismo espacio muestral.
@@ -40,7 +40,7 @@ Se considera variable aleatoria  **CONTINUA** si su rango $R_{_{X}}$ es un conju
 
 <br/>
 
-En todos los casos se caracterizan por : 
+En todos los casos se caracterizan por 
 
 * $f(x)$ : función de distribución de probabilidad (variables discretas), función de distribución de densidad (variables continuas)
 * $F(x)$ : función de probabilidad acumulada

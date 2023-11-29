@@ -323,7 +323,7 @@ prop.table(t)
 
 <br/><br/>
 
-En el segundo nivel se representan las probabilidades condicionales apartir de conocer que el pasajero sobrevivió, con relacin al sexo . ´`
+En el segundo nivel se representan las probabilidades condicionales a partir de conocer que el pasajero sobrevivió, con relación al sexo . 
 
 <br/>
 
