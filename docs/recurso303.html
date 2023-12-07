@@ -281,18 +281,18 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="img/variables1.jpg" width="100%" style="display: block; margin: auto;" />
+<p><img src="img/variables.png" width="100%" style="display: block; margin: auto;" />
 <sub>Tomada de: <a href="https://pixabay.com/"
 class="uri">https://pixabay.com/</a> </sub></p>
 <p><br/></p>
-<p>El concepto de variable aleatoria constituye uno de los conceptos
-principales de la probabilidad y estadística. A este concepto se pueden
-asociar dos paradigmas de evolución histórica segun J.A. Alberth &amp;
-B. Ruiz (2013) , El primero basado en el resultado de fenómenos
-aleatorios y el segundo, el proceso que relaciona los conjuntos de
-espacio muestral y sus respectivas probabilidades, para definir el
-concepto de variable aleatoria como función de números reales y el
-espacio para el sustento matemático.</p>
+<p>El concepto de <strong>variable aleatoria</strong> constituye uno de
+los conceptos principales de la probabilidad y estadística. A este
+concepto se pueden asociar dos paradigmas de evolución histórica según
+J.A. Alberth &amp; B. Ruiz (2013). El primero basado en el resultado de
+fenómenos aleatorios y el segundo, el proceso que relaciona los
+conjuntos de espacio muestral y sus respectivas probabilidades, para
+definir el concepto de variable aleatoria como función de números reales
+y el espacio para el sustento matemático.</p>
 <p><br/><br/><br/></p>
 <div id="variable-aleatoria" class="section level2">
 <h2><span style="color:#034a94"><strong>Variable
@@ -301,7 +301,7 @@ aleatoria</strong></span></h2>
 <div class="content-box-blue">
 <p>Una variable aleatoria <span class="math inline">\(X\)</span> es una
 función que asigna a cada valor de un espacio muestral <span
-class="math inline">\(S\)</span> un numero . El conjunto formado por
+class="math inline">\(S\)</span> un número. El conjunto formado por
 estos números conforman un subconjunto de los reales llamado rango de la
 variable X, (<span class="math inline">\(R_{_{X}}\)</span>)</p>
 </div>
@@ -324,7 +324,7 @@ infinito no numerable y generalmente corresponde a unión de intervalos.
 Están asociadas con la medición como son el tiempo, edad, precio,
 altura, distancia….</p>
 <p><br/></p>
-<p>En todos los casos se caracterizan por :</p>
+<p>En todos los casos se caracterizan por</p>
 <ul>
 <li><span class="math inline">\(f(x)\)</span> : función de distribución
 de probabilidad (variables discretas), función de distribución de
@@ -840,8 +840,13 @@ x=0,1,2, \ldots, n   \\
 <p><br/><br/></p>
 <p>Sea la variable <span class="math inline">\(X \sim binom(n=10,
 p=0.60)\)</span></p>
-<pre class="r"><code>library(ggplot2)
-# modelo binomial  ok
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>
+Attaching package: &#39;ggplot2&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:NLP&#39;:
+
+    annotate</code></pre>
+<pre class="r"><code># modelo binomial  ok
 x=0:10
 fx=dbinom(x,10,0.60)
 dat=data.frame(x,fx)
@@ -1017,9 +1022,9 @@ defectuoso</p>
 <p>Simulemos 100 valores que podrían corresponde al resultado de la
 revisión de 100 cajas</p>
 <pre class="r"><code>rbinom(100, 10, 0.10)</code></pre>
-<pre><code>  [1] 0 0 0 1 0 0 1 0 0 1 0 0 2 2 1 1 0 1 1 1 1 2 2 0 1 1 1 0 1 1 1 4 2 2 1 0 1
- [38] 1 0 2 1 0 1 2 1 0 1 0 1 0 1 0 2 1 1 0 1 0 3 1 1 2 0 1 0 0 1 0 1 0 2 1 3 2
- [75] 3 1 2 2 1 0 0 1 1 3 2 1 0 0 2 0 0 1 1 4 4 1 2 1 0 1</code></pre>
+<pre><code>  [1] 1 1 2 0 0 0 0 1 0 4 0 1 1 0 1 3 1 0 2 0 2 0 1 0 1 3 1 2 2 2 2 1 0 1 1 1 2
+ [38] 1 2 1 2 2 1 1 3 1 0 0 0 3 1 2 1 0 0 1 0 1 1 1 2 2 2 0 1 0 0 1 1 0 1 2 0 2
+ [75] 1 0 3 2 0 1 1 0 1 1 0 2 2 3 0 0 2 0 0 1 0 1 1 0 1 0</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="ejemplo-3" class="section level3">
@@ -1033,12 +1038,12 @@ class="math inline">\(\sigma^2\)</span> )</p>
 120\)</span> y <span class="math inline">\(\sigma = 20\)</span></p>
 <pre class="r"><code># round() , función para redondear a cero cifras decimanes
 round(rnorm(100,120,20),0) </code></pre>
-<pre><code>  [1]  99 107 134 135 124 109 105 128 129 160 121 114 144 124 104  95 109 153
- [19] 118 127  63 127 131 127 115 119 102 137 105 108 113 113 114 140 136 100
- [37] 132 104 133 173 109  88 122 116 115 112  89  92 133 103 150 159 128 119
- [55] 106 124 138 110 107 116 127 107 114 137 137 141 161 120 108  98 169 118
- [73]  91 121 151 121 114 124  88 105 104  93 119  84  83 135 130 157 131 126
- [91] 121 139 103 114 112 115 130 117 134 126</code></pre>
+<pre><code>  [1] 117 113 125 124 160 161 113 122 124 117 142 123 124 123 105 155 114  87
+ [19]  94 102 138 127 109  81 119 118  63 110 129  98 102 143 115 150 138 126
+ [37] 129 121 120  80 145  94 116 117 137 122 132 113 110 124 133 124 124 131
+ [55] 116 101 132 106 139 145 140 114 107 113  98 126 126 123 128  93  75 103
+ [73] 122 105 136 147 108 125 144 142 107 106 109 117 118 135  92 130 119  95
+ [91] 106 106 132 140 117 116 152 138 125 132</code></pre>
 </div>
 </div>
 

@@ -13,13 +13,13 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/variables1.jpg")
+knitr::include_graphics("img/variables.png")
 ```
 <sub>Tomada de: https://pixabay.com/ </sub>
 
 <br/>
 
-El concepto de variable aleatoria constituye uno de los conceptos principales de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica según J.A. Alberth & B. Ruiz (2013). El primero basado en el resultado de fenómenos aleatorios y el segundo, el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatoria como función de números reales y  el espacio para el sustento matemático. 
+El concepto de **variable aleatoria** constituye uno de los conceptos principales de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica según J.A. Alberth & B. Ruiz (2013). El primero basado en el resultado de fenómenos aleatorios y el segundo, el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatoria como función de números reales y  el espacio para el sustento matemático. 
 
 <br/><br/><br/>
 
