@@ -573,8 +573,9 @@ library(readr)
 library(rpart)
 library(rattle)
 library(rpart.plot)
-library(paqueteNIV)
+# library(paqueteNIV)
 data(&quot;titanic3&quot;)
+
 
 sobrevive.model &lt;- rpart(survived ~ ., data = ptitanic, cp = .02)
 rpart.plot(sobrevive.model,

@@ -11,8 +11,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 
 # install.packages("devtools") # solo una vez
-#devtools::install_github("dgonxalex80/paqueteNIV") # descarga paqueteDEG
-library(paqueteNIV) # activa paqueteDEG
+ devtools::install_github("dgonxalex80/paqueteNIV") # descarga paqueteDEG
+ library(paqueteNIV) # activa paqueteDEG
 
 
 ```
@@ -296,8 +296,9 @@ library(readr)
 library(rpart)
 library(rattle)
 library(rpart.plot)
-library(paqueteNIV)
+# library(paqueteNIV)
 data("titanic3")
+
 
 sobrevive.model <- rpart(survived ~ ., data = ptitanic, cp = .02)
 rpart.plot(sobrevive.model,
